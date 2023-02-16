@@ -4,7 +4,7 @@
          url('../fonts/cakra/Cakra-Normal.ttf') format("ttf");
     font-family: Cakra;
     font-weight: Normal;
-}
+} 
 
 * {
     box-sizing: border-box;
@@ -141,6 +141,7 @@ a {
     background-color: #FAE4B1;
     background-image: url(../img/lastochka.png);
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .popular__form {
@@ -310,4 +311,421 @@ a {
     color: #ffffff;
     cursor: pointer;
 }
+
 /* ------------------------------------------- КОНЕЦ ВЕРХНЯЯ ФОРМА ---------------------------------------------- */
+        /* Форма для выбора кресла */
+
+        .wr-price-order__wr-modal-type-chair {
+            position: absolute;
+
+            display: none;
+        }
+
+        .wr-type-chair_active {
+            display: block;
+        }
+
+        .wr-price-order__type-chair-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 347px;
+            width: 345px;
+            padding: 44px 38px 0 34px;
+
+            font-family: 'Roboto', sans-serif;
+
+            background-color: #CFA668;
+            border-radius: 20px;
+        }
+
+        .type-chair-item_last {
+            padding-top: 9px;
+        }
+
+        .wr-price-order__label-type-chair {
+            display: flex;
+            width: 100%;
+
+            font-size: 20px;
+            font-weight: 400;
+
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .wr-price-order__label-type-chair::after {
+            content: '';
+
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+
+            background: #DFDFDF;
+            border: 1px solid #9BD0C0;
+            border-radius: 50%;
+        }
+
+        .wr-price-order__radio-chair:checked + .wr-price-order__label-type-chair::after {
+            background: #234C60;
+            border: 1px solid #828282;
+        }
+
+        .wr-price-order__radio-chair {
+            display: none;
+        }
+
+        .wr-price-order__child-max-wight {
+            display: block;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        /* Форма для выбора кресла */
+
+
+/* СТАРТ КАРТА И ФОРМА ЗАКАЗА */
+
+.wr-price-order {
+    display: flex;
+    padding-top: 35px;
+    padding-bottom: 122px;
+
+    background-color: #FAE4B1;
+}
+
+.wr-price-order__price {
+    width: 50%;
+    padding-left: 151px;
+}
+
+.wr-price-order__order {
+    width: 50%;
+}
+
+    /* Общие свойства элементов форм label input select */
+        .wr-price-order__title {
+            min-width: 630px;
+            padding-bottom: 22px;
+        
+            font-family: Cakra, sans-serif;
+            font-size: 48px;
+            font-weight: 400;
+            text-transform: uppercase;
+        
+            color: #234C60;
+        }
+
+        .wr-price-order__labels {
+            font-family: 'Roboto', sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        .wr-price-order__look-inputs,
+        .wr-price-order__car-class-list,
+        .wr-price-order__amount-chair {
+            padding: 10px 16px 10px 16px;
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #3B7A67;
+            border-radius: 10px;
+        }
+    /* ------------------------------------------ */
+
+.wr-price-order__map {
+    height: 86%;
+    width: 92%;
+    
+    border: 1px solid #3B7A67;
+    border-radius: 10px;
+}
+
+
+
+
+.wr-price-order__name-fonnumber {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wr-price-order__wr-name,
+.wr-price-order__wr-tel {
+    min-width: 332px;
+    width: 50%;
+}
+
+.wr-price-order__name,
+.wr-price-order__tel {
+    width: 90%;
+}
+
+
+
+.wr-price-order__wr-data-of-transport {
+    display: flex;
+
+    min-width: 585px;
+    width: 90%;
+    margin-top: 28px;
+}
+
+.wr-price-order__wr-date-arrive,
+.wr-price-order__wr-time-arrive,
+.wr-price-order__wr-number-flight,
+.wr-price-order__wr-number-wagon {
+    width: 25%;
+}
+
+.wr-price-order__date-arrive,
+.wr-price-order__time-arrive,
+.wr-price-order__number-flight,
+.wr-price-order__number-wagon {
+    width: 90%;
+}
+
+
+
+.wr-price-order__wr-car-class {
+    width: 42.7%;
+    margin-top: 20px;
+}
+
+.wr-price-order__car-class-list {
+    width: 100%;
+}
+
+
+
+.wr-price-order__wr-chairs {
+    display: flex;
+
+    width: 60%;
+    margin-top: 20px;
+}
+
+.wr-price-order__wr-type-chair {
+    width: 75%;
+}
+
+.wr-price-order__type-chair {
+    width: 95%;
+}
+
+.wr-price-order__wr-amount-chair {
+    width: 20%;
+}
+
+.wr-price-order__amount-chair {
+    width: 90%;
+}
+
+
+
+.wr-price-order__wr-meet {
+    margin-top: 34px;
+}
+
+.wr-price-order__meet {
+    display: none;
+}
+
+.wr-price-order__label-meet {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    color: #383838;
+
+    cursor: pointer;
+}
+
+.wr-price-order__label-meet::before {
+    content: '';
+
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    box-sizing: border-box;
+
+    border: 1px solid #CFA668;
+    background: #ffffff;
+
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.wr-price-order__meet:checked + .wr-price-order__label-meet::before {
+    border: 4px solid #ffffff;
+    background: #CFA668;
+}
+
+
+
+.wr-price-order__wr-button-submit {
+    width: 52%;
+    margin-top: 29px;
+}
+
+.wr-price-order__button-submit {
+    height: 55px;
+    width: 100%;
+    padding: 15px 124px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    background: #9BD0C0;
+    border: 1px solid #234C60;
+    box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.wr-price-order__button-submit:active {
+    box-shadow: none;
+}
+/* КОНЕЦ КАРТА И ФОРМА ЗАКАЗА */
+
+/* СТАРТ АВТОМОБИЛИ КОЛЛБЭК */
+
+.callback {
+    padding-bottom: 138px;
+
+    background-color: #FAE4B1;
+    background-image: url(../img/callback.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.callback__car-class-list {
+    display: flex;
+    min-width: 1064px;
+    max-width: 1432px;
+    margin: 0 auto;
+
+    justify-content: space-around;
+}
+
+.callback__car-class-card {
+    display: flex;
+
+    height: 492px;
+    width: 333px;
+    margin-top: -64px;
+
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.25);
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.car-class-card_polo {
+    background-image: url(../img/polo.png);
+}
+
+.car-class-card_octavia {
+    background-image: url(../img/octavia.png);
+}
+
+.car-class-card_camry {
+    background-image: url(../img/camry.png);
+}
+
+
+.callback__wr-card-text {
+    display: flex;
+    height: 156px;
+    width: 271px;
+    margin-bottom: -16px;
+
+    font-family: Cakra, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+
+    background: linear-gradient(180deg, #926829, #E5CFAD);
+    border: 5px solid #9BD0C0;
+    box-shadow: -4px -4px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 0px 0px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.callback__card-text-class {
+    font-size: 36px;
+}
+
+.callback__card-text-car {
+    font-size: 24px;
+}
+
+
+
+.callback__wr-collback-form {
+    display: flex;
+    margin-top: 101px;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+.callback-title {
+    font-family: Cakra, sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #9BD0C0;
+}
+
+.callback__form-inputs {
+    height: 51px;
+    padding: 0 16px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #383838;
+
+    border: 1px solid #BFBFBF;
+    border-radius: 10px;
+}
+
+.callback__form-button {
+    height: 51px;
+    padding: 0 124px;
+
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+    color: #ffffff;
+
+    background: #9BD0C0;
+    border: 1px solid #234C60;
+    box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.callback__form-button:active {
+    box-shadow: none;
+}
+
+/* КОНЕЦ АВТОМОБИЛИ КОЛЛБЭК */
+

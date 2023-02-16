@@ -109,6 +109,7 @@
                 <header class="wr-price-order__header-map">
                     <h2 class="wr-price-order__title">расчет стоимости</h2>
                 </header>
+                <div class="wr-price-order__map" id="map"></div>
             </div>
             <div class="wr-price-order__order">
                 <form class="wr-price-order__form" action="" name="order">
@@ -118,42 +119,41 @@
 
                     <div class="wr-price-order__name-fonnumber">
                         <div class="wr-price-order__wr-name">
-                            <label class="wr-price-order__label-name" for="wr-price-order__name">Имя и фамилия</label>
-                            <input id="wr-price-order__name" type="text" name="name">
+                            <label class="wr-price-order__label-name wr-price-order__labels" for="wr-price-order__name">Имя и фамилия</label>
+                            <input class="wr-price-order__name wr-price-order__look-inputs" id="wr-price-order__name" type="text" name="name">
                         </div>
 
                         <div class="wr-price-order__wr-tel">
-                            <label class="wr-price-order__label-tel" for="wr-price-order__tel">Номер телефона</label>
-                            <input id="wr-price-order__tel" type="text" name="tel">
+                            <label class="wr-price-order__label-tel wr-price-order__labels" for="wr-price-order__tel">Номер телефона</label>
+                            <input class="wr-price-order__tel wr-price-order__look-inputs" id="wr-price-order__tel" type="text" name="tel">
                         </div>
                     </div>
 
                     <div class="wr-price-order__wr-data-of-transport">
                         <div class="wr-price-order__wr-date-arrive">
-                            <label for="wr-price-order__date-arrive" class="wr-price-order__label-date-arrive">Дата прибытия</label>
-                            <input id="wr-price-order__date-arrive" class="wr-price-order__date-arrive" type="text" name="date-arrive">
+                            <label class="wr-price-order__label-date-arrive wr-price-order__labels" for="wr-price-order__date-arrive">Дата прибытия</label>
+                            <input class="wr-price-order__date-arrive wr-price-order__look-inputs" id="wr-price-order__date-arrive" type="text" name="date-arrive">
                         </div>
 
                         <div class="wr-price-order__wr-time-arrive">
-                            <label for="wr-price-order__time-arrive" class="wr-price-order__label-time-arrive">Время прибытия</label>
-                            <input id="wr-price-order__time-arrive" class="wr-price-order__time-arrive" type="text" name="time-arrive">
+                            <label class="wr-price-order__label-time-arrive wr-price-order__labels" for="wr-price-order__time-arrive">Время прибытия</label>
+                            <input class="wr-price-order__time-arrive wr-price-order__look-inputs" id="wr-price-order__time-arrive" type="text" name="time-arrive">
                         </div>
 
                         <div class="wr-price-order__wr-number-flight">
-                            <label for="wr-price-order__number-flight" class="wr-price-order__label-number-flight">Номер рейса</label>
-                            <input id="wr-price-order__number-flight" class="wr-price-order__number-flight" type="text" name="number-flight">
+                            <label class="wr-price-order__label-number-flight wr-price-order__labels" for="wr-price-order__number-flight">Номер рейса</label>
+                            <input class="wr-price-order__number-flight wr-price-order__look-inputs" id="wr-price-order__number-flight" type="text" name="number-flight">
                         </div>
 
                         <div class="wr-price-order__wr-number-wagon">
-                            <label for="wr-price-order__number-wagon" class="wr-price-order__label-number-wagon">Номер вагона</label>
-                            <input id="wr-price-order__number-wagon" class="wr-price-order__number-wagon" type="text" name="number-wagon">
+                            <label class="wr-price-order__label-number-wagon wr-price-order__labels" for="wr-price-order__number-wagon">Номер вагона</label>
+                            <input class="wr-price-order__number-wagon wr-price-order__look-inputs" id="wr-price-order__number-wagon" type="text" name="number-wagon">
                         </div>
                     </div>
 
                     <div class="wr-price-order__wr-car-class">
-                        <label class="wr-price-order__label-car-class" for="wr-price-order__car-class-list">Класс авто</label>
                         <select class="wr-price-order__car-class-list" id="wr-price-order__car-class-list" name="car-class">
-                            <option value=""></option>
+                            <option value="">Класс авто</option>
                             <option value="Standart">Стандарт</option>
                             <option value="Comfort">Комфорт</option>
                             <option value="Comfort +">Комфорт +</option>
@@ -162,7 +162,7 @@
 
                     <div class="wr-price-order__wr-chairs">
                         <div class="wr-price-order__wr-type-chair">
-                            <input class="wr-price-order__type-chair" type="text" name="type-chair-first" placeholder="Детское кресло">
+                            <input class="wr-price-order__type-chair wr-price-order__look-inputs" type="text" name="type-chair-first" placeholder="Детское кресло">
                         </div>
                         <div class="wr-price-order__wr-amount-chair">
                             <select class="wr-price-order__amount-chair" name="amount-chairs">
@@ -176,7 +176,7 @@
 
                     <div class="wr-price-order__wr-chairs">
                         <div class="wr-price-order__wr-type-chair">
-                            <input class="wr-price-order__type-chair" type="text" name="type-chair-first" placeholder="Детское кресло">
+                            <input class="wr-price-order__type-chair wr-price-order__look-inputs" type="text" name="type-chair-first" placeholder="Детское кресло">
                         </div>
                         <div class="wr-price-order__wr-amount-chair">
                             <select class="wr-price-order__amount-chair" name="amount-chairs">
@@ -189,55 +189,68 @@
                     </div>
 
                     <div class="wr-price-order__wr-meet">
-                        <input type="checkbox" name="order__meet" id="wr-price-order__meet">
+                        <input class="wr-price-order__meet" id="wr-price-order__meet" type="checkbox" name="order__meet">
                         <label class="wr-price-order__label-meet" for="wr-price-order__meet">Нужна ли встреча с табличкой?</label>
                     </div>
 
                     <div class="wr-price-order__wr-button-submit">
                         <button class="wr-price-order__button-submit" type="submit">заказать</button>
                     </div>
-                    <!-- Список вариантов кресел для подстановки к соответствующему элементу, в меню самом серху там будет два этапа выбора -->
-                    <ul class="wr-price-order__type-chair-list">
-                        <li class="wr-price-order__type-chair-item">
-                            <label class="wr-price-order__label-type-chair" for="wr-price-order__type-chair">Люлька до 1 года</label>
-                            <input id="wr-price-order__type-chair" type="radio" name="type-chair" value="before-one-year">
-                            <span class="wr-price-order__child-max-wight">(до 10кг)</span>
-                        </li>
-                        <li class="wr-price-order__type-chair-item">
-                            <label class="wr-price-order__label-type-chair" for="wr-price-order__type-chair">Кресло до 4 лет</label>
-                            <input id="wr-price-order__type-chair" type="radio" name="type-chair" value="before-four-year">
-                            <span class="wr-price-order__child-max-wight">(9 - 18кг)</span>
-                        </li>
-                        <li class="wr-price-order__type-chair-item">
-                            <label class="wr-price-order__label-type-chair" for="wr-price-order__type-chair">Кресло 3 - 7 лет</label>
-                            <input id="wr-price-order__type-chair" type="radio" name="type-chair" value="three-seven-year">
-                            <span class="wr-price-order__child-max-wight">(15 - 25кг)</span>
-                        </li>
-                        <li class="wr-price-order__type-chair-item">
-                            <label class="wr-price-order__label-type-chair" for="wr-price-order__type-chair">Бустер 6 - 12 лет</label>
-                            <input id="wr-price-order__type-chair" type="radio" name="type-chair" value="six-twelve">
-                        </li>
-                        <li class="wr-price-order__type-chair-item">
-                            <label class="wr-price-order__label-type-chair" for="wr-price-order__type-chair">Свое кресло</label>
-                            <input id="wr-price-order__type-chair" type="radio" name="type-chair" value="own-chair">
-                        </li>
-                    </ul>
                 </form>
             </div>
         </div>
+
+
+        <!-- Форма для выбора кресла -->
+        <div class="wr-price-order__wr-modal-type-chair">
+                <ul class="wr-price-order__type-chair-list"> 
+                    <li class="wr-price-order__type-chair-item">
+                        <input class="wr-price-order__radio-chair" id="wr-price-order__chair-before-one-year" type="radio" name="type-chair" value="before-one-year">
+                        <label class="wr-price-order__label-type-chair" for="wr-price-order__chair-before-one-year">Люлька до 1 года</label>
+                        <span class="wr-price-order__child-max-wight">(до 10кг)</span>
+                    </li>
+                    <li class="wr-price-order__type-chair-item">
+                        <input class="wr-price-order__radio-chair" id="wr-price-order__chair-before-four-year" type="radio" name="type-chair" value="before-four-year">
+                        <label class="wr-price-order__label-type-chair" for="wr-price-order__chair-before-four-year">Кресло до 4 лет</label>
+                        <span class="wr-price-order__child-max-wight">(9 - 18кг)</span>
+                    </li>
+                    <li class="wr-price-order__type-chair-item">  
+                        <input class="wr-price-order__radio-chair" id="wr-price-order__chair-three-seven-year" type="radio" name="type-chair" value="three-seven-year">                          
+                        <label class="wr-price-order__label-type-chair" for="wr-price-order__chair-three-seven-year">Кресло 3 - 7 лет</label>
+                        <span class="wr-price-order__child-max-wight">(15 - 25кг)</span>
+                    </li>
+                    <li class="wr-price-order__type-chair-item">
+                        <input class="wr-price-order__radio-chair" id="wr-price-order__chair-six-twelve" type="radio" name="type-chair" value="six-twelve">
+                        <label class="wr-price-order__label-type-chair" for="wr-price-order__chair-six-twelve">Бустер 6 - 12 лет</label>
+                    </li>
+                    <li class="wr-price-order__type-chair-item type-chair-item_last">
+                        <input class="wr-price-order__radio-chair" id="wr-price-order__chair-own-chair" type="radio" name="type-chair" value="own-chair">
+                        <label class="wr-price-order__label-type-chair" for="wr-price-order__chair-own-chair">Свое кресло</label>
+                    </li>
+                </ul>
+            </div>
+            <!-- Форма для выбора кресла конец -->
+
+
         <div class="callback">
                 <ul class="callback__car-class-list">
-                    <li class="callback__car-class-card">
-                        <span class="callback__card-text-class">стандарт</span>
-                        <span class="callback__card-text-car">volkswagen polo</span>
+                    <li class="callback__car-class-card car-class-card_polo">
+                        <div class="callback__wr-card-text">
+                            <span class="callback__card-text-class">стандарт</span>
+                            <span class="callback__card-text-car">volkswagen polo</span>
+                        </div>
                     </li>
-                    <li class="callback__car-class-card">
-                        <span class="callback__card-text-class">комфорт</span>
-                        <span class="callback__card-text-car">skoda octavia</span>
+                    <li class="callback__car-class-card car-class-card_octavia">
+                        <div class="callback__wr-card-text">
+                            <span class="callback__card-text-class">комфорт</span>
+                            <span class="callback__card-text-car">skoda octavia</span>
+                        </div>
                     </li>
-                    <li class="callback__car-class-card">
-                        <span class="callback__card-text-class">комфорт +</span>
-                        <span class="callback__card-text-car">toyota camry</span>
+                    <li class="callback__car-class-card car-class-card_camry">
+                        <div class="callback__wr-card-text">
+                            <span class="callback__card-text-class">комфорт +</span>
+                            <span class="callback__card-text-car">toyota camry</span>
+                        </div>
                     </li>
                 </ul>
 
@@ -247,9 +260,9 @@
                     </header>
 
                     <form class="callback__form form-callback" action="" name="callback__form">
-                        <input type="text" name="name" placeholder="Имя">
-                        <input type="tel" name="tel" placeholder="+7(___)___ __ __">
-                        <button type="submit" name="submit">отправить</button>
+                        <input class="callback__form-name callback__form-inputs" type="text" name="name" placeholder="Имя">
+                        <input class="callback__form-tel callback__form-inputs" type="tel" name="tel" placeholder="+7(___)___ __ __">
+                        <button class="callback__form-button" type="submit" name="submit">отправить</button>
                     </form>
                 </div>
         </div>
@@ -374,5 +387,6 @@
         </div>
     </footer>
     <script src="js/scrypt.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=9279417d-5049-4b3f-8bef-f06d4f964194&lang=ru_RU" type="text/javascript" defer></script>
 </body>
 </html>
