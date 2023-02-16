@@ -141,7 +141,7 @@ a {
     background-color: #FAE4B1;
     background-image: url(../img/lastochka.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
 }
 
 .popular__form {
@@ -632,16 +632,20 @@ a {
     justify-content: space-around;
 }
 
-.car-class-card_polo {
-    background-image: url(../img/polo.png);
+.car-class-card_standart {
+    background-image: url(../img/chevrolet-aveo.png);
 }
 
-.car-class-card_octavia {
+.car-class-card_comfort {
     background-image: url(../img/octavia.png);
 }
 
-.car-class-card_camry {
-    background-image: url(../img/camry.png);
+.car-class-card_bizness {
+    background-image: url(../img/mercedes-e.png);
+}
+
+.car-class-card_miniven {
+    background-image: url(../img/mercedes-viano.png);
 }
 
 
@@ -692,8 +696,24 @@ a {
     color: #9BD0C0;
 }
 
+.callback__form {
+    display: flex;
+    width: 65.3%;
+
+    justify-content: space-between;
+}
+
+.callback__wr-form-inputs {
+    display: flex;
+    width: 62.7%;
+    margin-left: 18px;
+
+    justify-content: space-between;
+}
+
 .callback__form-inputs {
     height: 51px;
+    width: 27.5%;
     padding: 0 16px;
 
     font-family: 'Roboto', sans-serif;
@@ -706,13 +726,26 @@ a {
     border-radius: 10px;
 }
 
+.callback__form-name {
+    width: 49%;
+}
+
+.callback__form-tel {
+    width: 47.2%;
+}
+
+.callback__wr-form-button {
+    width: 26.9%;
+}
+
 .callback__form-button {
     height: 51px;
-    padding: 0 124px;
+    width: 100%;
 
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 20px;
+    text-transform: uppercase;
     color: #ffffff;
 
     background: #9BD0C0;

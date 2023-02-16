@@ -79,12 +79,10 @@
                         </div>
     
                         <div class="popular__wr-choose-chair">
-                            <!-- Здесь сделать с выпадающим вправо списком через инпут -->
                             <input class="popular__choose-chair" type="text" name="choose-chair" placeholder="Выбрать кресло">
-                            <!-- <label class="popular__label-choose-chair" for="popular__select-choose-chair">Выбрать кресло</label>
-                            <select class="popular__select-choose-chair" id="popular__select-choose-chair" type="text" name="choose-chair">
-                                <option value=""></option>
-                            </select> -->
+                        </div>
+                        <div class="popular__wr-choose-chair">
+                            <input class="popular__choose-chair" type="text" name="choose-chair" placeholder="Выбрать кресло">
                         </div>
     
                         <div class="popular__wr-meet-with-sign">
@@ -234,22 +232,28 @@
 
         <div class="callback">
                 <ul class="callback__car-class-list">
-                    <li class="callback__car-class-card car-class-card_polo">
+                    <li class="callback__car-class-card car-class-card_standart">
                         <div class="callback__wr-card-text">
                             <span class="callback__card-text-class">стандарт</span>
-                            <span class="callback__card-text-car">volkswagen polo</span>
+                            <span class="callback__card-text-car">chevrolet aveo</span>
                         </div>
                     </li>
-                    <li class="callback__car-class-card car-class-card_octavia">
+                    <li class="callback__car-class-card car-class-card_comfort">
                         <div class="callback__wr-card-text">
                             <span class="callback__card-text-class">комфорт</span>
                             <span class="callback__card-text-car">skoda octavia</span>
                         </div>
                     </li>
-                    <li class="callback__car-class-card car-class-card_camry">
+                    <li class="callback__car-class-card car-class-card_bizness">
                         <div class="callback__wr-card-text">
-                            <span class="callback__card-text-class">комфорт +</span>
-                            <span class="callback__card-text-car">toyota camry</span>
+                            <span class="callback__card-text-class">бизнесс</span>
+                            <span class="callback__card-text-car">mercedes e</span>
+                        </div>
+                    </li>
+                    <li class="callback__car-class-card car-class-card_miniven">
+                        <div class="callback__wr-card-text">
+                            <span class="callback__card-text-class">минивен</span>
+                            <span class="callback__card-text-car">mercedes viano</span>
                         </div>
                     </li>
                 </ul>
@@ -260,9 +264,13 @@
                     </header>
 
                     <form class="callback__form form-callback" action="" name="callback__form">
-                        <input class="callback__form-name callback__form-inputs" type="text" name="name" placeholder="Имя">
-                        <input class="callback__form-tel callback__form-inputs" type="tel" name="tel" placeholder="+7(___)___ __ __">
-                        <button class="callback__form-button" type="submit" name="submit">отправить</button>
+                        <div class="callback__wr-form-inputs">
+                            <input class="callback__form-name callback__form-inputs" type="text" name="name" placeholder="Имя">
+                            <input class="callback__form-tel callback__form-inputs" type="tel" name="tel" placeholder="+7(___)___ __ __">
+                        </div>
+                        <div class="callback__wr-form-button">
+                            <button class="callback__form-button" type="submit" name="submit">отправить</button>
+                        </div>
                     </form>
                 </div>
         </div>
