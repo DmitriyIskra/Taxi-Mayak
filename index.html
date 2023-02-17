@@ -231,6 +231,9 @@
 
 
         <div class="callback">
+
+            <!-- Картинку в блог img для li ширина 25% внутри позиции по центру при сужении меняем ширину на 50% через @media -->
+
                 <ul class="callback__car-class-list">
                     <li class="callback__car-class-card car-class-card_standart">
                         <div class="callback__wr-card-text">
@@ -258,7 +261,7 @@
                     </li>
                 </ul>
 
-                <div class="callback__wr-collback-form">
+                <div class="callback__wr-collback-form wr-collback-form">
                     <header class="callback__header">
                         <h2 class="callback-title">хотите мы вам перезвоним</h2>
                     </header>
@@ -276,77 +279,116 @@
         </div>
 
         <div class="services">
-            <ul class="services__cards">
-                <li class="services__card">
-                    <div class="services__card-icon"></div>
-                    <h2 class="services__card-title">встреча аэропорт и жд вокзал</h2>
-                    <p class="services__card-text"> 
-                        Прилетев в незнакомый город трудно бывает сориентироваться в информации, заниматься поиском такси, заботится о безопасности багажа. В этом случае вам поможет организованная встреча в аэропорту.
-                        Для удобства специалист встретит с табличкой, на которой будет написано ваше имя.
-                    </p>
-                </li>
-                <li class="services__card">
-                    <div class="services__card-icon"></div>
-                    <h2 class="services__card-title">помощь с подбором жилья</h2>
-                    <p class="services__card-text">
-                        Прилетев в незнакомый город трудно бывает сориентироваться в информации, заниматься поиском такси, заботится о безопасности багажа. В этом случае вам поможет организованная встреча в аэропорту.
-                        Для удобства специалист встретит с табличкой, на которой будет написано ваше имя.
-                    </p>
-                </li>
-                <li class="services__card">
-                    <div class="services__card-icon"></div>
-                    <h2 class="services__card-title">экскурсии по крыму</h2>
-                    <p class="services__card-text">
-                        Прилетев в незнакомый город трудно бывает сориентироваться в информации, заниматься поиском такси, заботится о безопасности багажа. В этом случае вам поможет организованная встреча в аэропорту.
-                        Для удобства специалист встретит с табличкой, на которой будет написано ваше имя.
-                    </p>
-                </li>
-                <li class="services__card">
-                    <div class="services__card-icon"></div>
-                    <h2 class="services__card-title">помощь с багажем</h2>
-                    <p class="services__card-text">
-                        Прилетев в незнакомый город трудно бывает сориентироваться в информации, заниматься поиском такси, заботится о безопасности багажа. В этом случае вам поможет организованная встреча в аэропорту.
-                        Для удобства специалист встретит с табличкой, на которой будет написано ваше имя.
-                    </p>
-                </li>
-            </ul>
+                <ul class="services__cards">
+                    <li class="services__card">
+                        <div class="services__card-icon services__card-icon_meet"></div>
+                        <div class="services__wr-card-text">
+                            <div class="services__wr-title">
+                                <h2 class="services__card-title">
+                                    <span class="services__text-title">встреча</span>
+                                    <span class="services__text-title">аэропорт и жд вокзал</span>   
+                                </h2>
+                            </div>
+                            <p class="services__card-text"> 
+                                Прилетев в незнакомый город трудно бывает сориентироваться в информации, заниматься поиском такси, заботится о безопасности багажа. В этом случае вам поможет организованная встреча в аэропорту.
+                                Для удобства специалист встретит с табличкой, на которой будет написано ваше имя.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="services__card">
+                        <div class="services__card-icon services__card-icon_luggage"></div>
+                        <div class="services__wr-card-text">
+                            <h2 class="services__card-title services__card-title_second-card">
+                                <span class="services__text-title">помощь с багажом</span>
+                            </h2>
+                            <p class="services__card-text">
+                                Прилетев в незнакомый город трудно бывает сориентироваться в информации, заниматься поиском такси, заботится о безопасности багажа. В этом случае вам поможет организованная встреча в аэропорту.
+                                Для удобства специалист встретит с табличкой, на которой будет написано ваше имя.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="services__cards">
+                    <li class="services__card">
+                        <div class="services__card-icon services__card-icon_rent"></div>
+                        <div class="services__wr-card-text">
+                            <h2 class="services__card-title">
+                                <span class="services__text-title">помощь</span>
+                                <span class="services__text-title">с подбором жилья</span>
+                            </h2>
+                            <p class="services__card-text">
+                                Прилетев в незнакомый город трудно бывает сориентироваться в информации, заниматься поиском такси, заботится о безопасности багажа. В этом случае вам поможет организованная встреча в аэропорту.
+                                Для удобства специалист встретит с табличкой, на которой будет написано ваше имя.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="services__card">
+                        <div class="services__card-icon  services__card-icon_excursions"></div>
+                        <div class="services__wr-card-text">
+                            <h2 class="services__card-title services__card-title_second-card">
+                                <span class="services__text-title">организация экскурсий</span>
+                            </h2>
+                            <p class="services__card-text">
+                                Прилетев в незнакомый город трудно бывает сориентироваться в информации, заниматься поиском такси, заботится о безопасности багажа. В этом случае вам поможет организованная встреча в аэропорту.
+                                Для удобства специалист встретит с табличкой, на которой будет написано ваше имя.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
         </div>
 
         <div class="about-us">
-            <ul class="about-us__cards">
-                <li class="about-us__card">
-                    <div class="about-us__icon"></div>
-                    <div class="about-us__wr-card-text">
-                        <span class="about-us__card-text">с нами</span>
-                        <span class="about-us__card-text">безопасно</span>
+            <div class="about-us__wr-title-bear">
+                <div class="about-us__wr-img-title">
+                    <div class="about-us__wr-title">
+                        <h2 class="about-us__title">узнайте о нас больше</h2>
                     </div>
-                </li>
-                <li class="about-us__card">
-                    <div class="about-us__icon"></div>
-                    <div class="about-us__wr-card-text">
-                        <span class="about-us__card-text">у нас новый</span>
-                        <span class="about-us__card-text">автопарк</span>
-                    </div>
-                </li>
-                <li class="about-us__card">
-                    <div class="about-us__icon"></div>
-                    <div class="about-us__wr-card-text">
-                        <span class="about-us__card-text">с нами</span>
-                        <span class="about-us__card-text">всегда легко</span>
-                    </div>
-                </li>
-            </ul>
-
-            <div class="about-us__img"></div>
-
-            <p class="about-us__text"> <!--в свойствах указать для этого блока display: block-->
-                С нами сотрудничают более 2500 профессиональных водителей, отлично знающих местность. У нас Вы можете выбрать такси эконом, стандарт, комфорт, комфорт-плюс и бизнес-класса. Для больших групп предусмотрены минивэны и микроавтобусы.
-                Максимальная безопасность гарантируется каждому пассажиру. Проверенные и опытные водители прекрасно ориентирующихся на горных дорогах и серпантине. Желаете заказать такси Симферополь – Ялта, или в другие населенные пункты? Заказывая у нас, Вы получаете комфортабельную поездку по приемлемой цене.
-                Приедем в любую погоду и время суток – быстрая подача!
-                Для желающих забронировать комфорт такси Симферополь – Севастополь или трансферы по другим маршрутам в обе стороны, мы предоставим скидку до 500 рублей.
-                Ищете дешевое такси в Крыму? Вы уже нашли его! Мы предлагаем самые доступные цены. Нашли дешевле? Звоните нам – мы предоставим скидку!
-                Дешевое Крымское такси. Дешевле – только пешком.
-            </p>
+                    <ul class="about-us__cards">
+                        <li class="about-us__card about-us__card_safely">
+                            <div class="about-us__icon about-us__icon_safely"></div>
+                            <div class="about-us__wr-card-text about-us__wr-card-text_safely">
+                                <span class="about-us__card-text">с нами</span>
+                                <span class="about-us__card-text">безопасно</span>
+                            </div>
+                        </li>
+                        <li class="about-us__card about-us__card_park">
+                            <div class="about-us__icon about-us__icon_park"></div>
+                            <div class="about-us__wr-card-text about-us__wr-card-text_park">
+                                <span class="about-us__card-text">у нас новый</span>
+                                <span class="about-us__card-text">автопарк</span>
+                            </div>
+                        </li>
+                        <li class="about-us__card about-us__card_easy">
+                            <div class="about-us__icon about-us__icon_easy"></div>
+                            <div class="about-us__wr-card-text about-us__wr-card-text_easy">
+                                <span class="about-us__card-text">с нами</span>
+                                <span class="about-us__card-text">всегда легко</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-us__wr-img">
+                    <img class="about-us__img" src="img/bear_mountain.png" alt="Гора медведь">
+                </div>
+            </div>
+            <div class="about-us__wr-text">
+                <p class="about-us__text">
+                    С нами сотрудничают более 2500 профессиональных водителей, отлично знающих местность. У нас Вы можете выбрать такси эконом, стандарт, комфорт, комфорт-плюс и бизнес-класса. Для больших групп предусмотрены минивэны и микроавтобусы.
+                </p>
+                <p class="about-us__text">
+                    Максимальная безопасность гарантируется каждому пассажиру. Проверенные и опытные водители прекрасно ориентирующихся на горных дорогах и серпантине. Желаете заказать такси Симферополь – Ялта, или в другие населенные пункты? Заказывая у нас, Вы получаете комфортабельную поездку по приемлемой цене.
+                    Приедем в любую погоду и время суток – быстрая подача!
+                </p>
+                <p class="about-us__text">
+                    Для желающих забронировать комфорт такси Симферополь – Севастополь или трансферы по другим маршрутам в обе стороны, мы предоставим скидку до 500 рублей.
+                </p>
+                <p class="about-us__text">
+                    Ищете дешевое такси в Крыму? Вы уже нашли его! Мы предлагаем самые доступные цены. Нашли дешевле? Звоните нам – мы предоставим скидку!
+                </p>
+                <p class="about-us__text">
+                    Дешевое Крымское такси. Дешевле – только пешком.
+                </p>
+            </div>
         </div>
         <div class="wr-checkers">
             <div wr-checkers__left></div>

@@ -136,7 +136,7 @@ a {
 .popular {
     padding-top: 87px;
     padding-left: 152px;
-    padding-bottom: 190px;
+    padding-bottom: 133px;
 
     background-color: #FAE4B1;
     background-image: url(../img/lastochka.png);
@@ -389,7 +389,7 @@ a {
 .wr-price-order {
     display: flex;
     padding-top: 35px;
-    padding-bottom: 122px;
+    padding-bottom: 163px;
 
     background-color: #FAE4B1;
 }
@@ -609,7 +609,7 @@ a {
 .callback__car-class-list {
     display: flex;
     min-width: 1064px;
-    max-width: 1432px;
+    max-width: 1586px;
     margin: 0 auto;
 
     justify-content: space-around;
@@ -666,7 +666,7 @@ a {
 
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     gap: 5px;
 }
 
@@ -682,11 +682,14 @@ a {
 
 .callback__wr-collback-form {
     display: flex;
-    margin-top: 101px;
-
+    
     flex-direction: column;
     align-items: center;
     gap: 28px;
+}
+
+.wr-collback-form {
+margin-top: 101px;
 }
 
 .callback-title {
@@ -761,4 +764,221 @@ a {
 }
 
 /* КОНЕЦ АВТОМОБИЛИ КОЛЛБЭК */
+
+
+/* СТАРТ СЕРВИСЫ */
+
+
+.services {
+    display: flex;
+    padding-top: 38px;
+    padding-bottom: 49px;
+    
+    background-color: #FAE4B1;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 74px;
+}
+
+.services__cards {
+    display: flex;
+    margin-left: 31px;
+
+    flex-wrap: wrap;
+    gap: 137px;
+}
+
+.services__card {
+    display: flex;
+}
+
+.services__card-icon {
+    width: 150px;
+}
+
+.services__card-icon_meet {
+    background: no-repeat url(../svg/meet.svg);
+    background-position: bottom center;
+}
+
+.services__card-icon_luggage {
+    background: no-repeat url(../svg/help_luggage.svg);
+    background-position: bottom center;
+}
+
+.services__card-icon_rent {
+    background: no-repeat url(../svg/rent.svg);
+    background-position: bottom center;
+}
+
+.services__card-icon_excursions {
+    background: no-repeat url(../svg/excursions.svg);
+    background-position: bottom center;
+}
+
+.services__card-title {
+    font-family: 'Cakra', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #234C60;
+}
+
+.services__text-title {
+    display: block;
+}
+
+.services__wr-card-text {
+    width: 375px;
+    margin-left: 28px;
+}
+
+.services__card-title_second-card {
+    margin-top: 30px;
+}
+
+.services__card-text {
+    margin-top: 12px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #234C60;
+}
+
+/* КОНЕЦ СЕРВИСЫ */
+
+
+
+/* СТАРТ О НАС */
+
+.about-us {
+    padding-top: 87px;
+    padding-bottom: 68px;
+
+    background-color: #FAE4B1;
+    background-image: url(../img/back-about-us.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.about-us__wr-title-bear {
+    display: flex;
+    width: 84%;
+    margin: 0 auto;
+}
+
+.about-us__wr-img-title {
+    display: flex;
+    width: 49.2%;
+
+    flex-direction: column;
+}
+
+.about-us__title {
+    font-family: 'Cakra', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #234C60;
+}
+
+.about-us__cards {
+    display: flex;
+    margin-top: 28px;
+    margin-bottom: -6px;
+
+    flex-grow: 1;
+    gap: 23px;
+}
+
+.about-us__card {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-us__card_safely, .about-us__card_easy {
+    align-self: flex-end;
+}
+
+.about-us__icon {
+    height: 158px;
+    width: 158px;
+}
+
+.about-us__icon_safely {
+    background: no-repeat url(../svg/convenient_with_us.svg);
+    background-position: center;
+}
+
+.about-us__icon_park {
+    background: no-repeat url(../svg/new_car_park.svg);
+    background-position: center;
+}
+
+.about-us__icon_easy {
+    background: no-repeat url(../svg/easy_with_us.svg);
+    background-position: center;
+}
+
+.about-us__wr-card-text {
+    display: flex;
+    padding: 38px 0 26px;
+
+    background: linear-gradient(180deg, #926829, #E5CFAD);
+    border: 5px solid #9BD0C0;
+    box-shadow: -4px -4px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 0 0;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-us__wr-card-text_safely {
+    width:194px;
+}
+
+.about-us__wr-card-text_park {
+    width:215px;
+}
+
+.about-us__wr-card-text_easy {
+    width:220px;
+}
+
+.about-us__card-text {
+    font-family: 'Cakra';
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.about-us__wr-img {
+    height: 521px;
+    width: 50%; 
+    margin-top: -40px;
+
+    overflow: hidden;
+}
+
+.about-us__img {
+    height: 521px;
+    object-fit: cover;
+}
+
+.about-us__wr-text {
+    margin-top: 50px;
+    padding: 0 151px;
+}
+
+.about-us__text {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    color: #234C60;
+}
+/* КОНЕЦ О НАС */
 
