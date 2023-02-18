@@ -272,9 +272,7 @@ a {
 /* ------------------------------------------- НАЧАЛО ВЕРХНЯЯ ФОРМА ---------------------------------------------- */
 
 .popular {
-    padding-top: 87px;
-    padding-left: 152px;
-    padding-bottom: 133px;
+    padding: 87px 0 195px 152px;
 
     background-color: #FAE4B1;
     background-image: url(../img/lastochka.png);
@@ -292,7 +290,7 @@ a {
 }
 
 .popular__header {
-    padding: 21px 0 19px;
+    padding: 25px 0 19px;
 
     border-radius: 10px 10px 0 0;
     background-image: linear-gradient(to bottom, #926829, #E5CFAD);
@@ -309,7 +307,7 @@ a {
 
 
 .popular__wr-data {
-    padding: 13px 27px 26px 27px;
+    padding: 13px 27px 0 27px;
 
     background: #CFA668;
     border-radius: 0 0 10px 10px;
@@ -352,7 +350,7 @@ a {
 
 .popular__choose-chair {
     width: 100%;
-    height: 50px;
+    height: 53px;
     padding-left: 5px;
 
     font-family: Roboto, Sans-serif;
@@ -372,7 +370,7 @@ a {
 
 
 .popular__wr-meet-with-sign {
-    padding-top: 34px;
+    padding-top: 11px;
 }
 
 .popular__label-meet-with-sign {
@@ -412,8 +410,7 @@ a {
     justify-content: center;
 
     width: 100%;
-    padding: 9px 0 5px;
-    margin-top: 17px;
+    padding-bottom: 5px;
 }
 
 .popular__price {
@@ -431,7 +428,7 @@ a {
 
 
 .popular__wr-button-submit {
-    margin-top: 24px;
+    margin-top: 28px;
 }
 
 .popular__button-submit {
@@ -459,24 +456,24 @@ a {
 .wr-price-order {
     display: flex;
     padding-top: 35px;
-    padding-bottom: 163px;
+    padding-bottom: 121px;
 
     background-color: #FAE4B1;
 }
 
 .wr-price-order__price {
-    width: 50%;
+    width: 79.5%;
     padding-left: 151px;
 }
 
 .wr-price-order__order {
-    width: 50%;
+    /* width: 50%; */
 }
 
     /* Общие свойства элементов форм label input select */
         .wr-price-order__title {
             min-width: 630px;
-            padding-bottom: 22px;
+            padding-bottom: 17px;
         
             font-family: Cakra, sans-serif;
             font-size: 48px;
@@ -508,8 +505,8 @@ a {
     /* ------------------------------------------ */
 
 .wr-price-order__map {
-    height: 86%;
-    width: 92%;
+    height: 532px;
+    width: 93.8%;
     
     border: 1px solid #3B7A67;
     border-radius: 10px;
@@ -517,6 +514,9 @@ a {
 
 
 
+.wr-price-order__form {
+    margin-left: 63px;
+}
 
 .wr-price-order__name-fonnumber {
     display: flex;
@@ -526,12 +526,18 @@ a {
 .wr-price-order__wr-name,
 .wr-price-order__wr-tel {
     min-width: 332px;
-    width: 50%;
+    width: 43.3%;
 }
 
-.wr-price-order__name,
+.wr-price-order__name {
+    height: 50px;
+    width: 96%;
+    margin-top: 2px;
+}
 .wr-price-order__tel {
-    width: 90%;
+    height: 50px;
+    width: 83.7%;
+    margin-top: 5px;
 }
 
 
@@ -548,25 +554,34 @@ a {
 .wr-price-order__wr-time-arrive,
 .wr-price-order__wr-number-flight,
 .wr-price-order__wr-number-wagon {
-    width: 25%;
+    width: 20.5%;
 }
 
 .wr-price-order__date-arrive,
 .wr-price-order__time-arrive,
 .wr-price-order__number-flight,
 .wr-price-order__number-wagon {
-    width: 90%;
+    height: 50px;
+    width: 90.6%;
+    margin-top: 5px;
 }
 
 
 
 .wr-price-order__wr-car-class {
-    width: 42.7%;
+    width: 35.5%;
     margin-top: 20px;
 }
 
 .wr-price-order__car-class-list {
+    height: 50px;
     width: 100%;
+
+    background-image: url(../svg/select-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: top 49% right 8%;
+
+    appearance: none;
 }
 
 
@@ -574,7 +589,7 @@ a {
 .wr-price-order__wr-chairs {
     display: flex;
 
-    width: 60%;
+    width: 49%;
     margin-top: 20px;
 }
 
@@ -583,7 +598,12 @@ a {
 }
 
 .wr-price-order__type-chair {
-    width: 95%;
+    height: 50px;
+    width: 96.1%;
+
+    background-image: url(../svg/select-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: top 49% right 8%;
 }
 
 .wr-price-order__wr-amount-chair {
@@ -591,13 +611,20 @@ a {
 }
 
 .wr-price-order__amount-chair {
-    width: 90%;
+    height: 50px;
+    width: 86%;
+
+    background-image: url(../svg/select-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: top 49% right 21%;
+
+    appearance: none;
 }
 
 
 
 .wr-price-order__wr-meet {
-    margin-top: 34px;
+    margin-top: 35px;
 }
 
 .wr-price-order__meet {
@@ -619,7 +646,7 @@ a {
     display: inline-block;
     width: 30px;
     height: 30px;
-    margin-right: 15px;
+    margin-right: 10px;
     box-sizing: border-box;
 
     border: 1px solid #CFA668;
@@ -637,7 +664,7 @@ a {
 
 
 .wr-price-order__wr-button-submit {
-    width: 52%;
+    width: 41.5%;
     margin-top: 29px;
 }
 
@@ -679,10 +706,11 @@ a {
 .callback__car-class-list {
     display: flex;
     min-width: 1064px;
-    max-width: 1586px;
+    max-width: 1602px;
     margin: 0 auto;
 
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 82px;
 }
 
 .callback__car-class-card {
@@ -722,8 +750,7 @@ a {
 .callback__wr-card-text {
     display: flex;
     height: 156px;
-    width: 271px;
-    margin-bottom: -16px;
+    margin-bottom: -19px;
 
     font-family: Cakra, sans-serif;
     font-weight: 400;
@@ -738,6 +765,22 @@ a {
     align-items: center;
     justify-content: center; 
     gap: 5px;
+}
+
+.callback__wr-card-text-aveo {
+    width: 245px;
+}
+
+.callback__wr-card-text-octavia {
+    width: 271px;
+}
+
+.callback__wr-card-text-e {
+    width: 211px;
+}
+
+.callback__wr-card-text-viano {
+    width: 245px;
 }
 
 .callback__card-text-class {
@@ -755,17 +798,20 @@ a {
     
     flex-direction: column;
     align-items: center;
-    gap: 28px;
+    gap: 24px;
 }
 
 .wr-collback-form {
-margin-top: 101px;
+margin-top: 106px;
 }
 
 .callback-title {
+    margin-left: 53px;
+
     font-family: Cakra, sans-serif;
     font-weight: 400;
     font-size: 48px;
+    text-transform: uppercase;
     color: #9BD0C0;
 }
 
@@ -890,7 +936,7 @@ margin-top: 101px;
 
 .about-us {
     padding-top: 87px;
-    padding-bottom: 68px;
+    padding-bottom: 66px;
 
     background-color: #FAE4B1;
     background-image: url(../img/back-about-us.png);
@@ -1016,7 +1062,8 @@ margin-top: 101px;
 .about-us__text {
     font-family: 'Roboto';
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.05vw;
+    /* font-size: 20px; */
     color: #234C60;
 }
 /* ------------------------------------------- КОНЕЦ О НАС ------------------------------------------- */
@@ -1028,6 +1075,7 @@ margin-top: 101px;
 .footer {
     display: flex;
     padding-top: 27px;
+    padding-bottom: 60px;
 
     background-color: #3B7A67;
     border-top: 3px solid #234C60;
