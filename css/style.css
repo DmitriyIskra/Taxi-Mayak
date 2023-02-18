@@ -66,7 +66,7 @@ a {
 /*------ КОНЕЦ ФОРМА КОЛЛБЭК ОБЩИЕ СВОЙСТВА -----*/
 
 
-/*------ СТАРТ ОБЩИЕ СВОЙСТВА -----*/
+/*------ СТАРТ ОБЩИЕ СВОЙСТВА ЛОГО -----*/
 
     .logo {
         height: 47px;
@@ -81,7 +81,57 @@ a {
         background-position: left 29% center;
     }
 
-/*------ КОНЕЦ ОБЩИЕ СВОЙСТВА -----*/
+/*------ КОНЕЦ ОБЩИЕ СВОЙСТВА ЛОГО -----*/
+
+
+/*------ СТАРТ ОБЩИЕ СВОЙСТВА КОНТАКТЫ -----*/
+.contacts {
+    display: flex;
+}
+
+.contacts-tel {
+    min-width: 180px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.contacts-social-icons {
+    display: flex;
+}
+
+.contacts-wr-viber {
+    height: 50px;
+}
+
+.contacts-viber-link {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+
+    background: no-repeat url(../svg/icon-viber.svg);
+    background-position: center right;
+}
+
+.contacts-wr-whatsapp {
+    height: 50px;
+}
+
+.contacts-whatsapp-link {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+
+    background: no-repeat url(../svg/icon-whatsapp.svg);
+    background-position: center right;
+}
+
+/*------ КОНЕЦ ОБЩИЕ СВОЙСТВА КОНТАКТЫ -----*/
+
+
 
 /* Всплывающая форма для выбора кресла */
 
@@ -195,66 +245,26 @@ a {
     color: #ffffff;
 }
 
-.contacts {
-    display: flex;
-}
-
 .header__contacts {
     width: 35%;
 
     align-items: center;
 }
 
-.contacts-tel {
-    min-width: 180px;
-
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    color: #ffffff;
-}
-
 .header__tel {
-    margin-left: 2.1em;
-}
-
-.contacts-social-icons {
-    display: flex;
-    width: 40%;
-}
-
-.contacts-wr-viber {
-    height: 50px;
+    margin-left: 57px;
 }
 
 .header__social-icons {
     width: 66%;
 }
 
-.contacts-viber-link {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-
-    background: no-repeat url(../svg/icon-viber.svg);
-    background-position: center right;
-}
-
-.contacts-wr-whatsapp {
-    height: 50px;
+.header__wr-viber {
+    width: 40%;
 }
 
 .header__wr-whatsapp {
-    width: 33%;
-}
-
-.contacts-whatsapp-link {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-
-    background: no-repeat url(../svg/icon-whatsapp.svg);
-    background-position: center right;
+    width: 20%;
 }
 
 /* ------------------------------------------- КОНЕЦ ХЕДЕР ---------------------------------------------- */
@@ -1025,6 +1035,10 @@ margin-top: 101px;
     justify-content: center;
 }
 
+.footer__wr-logo-nav {
+    margin-left: 27px;
+}
+
 .footer__wr-logo {
     height: 113px;
     width: 75%;
@@ -1058,10 +1072,11 @@ margin-top: 101px;
 
     flex-grow: 0.7;
     flex-direction: column;
+    align-items: center;
 }
 
 .footer__header {
-    align-self: center;
+    margin-left: 98px;
 }
 
 .footer__title {
@@ -1072,18 +1087,52 @@ margin-top: 101px;
     color: #9BD0C0;
 }
 
+.footer__form {
+    width: 93.8%;
+    margin-top: 23px;
 
+    justify-content: flex-end;
+}
+
+.footer__wr-form-inputs {
+    width: 67.3%;
+}
+
+.footer__form-name {
+    width: 44%;
+}
+
+.footer__form-tel {
+    width: 42.2%;
+    margin-left: 28px;
+}
+
+.footer__wr-form-button {
+    width: 28%;
+    padding-left: 27px;
+}
+
+.footer__form-button {
+    width: 100%;
+}
 
 .footer__contacts {
+    margin-top: 39px;
+    margin-right: 36px;
+
     align-self: flex-end;
 }
 
 .footer__tel {
+    margin-right: 36px;
+
     align-self: center;
 }
 
 .footer__social-icons {
     width: 145px;
+
+    gap: 41px;
 }
 
 .footer__wr-viber, 
