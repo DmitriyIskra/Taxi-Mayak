@@ -19,11 +19,140 @@ a {
     color: black; 
 }
 
+/*------ СТАРТ ФОРМА КОЛЛБЭК ОБЩИЕ СВОЙСТВА -----*/
+
+    .form-callback {
+        display: flex;
+    }
+
+    .wr-form-inputs {
+        display: flex;
+    }
+
+    .callback-form-inputs {
+        height: 51px;
+        padding: 0 16px;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        color: #383838;
+
+        border: 1px solid #BFBFBF;
+        border-radius: 10px;
+    }
+
+    .callback-form-button {
+        height: 51px;
+
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #ffffff;
+
+        background: #9BD0C0;
+        border: 1px solid #234C60;
+        box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+
+        cursor: pointer;
+    }
+
+    .callback-form-button:active {
+        box-shadow: none;
+    }
+
+/*------ КОНЕЦ ФОРМА КОЛЛБЭК ОБЩИЕ СВОЙСТВА -----*/
 
 
-/* font-family: 'Roboto', sans-serif; */
+/*------ СТАРТ ОБЩИЕ СВОЙСТВА -----*/
 
-/* у кнопок при нажатии тень исчезает */
+    .logo {
+        height: 47px;
+    }
+
+    .link-logo {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+
+        background: no-repeat url(../svg/logo.svg);
+        background-position: left 29% center;
+    }
+
+/*------ КОНЕЦ ОБЩИЕ СВОЙСТВА -----*/
+
+/* Всплывающая форма для выбора кресла */
+
+    .wr-price-order__wr-modal-type-chair {
+        position: absolute;
+
+        display: none;
+    }
+
+    .wr-type-chair_active {
+        display: block;
+    }
+
+    .wr-price-order__type-chair-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 347px;
+        width: 345px;
+        padding: 44px 38px 0 34px;
+
+        font-family: 'Roboto', sans-serif;
+
+        background-color: #CFA668;
+        border-radius: 20px;
+    }
+
+    .type-chair-item_last {
+        padding-top: 9px;
+    }
+
+    .wr-price-order__label-type-chair {
+        display: flex;
+        width: 100%;
+
+        font-size: 20px;
+        font-weight: 400;
+
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .wr-price-order__label-type-chair::after {
+        content: '';
+
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+
+        background: #DFDFDF;
+        border: 1px solid #9BD0C0;
+        border-radius: 50%;
+    }
+
+    .wr-price-order__radio-chair:checked + .wr-price-order__label-type-chair::after {
+        background: #234C60;
+        border: 1px solid #828282;
+    }
+
+    .wr-price-order__radio-chair {
+        display: none;
+    }
+
+    .wr-price-order__child-max-wight {
+        display: block;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+/* Всплывающая форма для выбора кресла */
+
 
 /* ------------------------------------------- НАЧАЛО ХЕДЕР ---------------------------------------------- */
 .wr-all {
@@ -48,19 +177,7 @@ a {
 }
 
 .header__wr-logo {
-    height: 47px;
     width: 32.2%;
-    /* margin-left: 151px;
-    margin-right: 375px; */
-}
-
-.header__logo {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-
-    background: no-repeat url(../svg/logo.svg);
-    background-position: left 29% center;
 }
 
 .header__nav {
@@ -80,29 +197,37 @@ a {
 
 .contacts {
     display: flex;
+}
 
+.header__contacts {
     width: 35%;
-    /* margin-left: 54px; */
 
     align-items: center;
-    /* gap: 125px; */
 }
 
 .contacts-tel {
     min-width: 180px;
-    margin-left: 2.1em;
 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
     color: #ffffff;
+}
+
+.header__tel {
+    margin-left: 2.1em;
 }
 
 .contacts-social-icons {
     display: flex;
     width: 40%;
-    /* gap: 40px; */
 }
 
 .contacts-wr-viber {
     height: 50px;
+}
+
+.header__social-icons {
     width: 66%;
 }
 
@@ -117,6 +242,9 @@ a {
 
 .contacts-wr-whatsapp {
     height: 50px;
+}
+
+.header__wr-whatsapp {
     width: 33%;
 }
 
@@ -313,78 +441,10 @@ a {
 }
 
 /* ------------------------------------------- КОНЕЦ ВЕРХНЯЯ ФОРМА ---------------------------------------------- */
-        /* Форма для выбора кресла */
-
-        .wr-price-order__wr-modal-type-chair {
-            position: absolute;
-
-            display: none;
-        }
-
-        .wr-type-chair_active {
-            display: block;
-        }
-
-        .wr-price-order__type-chair-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            height: 347px;
-            width: 345px;
-            padding: 44px 38px 0 34px;
-
-            font-family: 'Roboto', sans-serif;
-
-            background-color: #CFA668;
-            border-radius: 20px;
-        }
-
-        .type-chair-item_last {
-            padding-top: 9px;
-        }
-
-        .wr-price-order__label-type-chair {
-            display: flex;
-            width: 100%;
-
-            font-size: 20px;
-            font-weight: 400;
-
-            justify-content: space-between;
-            cursor: pointer;
-        }
-
-        .wr-price-order__label-type-chair::after {
-            content: '';
-
-            display: inline-block;
-            width: 25px;
-            height: 25px;
-
-            background: #DFDFDF;
-            border: 1px solid #9BD0C0;
-            border-radius: 50%;
-        }
-
-        .wr-price-order__radio-chair:checked + .wr-price-order__label-type-chair::after {
-            background: #234C60;
-            border: 1px solid #828282;
-        }
-
-        .wr-price-order__radio-chair {
-            display: none;
-        }
-
-        .wr-price-order__child-max-wight {
-            display: block;
-            font-size: 16px;
-            font-weight: 300;
-        }
-
-        /* Форма для выбора кресла */
+        
 
 
-/* СТАРТ КАРТА И ФОРМА ЗАКАЗА */
+/* ------------------------------------------- СТАРТ КАРТА И ФОРМА ЗАКАЗА ------------------------------------------- */
 
 .wr-price-order {
     display: flex;
@@ -593,9 +653,9 @@ a {
 .wr-price-order__button-submit:active {
     box-shadow: none;
 }
-/* КОНЕЦ КАРТА И ФОРМА ЗАКАЗА */
+/* ------------------------------------------- КОНЕЦ КАРТА И ФОРМА ЗАКАЗА ------------------------------------------- */
 
-/* СТАРТ АВТОМОБИЛИ КОЛЛБЭК */
+/* ------------------------------------------- СТАРТ АВТОМОБИЛИ КОЛЛБЭК ------------------------------------------- */
 
 .callback {
     padding-bottom: 138px;
@@ -700,33 +760,17 @@ margin-top: 101px;
 }
 
 .callback__form {
-    display: flex;
     width: 65.3%;
 
     justify-content: space-between;
 }
 
+
 .callback__wr-form-inputs {
-    display: flex;
     width: 62.7%;
     margin-left: 18px;
 
     justify-content: space-between;
-}
-
-.callback__form-inputs {
-    height: 51px;
-    width: 27.5%;
-    padding: 0 16px;
-
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    color: #383838;
-
-    border: 1px solid #BFBFBF;
-    border-radius: 10px;
 }
 
 .callback__form-name {
@@ -742,31 +786,13 @@ margin-top: 101px;
 }
 
 .callback__form-button {
-    height: 51px;
     width: 100%;
-
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #ffffff;
-
-    background: #9BD0C0;
-    border: 1px solid #234C60;
-    box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-
-    cursor: pointer;
 }
 
-.callback__form-button:active {
-    box-shadow: none;
-}
-
-/* КОНЕЦ АВТОМОБИЛИ КОЛЛБЭК */
+/* ------------------------------------------- КОНЕЦ АВТОМОБИЛИ КОЛЛБЭК ------------------------------------------- */
 
 
-/* СТАРТ СЕРВИСЫ */
+/* ------------------------------------------- СТАРТ СЕРВИСЫ ------------------------------------------- */
 
 
 .services {
@@ -846,11 +872,11 @@ margin-top: 101px;
     color: #234C60;
 }
 
-/* КОНЕЦ СЕРВИСЫ */
+/* ------------------------------------------- КОНЕЦ СЕРВИСЫ ------------------------------------------- */
 
 
 
-/* СТАРТ О НАС */
+/* ------------------------------------------- СТАРТ О НАС ------------------------------------------- */
 
 .about-us {
     padding-top: 87px;
@@ -904,28 +930,31 @@ margin-top: 101px;
 }
 
 .about-us__icon {
-    height: 158px;
-    width: 158px;
+    height: 8vw;
+    width: 8vw;
 }
 
 .about-us__icon_safely {
     background: no-repeat url(../svg/convenient_with_us.svg);
     background-position: center;
+    background-size: 100%;
 }
 
 .about-us__icon_park {
     background: no-repeat url(../svg/new_car_park.svg);
     background-position: center;
+    background-size: 100%;
 }
 
 .about-us__icon_easy {
     background: no-repeat url(../svg/easy_with_us.svg);
     background-position: center;
+    background-size: 100%;
 }
 
 .about-us__wr-card-text {
     display: flex;
-    padding: 38px 0 26px;
+    padding: 1.98vw 0 1.48vw;
 
     background: linear-gradient(180deg, #926829, #E5CFAD);
     border: 5px solid #9BD0C0;
@@ -937,36 +966,36 @@ margin-top: 101px;
 }
 
 .about-us__wr-card-text_safely {
-    width:194px;
+    width: 10.1vw;
 }
 
 .about-us__wr-card-text_park {
-    width:215px;
+    width: 11.2vw;
 }
 
 .about-us__wr-card-text_easy {
-    width:220px;
+    width: 11.5vw;
 }
 
 .about-us__card-text {
     font-family: 'Cakra';
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.05vw;
     text-transform: uppercase;
     color: #ffffff;
 }
 
+
 .about-us__wr-img {
     height: 521px;
-    width: 50%; 
+    width: 49.5%; 
     margin-top: -40px;
 
-    overflow: hidden;
-}
-
-.about-us__img {
-    height: 521px;
-    object-fit: cover;
+    border: 1px solid #3B7A67;
+    border-radius: 10px;
+    background: no-repeat url(../img/bear_mountain.png);
+    background-position: center;
+    background-size: cover;
 }
 
 .about-us__wr-text {
@@ -980,5 +1009,86 @@ margin-top: 101px;
     font-size: 20px;
     color: #234C60;
 }
-/* КОНЕЦ О НАС */
+/* ------------------------------------------- КОНЕЦ О НАС ------------------------------------------- */
 
+
+
+/* ------------------------------------------- СТАРТ FOOTER ------------------------------------------- */
+
+.footer {
+    display: flex;
+    padding-top: 27px;
+
+    background-color: #3B7A67;
+    border-top: 3px solid #234C60;
+
+    justify-content: center;
+}
+
+.footer__wr-logo {
+    height: 113px;
+    width: 75%;
+}
+
+.footer__logo {
+    background-size: 210px 113px;
+}
+
+.footer__nav {
+    margin-top: 7px;
+}
+
+.footer__nav-list {
+    display: flex;
+
+    flex-direction: column;
+    gap: 13px;
+}
+
+.footer__nav-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.footer__wr-callback {
+    display: flex;
+    padding-top: 8px;
+
+    flex-grow: 0.7;
+    flex-direction: column;
+}
+
+.footer__header {
+    align-self: center;
+}
+
+.footer__title {
+    font-family: Cakra, sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #9BD0C0;
+}
+
+
+
+.footer__contacts {
+    align-self: flex-end;
+}
+
+.footer__tel {
+    align-self: center;
+}
+
+.footer__social-icons {
+    width: 145px;
+}
+
+.footer__wr-viber, 
+.footer__wr-whatsapp {
+    width: 50px;
+}
+
+/* ------------------------------------------- КОНЕЦ FOOTER ------------------------------------------- */

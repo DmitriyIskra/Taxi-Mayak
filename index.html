@@ -12,8 +12,8 @@
 </head>
 <body>
     <header class="header">
-        <div class="header__wr-logo">
-            <a class="header__logo" href="#"></a>
+        <div class="header__wr-logo logo">
+            <a class="header__logo link-logo" href="#"></a>
         </div>
         <nav class="header__nav">
             <ul class="header__menu-list">
@@ -267,12 +267,12 @@
                     </header>
 
                     <form class="callback__form form-callback" action="" name="callback__form">
-                        <div class="callback__wr-form-inputs">
-                            <input class="callback__form-name callback__form-inputs" type="text" name="name" placeholder="Имя">
-                            <input class="callback__form-tel callback__form-inputs" type="tel" name="tel" placeholder="+7(___)___ __ __">
+                        <div class="callback__wr-form-inputs wr-form-inputs">
+                            <input class="callback__form-name callback-form-inputs" type="text" name="name" placeholder="Имя">
+                            <input class="callback__form-tel callback-form-inputs" type="tel" name="tel" placeholder="+7(___)___ __ __">
                         </div>
                         <div class="callback__wr-form-button">
-                            <button class="callback__form-button" type="submit" name="submit">отправить</button>
+                            <button class="callback__form-button callback-form-button" type="submit" name="submit">отправить</button>
                         </div>
                     </form>
                 </div>
@@ -367,9 +367,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="about-us__wr-img">
-                    <img class="about-us__img" src="img/bear_mountain.png" alt="Гора медведь">
-                </div>
+                <div class="about-us__wr-img"></div>
             </div>
             <div class="about-us__wr-text">
                 <p class="about-us__text">
@@ -397,7 +395,9 @@
     </main>
     <footer class="footer">
         <div class="footer__wr-logo-nav">
-            <div class="footer__logo"></div>
+            <div class="footer__wr-logo logo">
+                <a class="footer__logo link-logo" href="#"></a>
+            </div>
             <nav class="footer__nav">
                 <ul class="footer__nav-list">
                     <li class="footer__nav-item">
@@ -422,16 +422,24 @@
             </header>
 
             <form class="footer__form form-callback" action="" name="footer__form">
-                <input type="text" name="name" placeholder="Имя">
-                <input type="tel" name="tel" placeholder="+7(___)___ __ __">
-                <button type="submit" name="submit">отправить</button>
+                <div class="footer__wr-form-inputs">
+                    <input class="footer__form-name callback-form-inputs" type="text" name="name" placeholder="Имя">
+                    <input class="footer__form-tel callback-form-inputs" type="tel" name="tel" placeholder="+7(___)___ __ __">
+                </div>
+                <div class="footer__wr-form-button">
+                    <button class="footer__form-button callback-form-button" type="submit" name="submit">отправить</button>
+                </div>
             </form>
 
-            <address class="header__contacts contacts">
-                <a class="header__tel contacts-tel" href="tel:+8 888 888 88 88">8 888 888 88 88</a>
-                <ul class="header__social-icons contacts-social-icons">
-                    <li class="header__viber contacts-viber"></li>
-                    <li class="header__whatsapp contacts-whatsapp"></li>
+            <address class="footer__contacts contacts">
+                <a class="footer__tel contacts-tel" href="tel:+8 888 888 88 88">8 888 888 88 88</a>
+                <ul class="footer__social-icons contacts-social-icons">
+                    <li class="footer__wr-viber contacts-wr-viber">
+                        <a class="footer__viber-link contacts-viber-link" href="#"></a>
+                    </li>
+                    <li class="footer__wr-whatsapp contacts-wr-whatsapp">
+                        <a class="footer__whatsapp-link contacts-whatsapp-link" href="#"></a>
+                    </li>
                 </ul>
             </address>
         </div>
