@@ -926,7 +926,7 @@ margin-top: 106px;
 
 .services__card-icon_excursions {
     background: no-repeat url(../svg/excursions.svg);
-    background-position: bottom center;
+    background-position: bottom -13px center;
 }
 
 .services__card-title {
