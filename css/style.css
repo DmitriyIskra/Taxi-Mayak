@@ -442,9 +442,14 @@ a {
 
     background-color: #9BD0C0;
     border: 1px solid #234C60;
+    box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     color: #ffffff;
     cursor: pointer;
+}
+
+.popular__button-submit:active {
+    box-shadow: none;
 }
 
 /* ------------------------------------------- КОНЕЦ ВЕРХНЯЯ ФОРМА ---------------------------------------------- */
@@ -520,7 +525,9 @@ a {
 
 .wr-price-order__name-fonnumber {
     display: flex;
+
     flex-wrap: wrap;
+    align-items: flex-end;
 }
 
 .wr-price-order__wr-name,
@@ -548,6 +555,8 @@ a {
     min-width: 585px;
     width: 90%;
     margin-top: 28px;
+
+    align-items: flex-end;
 }
 
 .wr-price-order__wr-date-arrive,
@@ -671,7 +680,6 @@ a {
 .wr-price-order__button-submit {
     height: 55px;
     width: 100%;
-    padding: 15px 124px;
 
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -700,37 +708,49 @@ a {
     background-color: #FAE4B1;
     background-image: url(../img/callback.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom center;
 }
 
 .callback__car-class-list {
     display: flex;
-    min-width: 1064px;
     max-width: 1602px;
     margin: 0 auto;
 
     justify-content: flex-start;
-    gap: 82px;
+    gap: 4.3vw;
+    /* gap: 82px; */
 }
 
 .callback__car-class-card {
     display: flex;
 
-    height: 492px;
-    width: 333px;
-    margin-top: -64px;
+    height: 25.63vw;
+    /* height: 492px; */
+    /* width: 333px; */
+    margin-top: -3.25vw;
+    /* margin-top: -64px; */
 
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.25);
-    background-repeat: no-repeat;
-    background-position: center top;
+    /* background-repeat: no-repeat;
+    background-position: center top; */
 
-    align-items: flex-end;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.car-class-card_standart {
+.callback__wr-img {
+    height: 200px;
+}
+
+.callback__img {
+    display: inline-block;
+    width: 17.344vw;
+}
+
+/* .car-class-card_standart {
     background-image: url(../img/chevrolet-aveo.png);
 }
 
@@ -744,12 +764,13 @@ a {
 
 .car-class-card_miniven {
     background-image: url(../img/mercedes-viano.png);
-}
+} */
 
 
 .callback__wr-card-text {
     display: flex;
-    height: 156px;
+    height: 8.595vw;
+    /* height: 156px; */
     margin-bottom: -19px;
 
     font-family: Cakra, sans-serif;
@@ -768,27 +789,36 @@ a {
 }
 
 .callback__wr-card-text-aveo {
-    width: 245px;
+    width: 14.12vw;
+    /* width: 12.76vw; */
+    /* width: 245px; */
 }
 
 .callback__wr-card-text-octavia {
-    width: 271px;
+    width: 14.12vw;
+    /* width: 271px; */
 }
 
 .callback__wr-card-text-e {
-    width: 211px;
+    width: 14.12vw;
+    /* width: 10.99vw; */
+    /* width: 211px; */
 }
 
 .callback__wr-card-text-viano {
-    width: 245px;
+    width: 14.12vw;
+    /* width: 12.76vw; */
+    /* width: 245px; */
 }
 
 .callback__card-text-class {
-    font-size: 36px;
+    font-size: 1.88vw;
+    /* font-size: 36px; */
 }
 
 .callback__card-text-car {
-    font-size: 24px;
+    font-size: 1.25vw;
+    /* font-size: 24px; */
 }
 
 
@@ -1090,6 +1120,7 @@ margin-top: 106px;
 .footer__wr-logo {
     height: 113px;
     width: 75%;
+    margin-top: -10px;
 }
 
 .footer__logo {
@@ -1102,6 +1133,7 @@ margin-top: 106px;
 
 .footer__nav-list {
     display: flex;
+    margin-top: 17px;
 
     flex-direction: column;
     gap: 13px;
@@ -1189,3 +1221,110 @@ margin-top: 106px;
 }
 
 /* ------------------------------------------- КОНЕЦ FOOTER ------------------------------------------- */
+
+
+
+/* --------- @@@@@@ MEDIA @@@@@@@ ------------- */
+
+
+/* ------- HEADER */
+@media (max-width: 1366px) {
+    .header__wr-logo {
+        width: 27.2%;
+    }
+}
+
+@media (max-width: 1366px) {
+    .header__wr-whatsapp {
+        width: 32%;
+    }
+}
+
+/* ------- ФОРМА ЗАКАЗА */
+
+@media (max-width: 1366px) {
+    .wr-price-order__price {
+        padding-left: 44px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .wr-price-order__form {
+        margin-left: 24px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .wr-price-order__wr-name, .wr-price-order__wr-tel {
+        min-width: 315px;
+        width: 43.3%;
+    }
+}
+
+@media (max-width: 1366px) {
+    .wr-price-order__wr-data-of-transport {
+        width: 97%;
+    }
+}
+
+@media (max-width: 1366px) {
+    .wr-price-order__wr-date-arrive,
+    .wr-price-order__wr-time-arrive,
+    .wr-price-order__wr-number-flight,
+    .wr-price-order__wr-number-wagon {
+        width: 29.5%;
+    }
+}
+
+@media (max-width: 1366px) {
+    .wr-price-order__date-arrive,
+    .wr-price-order__time-arrive,
+    .wr-price-order__number-flight,
+    .wr-price-order__number-wagon {
+        width: 94.6%;
+    }
+}
+
+@media (max-width: 1366px) {
+    .wr-price-order__wr-button-submit {
+        width: 59.5%;
+    }
+}
+
+
+/* ------- CALLBACK */
+
+@media (max-width:1895px) {
+    .callback__car-class-list {
+        justify-content: center;
+    }
+}
+
+
+/* ------- SERVICES */
+@media (max-width: 1366px) {
+    .about-us__wr-title-bear {
+        width: 94%;
+    }
+}
+
+@media (max-width: 1366px) {
+    .about-us__wr-img-title {
+        width: 46.2%;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .about-us__wr-img {
+        width: 51.5%;
+        margin-left: 18px; 
+    }
+}
+
+
+
+
+
+
+
