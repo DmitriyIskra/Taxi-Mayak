@@ -1240,11 +1240,30 @@ margin-top: 106px;
     }
 }
 
+@media (max-width: 1280px) {
+    .header__wr-whatsapp {
+        width: 38%;
+    }
+}
+
 /* ------- ФОРМА ЗАКАЗА */
 
 @media (max-width: 1366px) {
     .wr-price-order__price {
         padding-left: 44px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .wr-price-order__price {
+        width: 46%;
+        padding-left: 47px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .wr-price-order__map {
+        width: 100%;
     }
 }
 
@@ -1254,10 +1273,54 @@ margin-top: 106px;
     }
 }
 
+
+@media (max-width: 1280px) {
+    .wr-price-order__title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .wr-price-order__order {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .wr-price-order__form {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1280px) {
+    .wr-price-order__name-fonnumber {
+        width: 478px;
+    }
+}
+
 @media (max-width: 1366px) {
-    .wr-price-order__wr-name, .wr-price-order__wr-tel {
+    .wr-price-order__wr-name,
+    .wr-price-order__wr-tel {
         min-width: 315px;
         width: 43.3%;
+    }
+}
+
+@media (max-width:1280px) {
+    .wr-price-order__wr-name {
+        width: 53.3%;
+    }
+}
+
+@media (max-width:1280px) {
+    .wr-price-order__wr-tel {
+        width: none;
+    }
+}
+
+@media (max-width:1280px) {
+    .wr-price-order__tel {
+        width: 95.7%;
     }
 }
 
@@ -1267,12 +1330,30 @@ margin-top: 106px;
     }
 }
 
+@media (max-width: 1280px) {
+    .wr-price-order__wr-data-of-transport {
+        width: 544px;
+        min-width: 498px;
+
+        flex-wrap: wrap;
+    }
+}
+
 @media (max-width: 1366px) {
     .wr-price-order__wr-date-arrive,
     .wr-price-order__wr-time-arrive,
     .wr-price-order__wr-number-flight,
     .wr-price-order__wr-number-wagon {
         width: 29.5%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .wr-price-order__wr-date-arrive,
+    .wr-price-order__wr-time-arrive,
+    .wr-price-order__wr-number-flight,
+    .wr-price-order__wr-number-wagon {
+        width: 49.5%;
     }
 }
 
@@ -1301,8 +1382,18 @@ margin-top: 106px;
     }
 }
 
-
 /* ------- SERVICES */
+
+@media (max-width: 1280px) {
+    .services__cards {
+        margin-left: 0;
+
+        gap: 29px;
+    }
+}
+
+/* ------------- ABOUT US */
+
 @media (max-width: 1366px) {
     .about-us__wr-title-bear {
         width: 94%;
@@ -1322,7 +1413,6 @@ margin-top: 106px;
         margin-left: 18px; 
     }
 }
-
 
 
 
