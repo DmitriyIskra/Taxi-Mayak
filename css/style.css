@@ -1267,6 +1267,14 @@ margin-top: 106px;
 
 /* --------- @@@@@@ MEDIA @@@@@@@ ------------- */
 
+/* -------- CHECKERS */
+
+@media (max-width: 1570px) {
+    .wr-checkers {
+        display: none;
+    }
+}
+
 
 /* ------- HEADER */
 @media (max-width: 1366px) {
