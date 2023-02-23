@@ -90,7 +90,7 @@ a {
 }
 
 .contacts-tel {
-    min-width: 180px;
+    min-width: 190px;
 
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -226,6 +226,18 @@ a {
     align-items: center;
 }
 
+.header__icon-mobile {
+    display: none;
+    height: 30px;
+    width: 30px;
+
+    background: no-repeat url(../svg/icon-menu-mobile.svg);
+    background-position: center;
+    background-size: 30px;
+
+    cursor: pointer;
+}
+
 .header__wr-logo {
     width: 32.2%;
 }
@@ -241,7 +253,7 @@ a {
     justify-content: space-between;
 }
 
-.header__menu-link {
+.header__menu-link { 
     color: #ffffff;
 }
 
@@ -252,11 +264,12 @@ a {
 }
 
 .header__tel {
+    width: 30%;
     margin-left: 57px;
 }
 
 .header__social-icons {
-    width: 66%;
+    width: 57%;
 }
 
 .header__wr-viber {
@@ -264,9 +277,18 @@ a {
 }
 
 .header__wr-whatsapp {
-    width: 20%;
+    width: 23%;
 }
 
+.header__icon-telefone {
+    display: none;
+    width: 30px;
+    height: 30px;
+
+    background: no-repeat url(../svg/icon-telefone.svg);
+    background-position: center;
+    background-size: 30px;
+}
 /* ------------------------------------------- КОНЕЦ ХЕДЕР ---------------------------------------------- */
 
 /* ------------------------------------------- НАЧАЛО ВЕРХНЯЯ ФОРМА ---------------------------------------------- */
@@ -298,7 +320,7 @@ main {
     padding: 25px 0 19px;
 
     border-radius: 10px 10px 0 0;
-    background-image: linear-gradient(to bottom, #926829, #E5CFAD);
+    background: rgba(0, 0, 0, 0.45);
 }
 
 .popular__title {
@@ -314,8 +336,9 @@ main {
 .popular__wr-data {
     padding: 13px 27px 0 27px;
 
-    background: #CFA668;
+    background: rgba(0, 0, 0, 0.45);
     border-radius: 0 0 10px 10px;
+    color: #ffffff;
 }
 
 .popular__wr-selects {
@@ -471,14 +494,11 @@ main {
     background-color: #FAE4B1;
 }
 
-.wr-price-order__price {
+.wr-price-order__price { 
     width: 79.5%;
     padding-left: 151px;
 }
 
-.wr-price-order__order {
-    /* width: 50%; */
-}
 
     /* Общие свойства элементов форм label input select */
         .wr-price-order__title {
@@ -1264,7 +1284,7 @@ margin-top: 106px;
 /* ------------------------------------------- КОНЕЦ FOOTER ------------------------------------------- */
 
 
-
+/* 360 768 1080 1179 1290   */
 /* --------- @@@@@@ MEDIA @@@@@@@ ------------- */
 
 /* -------- CHECKERS */
@@ -1277,9 +1297,77 @@ margin-top: 106px;
 
 
 /* ------- HEADER */
+
+@media (max-width: 1290px) {
+    .header__icon-mobile {
+        display: block;
+        margin-left: 42px;
+    }
+}
+
 @media (max-width: 1366px) {
     .header__wr-logo {
         width: 27.2%;
+    }
+}
+
+@media (max-width: 1290px) {
+    .header__wr-logo {
+        width: auto;
+
+        flex-grow: 1;
+    }
+}
+
+@media (max-width: 1290px) {
+    .header__logo {
+        width: 153px;
+        height: 100%;
+    }
+}
+
+@media (max-width: 1290px) {
+    .header__nav {
+        display: none;
+    }
+}
+
+@media (max-width: 1290px) {
+    .header__tel {
+        width: 53%;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .header__tel {
+        display: none;
+    }
+}
+
+@media (max-width: 1290px) {
+    .header__contacts {
+        width: auto;
+        margin-right: 35px;
+    }
+}
+
+@media (max-width: 1290px) {
+    .header__social-icons {
+        width: auto;
+    }
+}
+
+@media (max-width: 1290px) {
+    .header__wr-viber {
+        width: 55px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 1290px) {
+    .header__viber-link {
+        width: 55px;
     }
 }
 
@@ -1289,11 +1377,26 @@ margin-top: 106px;
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1290px) {
     .header__wr-whatsapp {
-        width: 38%;
+        width: auto;
+        margin-right: 10px;
     }
 }
+
+@media (max-width: 1290px) {
+    .header__whatsapp-link {
+        width: 55px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .header__icon-telefone {
+        display: block;
+    }
+}
+
+
 
 /* ------- ФОРМА ЗАКАЗА */
 
@@ -1303,14 +1406,14 @@ margin-top: 106px;
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1290px) {
     .wr-price-order__price {
         width: 46%;
         padding-left: 47px;
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1290px) {
     .wr-price-order__map {
         width: 100%;
     }
@@ -1323,25 +1426,25 @@ margin-top: 106px;
 }
 
 
-@media (max-width: 1280px) {
+@media (max-width: 1290px) {
     .wr-price-order__title {
         font-size: 40px;
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1290px) {
     .wr-price-order__order {
         margin-left: 50px;
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1290px) {
     .wr-price-order__form {
         margin-left: 0;
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1290px) {
     .wr-price-order__name-fonnumber {
         width: 478px;
     }
@@ -1355,19 +1458,19 @@ margin-top: 106px;
     }
 }
 
-@media (max-width:1280px) {
+@media (max-width:1290px) {
     .wr-price-order__wr-name {
         width: 53.3%;
     }
 }
 
-@media (max-width:1280px) {
+@media (max-width:1290px) {
     .wr-price-order__wr-tel {
         width: none;
     }
 }
 
-@media (max-width:1280px) {
+@media (max-width:1290px) {
     .wr-price-order__tel {
         width: 95.7%;
     }
@@ -1379,7 +1482,7 @@ margin-top: 106px;
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1290px) {
     .wr-price-order__wr-data-of-transport {
         width: 544px;
         min-width: 498px;
@@ -1397,7 +1500,7 @@ margin-top: 106px;
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1290px) {
     .wr-price-order__wr-date-arrive,
     .wr-price-order__wr-time-arrive,
     .wr-price-order__wr-number-flight,
@@ -1431,9 +1534,15 @@ margin-top: 106px;
     }
 }
 
+@media (max-width: 1179px) {
+    .callback__form {
+        width: 74.3%;
+    }
+}
+
 /* ------- SERVICES */
 
-@media (max-width: 1280px) {
+@media (max-width: 1290px) {
     .services__cards {
         margin-left: 0;
 
@@ -1442,10 +1551,32 @@ margin-top: 106px;
 }
 
 /* ------------- ABOUT US */
+@media (max-width: 1290px) {
+    .about-us {
+        padding-bottom: 53px;
+    }
+}
+
+@media (max-width: 1179px) {
+    .about-us {
+        padding-top: 0;
+
+        background-image: none;
+        background-color: #9BD0C0;
+    }
+}
 
 @media (max-width: 1366px) {
     .about-us__wr-title-bear {
         width: 94%;
+    }
+}
+
+@media (max-width: 1179px) {
+    .about-us__wr-title-bear {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -1456,12 +1587,142 @@ margin-top: 106px;
     }
 }
 
+@media (max-width: 1179px) {
+    .about-us__wr-img-title {
+        width: 95%;
+
+        order: 2;
+    }
+}
+
 @media (max-width: 1366px) {
     .about-us__wr-img {
         width: 51.5%;
         margin-left: 18px; 
     }
 }
+
+@media (max-width: 1179px) {
+    .about-us__wr-img {
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+
+        border: none;
+        border-radius: 0;
+
+        order: 1;
+    }
+}
+
+
+
+@media (max-width: 1179px) {
+    .about-us__wr-title {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1179px) {
+    .about-us__title {
+        text-align: center;
+    }
+}
+
+@media(max-width: 1290px) {
+    .about-us__cards {
+        gap: 5px;
+    }
+}
+
+@media(max-width: 1179px) {
+    .about-us__cards {
+        justify-content: center;
+        gap: 100px;
+    }
+}
+
+@media(max-width: 1290px) {
+    .about-us__icon {
+        height: 130px;
+        width: 130px;
+    }
+}
+
+@media(max-width: 1290px) {
+    .about-us__wr-card-text_safely {
+        width: 181px;
+    }
+}
+
+@media(max-width: 1179px) {
+    .about-us__wr-card-text_safely {
+        width: 200px;
+    }
+}
+
+@media(max-width: 1290px) {
+    .about-us__wr-card-text_park {
+        width: 173px;
+    }
+}
+
+@media(max-width: 1179px) {
+    .about-us__wr-card-text_park {
+        width: 200px;
+    }
+}
+
+@media(max-width: 1290px) {
+    .about-us__wr-card-text_easy {
+        width: 181px;
+    }
+}
+
+@media(max-width: 1179px) {
+    .about-us__wr-card-text_easy {
+        width: 200px;
+    }
+}
+
+@media(max-width: 1290px) {
+    .about-us__wr-card-text {
+        padding: 26px 0 22px;
+    }
+}
+
+@media(max-width: 1290px) {
+    .about-us__card-text {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 1179px) {
+    .about-us__card-text {
+        font-size: 24px;
+    }
+}
+
+
+
+@media (max-width:1290px) {
+    .about-us__wr-text {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width:1290px) {
+    .about-us__text {
+        font-size: 19px;
+    }
+}
+
+@media (max-width:1179px) {
+    .about-us__text {
+        font-size: 21px;
+    }
+}
+
 
 
 
