@@ -237,12 +237,19 @@ a {
     align-items: center;
 }
 
+.header__icon-mobile_open {
+    background: no-repeat url(../svg/icon-menu-mobile.svg);
+}
+
+.header__icon-mobile_close {
+    background: no-repeat url(../svg/close-mobile-menu.svg);
+}
+
 .header__icon-mobile {
     display: none;
     height: 30px;
     width: 30px;
 
-    background: no-repeat url(../svg/icon-menu-mobile.svg);
     background-position: center;
     background-size: 30px;
 
@@ -301,12 +308,107 @@ main {
 }
 
 .popular {
+    position: relative;
+
     padding: 87px 0 195px 152px;
 
     background-color: #FAE4B1;
     background-image: url(../img/lastochka.png);
     background-repeat: no-repeat;
     background-position: center top;
+}
+
+.popular__wr-mobile-menu-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: none;
+
+    background-color: rgba(0, 0, 0, 0.50);
+}
+
+.popular__wr-mobile-menu {
+    position: absolute; 
+    left: -300px;
+
+    height: 738px;
+    width: 300px;
+
+    background: linear-gradient(180deg, #926829 0%, #E5CFAD 100%);
+
+    transition: left 2s;
+}
+
+.popular__wr-mobile-menu_show {
+    left: 0;
+}
+
+.popular__mobile-menu {
+    padding-top: 44px;
+    margin-left: 32px;
+}
+
+.popular__menu-mobile-list {
+    display: flex;
+
+    flex-direction: column;
+    gap: 30px;
+}
+
+.popular__menu-mobile-link {
+    font-family: Roboto, Sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+
+    color: #ffffff;
+}
+
+.popular__mobile-menu-contacts {
+    margin: 30px 0 0 32px;
+}
+
+.popular__mobile-menu-tel {
+    font-family: Roboto, Sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    font-style: normal;
+
+    color: #ffffff;
+}
+
+.popular__wr-mobile-menu-social {
+    display: flex;
+    margin-top: 40px;
+
+    gap: 40px;
+}
+
+.popular__wr-mobile-menu-viber,
+ .popular__wr-mobile-menu-whatsapp {
+    width: 50px;
+    height: 50px;
+
+    background-size: 50px;
+    background-position: center;
+
+    cursor: pointer;
+ }
+
+.popular__wr-mobile-menu-viber {
+    background: no-repeat url(../svg/icon-viber.svg);
+}
+
+.popular__wr-mobile-menu-whatsapp {
+    background: no-repeat url(../svg/icon-whatsapp.svg);
+}
+
+.popular__mobile-menu-social {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
 }
 
 .popular__form {
@@ -482,9 +584,12 @@ main {
     box-shadow: none;
 }
 
-/* ------------------------------------------- КОНЕЦ ВЕРХНЯЯ ФОРМА ---------------------------------------------- */
-        
+.active {
+    display: block;
+}
 
+/* ------------------------------------------- КОНЕЦ ВЕРХНЯЯ ФОРМА ---------------------------------------------- */
+    
 
 /* ------------------------------------------- СТАРТ КАРТА И ФОРМА ЗАКАЗА ------------------------------------------- */
 
