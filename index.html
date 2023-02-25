@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Такси Маяк</title> 
 </head>
-<body>
+<body>  
     <header class="header">
         <div class="header__icon-mobile">
         </div>
@@ -43,7 +43,9 @@
                     <a class="header__whatsapp-link contacts-whatsapp-link" href="https://api.whatsapp.com/send/?phone=79189884646"></a>
                 </li>
             </ul>
-            <div class="header__icon-telefone"></div>
+
+            <a class="header__icon-telefone icon-telefone" href="tel:+8 888 888 88 88"></a>
+
         </address>
     </header>
     <main>
@@ -300,13 +302,11 @@
                 <ul class="services__cards">
                     <li class="services__card">
                         <div class="services__card-icon services__card-icon_meet"></div>
-                        <div class="services__wr-card-text">
-                            <div class="services__wr-title">
-                                <h2 class="services__card-title">
-                                    <span class="services__text-title">встреча</span>
-                                    <span class="services__text-title">аэропорт и жд вокзал</span>   
-                                </h2>
-                            </div>
+                        <div class="services__wr-card-text services__wr-card-text_meet">
+                            <h2 class="services__card-title">
+                                <span class="services__text-title">встреча</span>
+                                <span class="services__text-title">аэропорт и жд вокзал</span>   
+                            </h2>
                             <p class="services__card-text"> 
                                 Прилетев в незнакомый город трудно бывает сориентироваться в информации, заниматься поиском такси, заботится о безопасности багажа. В этом случае вам поможет организованная встреча в аэропорту.
                                 Для удобства специалист встретит с табличкой, на которой будет написано ваше имя.
@@ -315,7 +315,7 @@
                     </li>
                     <li class="services__card">
                         <div class="services__card-icon services__card-icon_luggage"></div>
-                        <div class="services__wr-card-text">
+                        <div class="services__wr-card-text services__wr-card-text_luggage">
                             <h2 class="services__card-title services__card-title_second-card">
                                 <span class="services__text-title">помощь с багажом</span>
                             </h2>
@@ -329,7 +329,7 @@
                 <ul class="services__cards">
                     <li class="services__card">
                         <div class="services__card-icon services__card-icon_rent"></div>
-                        <div class="services__wr-card-text">
+                        <div class="services__wr-card-text services__wr-card-text_rent">
                             <h2 class="services__card-title">
                                 <span class="services__text-title">помощь</span>
                                 <span class="services__text-title">с подбором жилья</span>
@@ -342,7 +342,7 @@
                     </li>
                     <li class="services__card">
                         <div class="services__card-icon  services__card-icon_excursions"></div>
-                        <div class="services__wr-card-text">
+                        <div class="services__wr-card-text services__wr-card-text_excursions">
                             <h2 class="services__card-title services__card-title_second-card">
                                 <span class="services__text-title">организация экскурсий</span>
                             </h2>
@@ -505,6 +505,9 @@
                         <a class="footer__whatsapp-link contacts-whatsapp-link" href="#"></a>
                     </li>
                 </ul>
+
+                <a class="footer__icon-telefone icon-telefone" href="tel:+8 888 888 88 88"></a>
+
             </address>
         </div>
     </footer>
