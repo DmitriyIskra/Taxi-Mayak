@@ -38,9 +38,9 @@ class IconMobieControl {
     };
 };
 
-iconMobie = document.querySelector('.header__icon-mobile');
-wrMobileMenuCover = document.querySelector('.popular__wr-mobile-menu-cover');
-popularWrMobileMenu = document.querySelector('.popular__wr-mobile-menu');
+const iconMobie = document.querySelector('.header__icon-mobile');
+const wrMobileMenuCover = document.querySelector('.popular__wr-mobile-menu-cover');
+const popularWrMobileMenu = document.querySelector('.popular__wr-mobile-menu');
 
 controlIconMobileMenu = new IconMobieControl(iconMobie,wrMobileMenuCover,popularWrMobileMenu);
 controlIconMobileMenu.registerEvent();     // вызываем навешивание событий

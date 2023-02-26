@@ -1755,11 +1755,11 @@ margin-top: 106px;
 
 @media(max-width: 430px) {
     .header__icon-mobile {
-        height: 23px;
-        width: 23px;
+        height: 30px;
+        width: 30px;
         margin-left: 20px;
 
-        background-size: 23px;
+        /* background-size: 30px; */
     }
 }
 
