@@ -4,7 +4,7 @@
 
 
 // ============ Открытие/закрытие меню мобильной версии по клику на иконку или элементам меню
-class IconMobieControl {
+class IconMobieControl { 
     constructor(iconMobie, wrMobileMenuCover, popularWrMobileMenu) {
         this.iconMobie = iconMobie;
         this.wrMobileMenuCover = wrMobileMenuCover;
@@ -44,3 +44,8 @@ const popularWrMobileMenu = document.querySelector('.popular__wr-mobile-menu');
 
 controlIconMobileMenu = new IconMobieControl(iconMobie,wrMobileMenuCover,popularWrMobileMenu);
 controlIconMobileMenu.registerEvent();     // вызываем навешивание событий
+
+
+// // ============ Активация выбора кресла
+
+const formChairsActive = document.querySelector('.wr-price-order__wr-modal-type-chair');
