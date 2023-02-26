@@ -242,7 +242,7 @@ a {
 }
 
 .header__icon-mobile_close {
-    background: no-repeat url(../svg/close-mobile-menu.svg);
+    background: no-repeat url(../svg/icon-menu-mobile-close.svg);
 }
 
 .header__icon-mobile {
