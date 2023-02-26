@@ -49,3 +49,32 @@ controlIconMobileMenu.registerEvent();     // вызываем навешива�
 // // ============ Активация выбора кресла
 
 const formChairsActive = document.querySelector('.wr-price-order__wr-modal-type-chair');
+const popularForm = document.querySelector('.popular__form');
+const windowWidth = window.innerWidth;
+
+
+popularForm.addEventListener('focus', (e) => { // Управление формой популярные направления
+    if(e.target.matches('.popular__choose-chair')  && windowWidth > 976 ) { // 
+        openFormTypeChairs(`250px`, `515px`); // Отправляем позицию в зависимости от ширины экрана
+    }
+}, true)
+
+
+function openFormTypeChairs(top, left) {    // Активация формы выбора при нажатии на популярные направления
+    console.log('work')
+    formChairsActive.classList.add('wr-type-chair_active');
+
+    formChairsActive.style.top = top;
+    formChairsActive.style.left = left;
+}
+
+
+formChairsActive.addEventListener('click', (e) => {   // управление формой выбора типа кресла
+    if(e.target.matches('.wr-price-order__close')) {
+        closeFormTypeChair(formChairsActive)
+    }
+})
+
+function closeFormTypeChair(el) {  // Закрытие формы типа кресла
+    el.classList.remove('wr-type-chair_active');
+}
