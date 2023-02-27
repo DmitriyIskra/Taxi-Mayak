@@ -46,35 +46,60 @@ controlIconMobileMenu = new IconMobieControl(iconMobie,wrMobileMenuCover,popular
 controlIconMobileMenu.registerEvent();     // вызываем навешивание событий
 
 
-// // ============ Активация выбора кресла
+// // ============ УПРАВЛЕНИЕ ФОРМОЙ ПОПУЛЯРНЫЕ НАПРАВЛЕНИЯ
 
-const formChairsActive = document.querySelector('.wr-price-order__wr-modal-type-chair');
+const formChairsType = document.querySelector('.wr-price-order__wr-modal-type-chair');
 const popularForm = document.querySelector('.popular__form');
+const collectionLabels = formChairsType.querySelectorAll('.wr-price-order__label-type-chair');
 const windowWidth = window.innerWidth;
+let lastActiveInputChair;
+let checkActiveRadioType;
 
 
-popularForm.addEventListener('focus', (e) => { // Управление формой популярные направления
-    if(e.target.matches('.popular__choose-chair')  && windowWidth > 976 ) { // 
-        openFormTypeChairs(`250px`, `515px`); // Отправляем позицию в зависимости от ширины экрана
+popularForm.addEventListener('focus', (e) => { 
+
+    if(e.target.matches('.popular__choose-chair')  && windowWidth > 976 ) { // Открытие формы выбора типа кресла
+        lastActiveInputChair = e.target;
+        openFormTypeChairs(`250px`, `515px`); // в зависимости от ширины экрана
     }
 }, true)
 
 
-function openFormTypeChairs(top, left) {    // Активация формы выбора при нажатии на популярные направления
-    console.log('work')
-    formChairsActive.classList.add('wr-type-chair_active');
+function openFormTypeChairs(top, left) {    // Активация формы выбора при нажатии на выбор кресла
+    formChairsType.classList.add('wr-type-chair_active');
 
-    formChairsActive.style.top = top;
-    formChairsActive.style.left = left;
-}
+    formChairsType.style.top = top;  // Задаем координаты
+    formChairsType.style.left = left;
 
-
-formChairsActive.addEventListener('click', (e) => {   // управление формой выбора типа кресла
-    if(e.target.matches('.wr-price-order__close')) {
-        closeFormTypeChair(formChairsActive)
+    if(lastActiveInputChair.value !== '') {  // Если кресло выбрано, и открывается повторно выствляется нужный radio
+        let elem = formChairsType.querySelector(`[data-set="${lastActiveInputChair.value}"]`); 
+        elem.checked = true;
     }
-})
-
-function closeFormTypeChair(el) {  // Закрытие формы типа кресла
-    el.classList.remove('wr-type-chair_active');
 }
+
+    // -- управление формой выбора типа кресла
+    formChairsType.addEventListener('click', (e) => {   
+        if(e.target.matches('.wr-price-order__close')) {
+            closeFormTypeChair(formChairsType);
+            resetFormTypeChair(formChairsType);
+        };
+        
+        if(e.target.matches('.wr-price-order__label-type-chair')) {
+            chooseTypeChair(e.target)
+        };
+    });
+
+    function closeFormTypeChair(el) {  // Закрытие формы типа кресла
+        el.classList.remove('wr-type-chair_active');
+    };
+
+    function resetFormTypeChair(el) {  // Cброс формы типа кресла
+        el.reset();
+    };
+
+
+    function chooseTypeChair(el) {
+        lastActiveInputChair.value = el.textContent;
+        closeFormTypeChair(formChairsType);
+    };
+// // ============ Активация выбора кресла END =========

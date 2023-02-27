@@ -276,6 +276,10 @@ a {
     width: 32.2%;
 }
 
+.header__logo {
+    height: 53px;
+}
+
 .header__nav {
     min-width: 519px;
     width: 32.5%;
@@ -1574,8 +1578,11 @@ margin-top: 106px;
 }
 
 @media (max-width: 1290px) {
-    .header__viber-link {
-        width: 40px;
+    .contacts-viber-link {
+        width: 37px;
+        margin-right: 10px;
+
+        background-size: 35px;
     }
 }
 
@@ -1589,6 +1596,12 @@ margin-top: 106px;
 @media (max-width: 1290px) {
     .header__whatsapp-link {
         width: 37px;
+    }
+}
+
+@media (max-width: 1290px) {
+    .contacts-whatsapp-link {
+        background-size: 35px;
     }
 }
 
