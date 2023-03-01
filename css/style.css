@@ -144,91 +144,7 @@ a {
 
 
 
-/* Всплывающая форма для выбора кресла */
 
-    .wr-price-order__wr-modal-type-chair {
-        position: absolute;
-
-        display: none;
-    }
-
-    .wr-type-chair_active {
-        display: block;
-    }
-
-    .wr-price-order__close {
-        position: absolute;
-        top: -20px;
-        right: 10px;
-
-        font-family: 'Roboto', sans-serif;
-        color: #ffffff;
-        font-size: 15px;
-
-
-        align-self: flex-end;
-        cursor: pointer;
-    }
-
-    .wr-price-order__type-chair-list {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        height: 347px;
-        width: 345px;
-        padding: 44px 38px 0 34px;
-
-        font-family: 'Roboto', sans-serif;
-
-        color: #ffffff;
-        background-color: rgba(0, 0, 0, 0.45);;
-        border-radius: 20px;
-        box-shadow: 0px 4px 12px #FFFFFF;
-    }
-
-    .type-chair-item_last {
-        padding-top: 9px;
-    }
-
-    .wr-price-order__label-type-chair {
-        display: flex;
-        width: 100%;
-
-        font-size: 20px;
-        font-weight: 400;
-
-        justify-content: space-between;
-        cursor: pointer;
-    }
-
-    .wr-price-order__label-type-chair::after {
-        content: '';
-
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-
-        background: #DFDFDF;
-        border: 1px solid #9BD0C0;
-        border-radius: 50%;
-    }
-
-    .wr-price-order__radio-chair:checked + .wr-price-order__label-type-chair::after {
-        background: #234C60;
-        border: 1px solid #828282;
-    }
-
-    .wr-price-order__radio-chair {
-        display: none;
-    }
-
-    .wr-price-order__child-max-wight {
-        display: block;
-        font-size: 16px;
-        font-weight: 300;
-    }
-
-/* Всплывающая форма для выбора кресла */
 
 
 /* ------------------------------------------- НАЧАЛО ХЕДЕР ---------------------------------------------- */
@@ -431,6 +347,8 @@ main {
     height: 100%;
 }
 
+
+
 .popular__form {
     width: 343px;
 }
@@ -608,12 +526,100 @@ main {
     display: block;
 }
 
+/* Всплывающая форма для выбора кресла */
+
+.popular__wr-modal-type-chair {
+    position: absolute;
+
+    display: none;
+}
+
+.wr-type-chair_active {
+    display: block;
+}
+
+.popular__close {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+
+
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.popular__type-chair-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 347px;
+    width: 345px;
+    padding: 44px 38px 0 34px;
+
+    font-family: 'Roboto', sans-serif;
+
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.70);
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px #FFFFFF;
+}
+
+.type-chair-item_last {
+    padding-top: 9px;
+}
+
+.popular__label-type-chair {
+    display: flex;
+    width: 100%;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.popular__label-type-chair::after {
+    content: '';
+
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+
+    background: #DFDFDF;
+    border: 1px solid #9BD0C0;
+    border-radius: 50%;
+}
+
+.popular__radio-chair:checked + .popular__label-type-chair::after {
+    background: #234C60;
+    border: 1px solid #828282;
+}
+
+.popular__radio-chair {
+    display: none;
+}
+
+.popular__child-max-wight {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* Всплывающая форма для выбора кресла */
+
 /* ------------------------------------------- КОНЕЦ ВЕРХНЯЯ ФОРМА ---------------------------------------------- */
     
 
 /* ------------------------------------------- СТАРТ КАРТА И ФОРМА ЗАКАЗА ------------------------------------------- */
 
 .wr-price-order {
+    position: relative;
+
     display: flex;
     padding-top: 35px;
     padding-bottom: 121px;
@@ -739,7 +745,7 @@ main {
 
     background-image: url(../svg/select-arrow.svg);
     background-repeat: no-repeat;
-    background-position: top 49% right 8%;
+    background-position: top 49% right 5%;
 
     appearance: none;
 }
@@ -764,6 +770,8 @@ main {
     background-image: url(../svg/select-arrow.svg);
     background-repeat: no-repeat;
     background-position: top 49% right 8%;
+
+    cursor: pointer;
 }
 
 .wr-price-order__wr-amount-chair {
@@ -849,11 +857,104 @@ main {
 .wr-price-order__button-submit:active {
     box-shadow: none;
 }
+
+
+/* ----------- Форма выбора кресла */
+
+.wr-price-order__wr-modal-type-chair {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+    padding: 15px;
+
+    border: 1px solid #000000;
+    border-radius: 20px;
+    background-color: #CFA668;
+
+    z-index: 20;
+}
+
+.wr-modal-type-chair-order_active {
+    display: block;
+}
+
+.wr-price-order__close {
+    display: block;
+    width: 100%;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-align: right;
+    
+    cursor: pointer;
+}
+
+.wr-price-order__type-chair-list {
+    display: flex;
+    margin-top: 10px;
+
+    flex-direction: column;
+    gap: 7px;
+}
+
+.wr-price-order__type-chair-item {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.wr-price-order__radio-chair {
+    display: none;
+}
+
+.wr-price-order__label-type-chair {
+    display: flex;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+.wr-price-order__label-type-chair::after {
+    content: "";
+
+    display: inline-block;
+    box-sizing: border-box;
+    height: 25px;
+    width: 25px;
+
+    background: #DFDFDF;
+    border: 1px solid #9BD0C0;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.wr-price-order__radio-chair:checked + .wr-price-order__label-type-chair::after {
+    background-color: #234C60;
+}
+
+.wr-price-order__child-max-wight {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+
+    color: #383838;
+}
+
 /* ------------------------------------------- КОНЕЦ КАРТА И ФОРМА ЗАКАЗА ------------------------------------------- */
 
 /* ------------------------------------------- СТАРТ АВТОМОБИЛИ КОЛЛБЭК ------------------------------------------- */
 
 .callback {
+    position: relative;
+
     padding-bottom: 138px;
 
     background-color: #FAE4B1;
@@ -1684,6 +1785,15 @@ margin-top: 106px;
 
 
 
+@media(max-width: 1290px) {
+    .wr-price-order__label-type-chair {
+        font-size: 18px;
+    }
+
+    .wr-price-order__child-max-wight {
+        font-size: 12px;
+    }
+}
 
 /* ------- SERVICES */
 

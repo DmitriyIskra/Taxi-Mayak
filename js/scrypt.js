@@ -16,21 +16,25 @@ controlIconMobileMenu.registerEvent();     // вызываем навешива�
 
 // // ============ УПРАВЛЕНИЕ ФОРМОЙ ПОПУЛЯРНЫЕ НАПРАВЛЕНИЯ
 
-const formChairsType = document.querySelector('.wr-price-order__wr-modal-type-chair');
+// Данные для работы формы popular
 const popularForm = document.querySelector('.popular__form');
-const collectionLabels = formChairsType.querySelectorAll('.wr-price-order__label-type-chair');
+const formChairsType = document.querySelector('.popular__wr-modal-type-chair');
 const windowWidth = window.innerWidth;
 let lastActiveInputChair;
-let checkActiveRadioType;
-
 
 popularForm.addEventListener('focus', (e) => { 
 
     if(e.target.matches('.popular__choose-chair')  && windowWidth > 976 ) { // Открытие формы выбора типа кресла
         lastActiveInputChair = e.target;
-        openFormTypeChairs(`250px`, `515px`); // в зависимости от ширины экрана
+        openFormTypeChairs(`26.5956vh`, ` 26.8229vw`); // в зависимости от ширины экрана `250px`, `515px`
+    }
+    else if(e.target.matches('.popular__choose-chair')  && windowWidth < 976 ) {
+        lastActiveInputChair = e.target;
+        formChairsType.querySelector('.popular__type-chair-list').style.backgroundColor = 'rgba(0, 0, 0, 0.7)'
+        openFormTypeChairs(`120px`, `80px`);
     }
 }, true)
+
 
 
 function openFormTypeChairs(top, left) {    // Активация формы выбора при нажатии на выбор кресла
@@ -47,12 +51,12 @@ function openFormTypeChairs(top, left) {    // Активация формы в�
 
     // -- управление формой выбора типа кресла
     formChairsType.addEventListener('click', (e) => {   
-        if(e.target.matches('.wr-price-order__close')) {
+        if(e.target.matches('.popular__close')) {
             closeFormTypeChair(formChairsType);
             resetFormTypeChair(formChairsType);
         };
         
-        if(e.target.matches('.wr-price-order__label-type-chair')) {
+        if(e.target.matches('.popular__label-type-chair')) {
             chooseTypeChair(e.target)
         };
     });
@@ -70,6 +74,65 @@ function openFormTypeChairs(top, left) {    // Активация формы в�
         lastActiveInputChair.value = el.textContent;
         closeFormTypeChair(formChairsType);
     };
+
 // // ============ Активация выбора кресла END =========
-import {name as f} from './nav-mobile.js'
-console.log(f)
+
+
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+// // ============ УПРАВЛЕНИЕ ФОРМОЙ ЗАКАЗАТЬ
+
+const orderForm = document.querySelector('.wr-price-order__form');
+const typeChairOrder = document.querySelector('.wr-price-order__wr-modal-type-chair');
+let lastActiveInputChairOrder;
+
+// console.log(orderForm)
+
+orderForm.addEventListener('click', (e) => { 
+    if(e.target.matches('.wr-price-order__type-chair')) { // Открытие формы выбора типа кресла
+        openFormTypechairsOrder(e.target);
+    };
+}, true);
+
+
+function openFormTypechairsOrder(elem) {  // Открываем модальное окно
+    lastActiveInputChairOrder = elem;   // Присваиваем последний активный элемент
+    typeChairOrder.classList.toggle('wr-modal-type-chair-order_active');
+    typeChairOrder.style.width = `${elem.offsetWidth}px`
+    typeChairOrder.style.left = `${elem.offsetLeft}px`;
+    typeChairOrder.style.top = `${elem.offsetTop + 55}px`;
+
+    if(lastActiveInputChairOrder.value !== '') {
+        console.log(lastActiveInputChairOrder.value)
+        let element = typeChairOrder.querySelector(`[data-set="${lastActiveInputChairOrder.value}"]`); 
+        element.checked = true;
+    }
+};
+
+
+        // Форма выбора типа кресла
+
+typeChairOrder.addEventListener('click', e => {
+    if(e.target.matches('.wr-price-order__close')) {
+        closeModalFormOrder(e.target);
+    };
+
+    if(e.target.matches('.wr-price-order__label-type-chair')) {
+        addTypeChair(e.target)
+    }
+});
+
+function addTypeChair(elem) { // Заполняем поле выбранным типом кресла 
+    lastActiveInputChairOrder.value = elem.textContent;
+    closeModalFormOrder();
+}
+
+function closeModalFormOrder(elem) { // Функция закрытия модального окна по кнопке close
+    typeChairOrder.classList.remove('wr-modal-type-chair-order_active');
+};
+
+
+

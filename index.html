@@ -139,7 +139,38 @@
                     <button class="popular__button-submit" type="submit">заказать</button>
                 </div>
             </form>
+
+            <form class="popular__wr-modal-type-chair">
+                <span class="popular__close">Close</span>
+                <ul class="popular__type-chair-list"> 
+                    <li class="popular__type-chair-item">
+                        <input class="popular__radio-chair" id="popular__chair-before-one-year" type="radio" name="type-chair" data-set="Люлька до 1 года" value="before-one-year">
+                        <label class="popular__label-type-chair" for="popular__chair-before-one-year">Люлька до 1 года</label>
+                        <span class="popular__child-max-wight">(до 10кг)</span>
+                    </li>
+                    <li class="popular__type-chair-item">
+                        <input class="popular__radio-chair" id="popular__chair-before-four-year" type="radio" name="type-chair" data-set="Кресло до 4 лет" value="before-four-year">
+                        <label class="popular__label-type-chair" for="popular__chair-before-four-year">Кресло до 4 лет</label>
+                        <span class="popular__child-max-wight">(9 - 18кг)</span>
+                    </li>
+                    <li class="popular__type-chair-item">  
+                        <input class="popular__radio-chair" id="popular__chair-three-seven-year" type="radio" name="type-chair" data-set="Кресло 3 - 7 лет" value="three-seven-year">                          
+                        <label class="popular__label-type-chair" for="popular__chair-three-seven-year">Кресло 3 - 7 лет</label>
+                        <span class="popular__child-max-wight">(15 - 25кг)</span>
+                    </li>
+                    <li class="popular__type-chair-item">
+                        <input class="popular__radio-chair" id="popular__chair-six-twelve" type="radio" name="type-chair" data-set="Бустер 6 - 12 лет" value="six-twelve">
+                        <label class="popular__label-type-chair" for="popular__chair-six-twelve">Бустер 6 - 12 лет</label>
+                    </li>
+                    <li class="popular__type-chair-item type-chair-item_last">
+                        <input class="popular__radio-chair" id="popular__chair-own-chair" type="radio" name="type-chair" data-set="Свое кресло" value="own-chair">
+                        <label class="popular__label-type-chair" for="popular__chair-own-chair">Свое кресло</label>
+                    </li>
+                </ul>
+            </form>
         </div>
+
+
         <div class="wr-price-order" id="wr-price-order">
             <div class="wr-price-order__price">
                 <header class="wr-price-order__header-map">
@@ -168,12 +199,12 @@
                     <div class="wr-price-order__wr-data-of-transport">
                         <div class="wr-price-order__wr-date-arrive">
                             <label class="wr-price-order__label-date-arrive wr-price-order__labels" for="wr-price-order__date-arrive">Дата прибытия</label>
-                            <input class="wr-price-order__date-arrive wr-price-order__look-inputs" id="wr-price-order__date-arrive" type="text" name="date-arrive">
+                            <input class="wr-price-order__date-arrive wr-price-order__look-inputs" id="wr-price-order__date-arrive" type="date" name="date-arrive">
                         </div>
 
                         <div class="wr-price-order__wr-time-arrive">
                             <label class="wr-price-order__label-time-arrive wr-price-order__labels" for="wr-price-order__time-arrive">Время прибытия</label>
-                            <input class="wr-price-order__time-arrive wr-price-order__look-inputs" id="wr-price-order__time-arrive" type="text" name="time-arrive">
+                            <input class="wr-price-order__time-arrive wr-price-order__look-inputs" id="wr-price-order__time-arrive" type="time" name="time-arrive">
                         </div>
 
                         <div class="wr-price-order__wr-number-flight">
@@ -233,40 +264,41 @@
                         <button class="wr-price-order__button-submit" type="submit">заказать</button>
                     </div>
                 </form>
+
+
+                <form class="wr-price-order__wr-modal-type-chair">
+                    <span class="wr-price-order__close">Close</span>
+                    <ul class="wr-price-order__type-chair-list"> 
+                        <li class="wr-price-order__type-chair-item">
+                            <input class="wr-price-order__radio-chair" id="wr-price-order__chair-before-one-year" type="radio" name="type-chair" data-set="Люлька до 1 года" value="before-one-year">
+                            <label class="wr-price-order__label-type-chair" for="wr-price-order__chair-before-one-year">Люлька до 1 года</label>
+                            <span class="wr-price-order__child-max-wight">(до 10кг)</span>
+                        </li>
+                        <li class="wr-price-order__type-chair-item">
+                            <input class="wr-price-order__radio-chair" id="wr-price-order__chair-before-four-year" type="radio" name="type-chair" data-set="Кресло до 4 лет" value="before-four-year">
+                            <label class="wr-price-order__label-type-chair" for="wr-price-order__chair-before-four-year">Кресло до 4 лет</label>
+                            <span class="wr-price-order__child-max-wight">(9 - 18кг)</span>
+                        </li>
+                        <li class="wr-price-order__type-chair-item">  
+                            <input class="wr-price-order__radio-chair" id="wr-price-order__chair-three-seven-year" type="radio" name="type-chair" data-set="Кресло 3 - 7 лет" value="three-seven-year">                          
+                            <label class="wr-price-order__label-type-chair" for="wr-price-order__chair-three-seven-year">Кресло 3 - 7 лет</label>
+                            <span class="wr-price-order__child-max-wight">(15 - 25кг)</span>
+                        </li>
+                        <li class="wr-price-order__type-chair-item">
+                            <input class="wr-price-order__radio-chair" id="wr-price-order__chair-six-twelve" type="radio" name="type-chair" data-set="Бустер 6 - 12 лет" value="six-twelve">
+                            <label class="wr-price-order__label-type-chair" for="wr-price-order__chair-six-twelve">Бустер 6 - 12 лет</label>
+                        </li>
+                        <li class="wr-price-order__type-chair-item type-chair-item_last">
+                            <input class="wr-price-order__radio-chair" id="wr-price-order__chair-own-chair" type="radio" name="type-chair" data-set="Свое кресло" value="own-chair">
+                            <label class="wr-price-order__label-type-chair" for="wr-price-order__chair-own-chair">Свое кресло</label>
+                        </li>
+                    </ul>
+                </form>
             </div>
+
+
         </div>
 
-
-        <!-- Форма для выбора кресла -->
-        <form class="wr-price-order__wr-modal-type-chair">
-                <span class="wr-price-order__close">Close</span>
-                <ul class="wr-price-order__type-chair-list"> 
-                    <li class="wr-price-order__type-chair-item">
-                        <input class="wr-price-order__radio-chair" id="wr-price-order__chair-before-one-year" type="radio" name="type-chair" data-set="Люлька до 1 года" value="before-one-year">
-                        <label class="wr-price-order__label-type-chair" for="wr-price-order__chair-before-one-year">Люлька до 1 года</label>
-                        <span class="wr-price-order__child-max-wight">(до 10кг)</span>
-                    </li>
-                    <li class="wr-price-order__type-chair-item">
-                        <input class="wr-price-order__radio-chair" id="wr-price-order__chair-before-four-year" type="radio" name="type-chair" data-set="Кресло до 4 лет" value="before-four-year">
-                        <label class="wr-price-order__label-type-chair" for="wr-price-order__chair-before-four-year">Кресло до 4 лет</label>
-                        <span class="wr-price-order__child-max-wight">(9 - 18кг)</span>
-                    </li>
-                    <li class="wr-price-order__type-chair-item">  
-                        <input class="wr-price-order__radio-chair" id="wr-price-order__chair-three-seven-year" type="radio" name="type-chair" data-set="Кресло 3 - 7 лет" value="three-seven-year">                          
-                        <label class="wr-price-order__label-type-chair" for="wr-price-order__chair-three-seven-year">Кресло 3 - 7 лет</label>
-                        <span class="wr-price-order__child-max-wight">(15 - 25кг)</span>
-                    </li>
-                    <li class="wr-price-order__type-chair-item">
-                        <input class="wr-price-order__radio-chair" id="wr-price-order__chair-six-twelve" type="radio" name="type-chair" data-set="Бустер 6 - 12 лет" value="six-twelve">
-                        <label class="wr-price-order__label-type-chair" for="wr-price-order__chair-six-twelve">Бустер 6 - 12 лет</label>
-                    </li>
-                    <li class="wr-price-order__type-chair-item type-chair-item_last">
-                        <input class="wr-price-order__radio-chair" id="wr-price-order__chair-own-chair" type="radio" name="type-chair" data-set="Свое кресло" value="own-chair">
-                        <label class="wr-price-order__label-type-chair" for="wr-price-order__chair-own-chair">Свое кресло</label>
-                    </li>
-                </ul>
-            </form>
-            <!-- Форма для выбора кресла конец -->
 
 
         <div class="callback" id="callback">

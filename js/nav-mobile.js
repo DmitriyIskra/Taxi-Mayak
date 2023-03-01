@@ -1,4 +1,4 @@
-export let name = 'Dmitriy'
+
 
 export class IconMobieControl { 
     constructor(iconMobie, wrMobileMenuCover, popularWrMobileMenu) {
