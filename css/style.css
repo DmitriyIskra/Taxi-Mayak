@@ -1749,7 +1749,7 @@ margin-top: 106px;
 
 @media (max-width:1290px) {
     .wr-price-order__wr-name {
-        width: 53.3%;
+        width: 76.3%;
     }
 }
 
@@ -1952,6 +1952,12 @@ margin-top: 106px;
 
 /* ПОПУЛЯРНЫЕ НАПРАВЛЕНИЯ */
 
+
+@media(max-width: 430px) {        /*Модальное окно популярных направлений*/
+    .popular__type-chair-list {
+        width: 333px;
+    }
+}
 
 /* ----------- */
 

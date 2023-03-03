@@ -31,7 +31,7 @@ popularForm.addEventListener('focus', (e) => {
     else if(e.target.matches('.popular__choose-chair')  && windowWidth < 976 ) {
         lastActiveInputChair = e.target;
         formChairsType.querySelector('.popular__type-chair-list').style.backgroundColor = 'rgba(0, 0, 0, 0.7)'
-        openFormTypeChairs(`120px`, `72px`);
+        openFormTypeChairs(`120px`, `75px`);
     }
 }, true)
 
