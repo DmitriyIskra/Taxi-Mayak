@@ -883,6 +883,7 @@ main {
 .wr-price-order__close {
     display: block;
     width: 100%;
+    margin-bottom: 14px;
 
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
