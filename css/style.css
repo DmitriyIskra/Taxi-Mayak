@@ -2050,8 +2050,9 @@ margin-top: 106px;
         width: 100%;
         margin-top: 12px;
 
-        flex-wrap: nowrap;
-        gap: 4px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* gap: 4px; */
     }
 }
 
@@ -2060,7 +2061,7 @@ margin-top: 106px;
      .wr-price-order__wr-time-arrive,
       .wr-price-order__wr-number-flight,
        .wr-price-order__wr-number-wagon {
-        width: auto;
+        width: 48.7%;
     }
 }
 
