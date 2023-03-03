@@ -31,7 +31,7 @@ popularForm.addEventListener('focus', (e) => {
     else if(e.target.matches('.popular__choose-chair')  && windowWidth < 976 ) {
         lastActiveInputChair = e.target;
         formChairsType.querySelector('.popular__type-chair-list').style.backgroundColor = 'rgba(0, 0, 0, 0.7)'
-        openFormTypeChairs(`120px`, `80px`);
+        openFormTypeChairs(`120px`, `77px`);
     }
 }, true)
 
@@ -102,8 +102,8 @@ function openFormTypechairsOrder(elem) {  // Открываем модально
     lastActiveInputChairOrder = elem;   // Присваиваем последний активный элемент
     typeChairOrder.classList.toggle('wr-modal-type-chair-order_active');
     typeChairOrder.style.width = `${elem.offsetWidth}px`
-    typeChairOrder.style.left = `${elem.offsetLeft}px`;
-    typeChairOrder.style.top = `${elem.offsetTop + 55}px`;
+    typeChairOrder.style.left = `${elem.offsetLeft + 15}px`;
+    typeChairOrder.style.top = `${elem.offsetTop - 245}px`;
 
     if(lastActiveInputChairOrder.value !== '') {
         console.log(lastActiveInputChairOrder.value)
