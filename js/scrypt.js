@@ -12,9 +12,7 @@ controlIconMobileMenu.registerEvent();     // вызываем навешива�
 // ============ Открытие/закрытие меню мобильной версии по клику на иконку или элементам меню ===================
 
 
-
-
-// // ============ УПРАВЛЕНИЕ ФОРМОЙ ПОПУЛЯРНЫЕ НАПРАВЛЕНИЯ
+// // ============ УПРАВЛЕНИЕ ФОРМОЙ ПОПУЛЯРНЫЕ НАПРАВЛЕНИЯ ВЫЗОВ И РАБОТА МОДАЛЬНОГО ОКНА
 
 // Данные для работы формы popular
 const popularForm = document.querySelector('.popular__form');
@@ -77,7 +75,10 @@ function openFormTypeChairs(top, left) {    // Активация формы в�
 
 // // ============ Активация выбора кресла END =========
 
+// // ============ Расчет цены START =========
+import calcPrice from './show-price.js'
 
+calcPrice.registerEvent()
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -103,7 +104,7 @@ function openFormTypechairsOrder(elem) {  // Открываем модально
     typeChairOrder.classList.toggle('wr-modal-type-chair-order_active');
     typeChairOrder.style.width = `${elem.offsetWidth}px`
     typeChairOrder.style.left = `${elem.offsetLeft + 15}px`;
-    typeChairOrder.style.top = `${elem.offsetTop - 245}px`;
+    typeChairOrder.style.top = `${elem.offsetTop - 250}px`;
 
     if(lastActiveInputChairOrder.value !== '') {
         console.log(lastActiveInputChairOrder.value)
