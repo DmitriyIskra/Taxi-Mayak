@@ -355,7 +355,6 @@ main {
 
 .popular__wr-form-shadow {
     border-radius: 10px;
-    box-shadow: 0px 4px 12px #FFFFFF;
 }
 
 .popular__header {
@@ -512,7 +511,6 @@ main {
 
     background-color: #9BD0C0;
     border: 1px solid #234C60;
-    box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     color: #ffffff;
     cursor: pointer;
@@ -530,6 +528,8 @@ main {
 
 .popular__wr-modal-type-chair {
     position: absolute;
+    top: 0;
+    left: 0;
 
     display: none;
 }
@@ -565,7 +565,6 @@ main {
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.70);
     border-radius: 20px;
-    box-shadow: 0px 4px 12px #FFFFFF;
 }
 
 .type-chair-item_last {
@@ -1958,10 +1957,15 @@ margin-top: 106px;
 
 /* ПОПУЛЯРНЫЕ НАПРАВЛЕНИЯ */
 
+@media(max-width:430px) {
+    .popular__wr-modal-type-chair {
+        width: 303px;
+    } 
+}
 
 @media(max-width: 430px) {        /*Модальное окно популярных направлений*/
     .popular__type-chair-list {
-        width: 333px;
+        width: 100%;
     }
 }
 
@@ -1974,6 +1978,12 @@ margin-top: 106px;
         padding: 40px 0 140px;
 
         justify-content: center;
+    }
+}
+
+@media(max-width: 430px) {
+    .popular__form {
+        width: 315px;
     }
 }
 
@@ -1991,7 +2001,7 @@ margin-top: 106px;
 
 @media(max-width: 430px) {
     .wr-price-order__price {
-        width: 95%;
+        width: 90%;
         padding: 0;
     }
 }
@@ -2016,7 +2026,7 @@ margin-top: 106px;
 
 @media(max-width: 430px) {
     .wr-price-order__order {
-        width: 95%;
+        width: 90%;
         margin: 45px 0 0;
     }
 }
@@ -2284,7 +2294,7 @@ margin-top: 106px;
 
 @media(max-width: 430px) {
     .callback__form {
-        width: 95%;
+        width: 90%;
 
         flex-direction: column;
         gap: 24px;
@@ -2336,7 +2346,7 @@ margin-top: 106px;
 
 @media(max-width: 430px) {
     .services__cards {
-        width: 95%;
+        width: 90%;
 
         flex-direction: column;
         gap: 43px;
@@ -2471,6 +2481,8 @@ margin-top: 106px;
         width: 100%;
         margin-left: 0;
         margin-top: 0;
+
+        border-radius: 0;
     }
 }
 
@@ -2507,7 +2519,7 @@ margin-top: 106px;
 
 @media(max-width: 430px) {
     .about-us__cards {
-        width: 95%;
+        width: 90%;
         margin: 0 auto;
         padding-top: 30px;
 
@@ -2564,7 +2576,7 @@ margin-top: 106px;
 
 @media(max-width: 430px) {
     .about-us__wr-text {
-        width: 95%;
+        width: 90%;
         margin: 40px auto 0;
         padding: 0;
     }
@@ -2593,16 +2605,11 @@ margin-top: 106px;
 
 @media(max-width: 430px) {
     .footer__wr-callback {
+        width: 90%;
         padding-top: 0px;
 
         flex-grow: initial;
         order: 1;
-    }
-}
-
-@media(max-width: 430px) {
-    .footer__wr-logo-nav {
-        order: 2;
     }
 }
 
@@ -2620,7 +2627,7 @@ margin-top: 106px;
 
 @media(max-width: 430px) {
     .footer__form {
-        width: 95%;
+        width: 100%;
 
         flex-direction: column;
         align-items: center;
@@ -2664,7 +2671,7 @@ margin-top: 106px;
 @media(max-width: 430px) {
     .footer__contacts {
         margin-top: 52px;
-        margin-right: 11px;
+        margin-right: 0;
 
         gap: 21px;
     }
@@ -2710,16 +2717,18 @@ margin-top: 106px;
 
 @media(max-width: 430px) {
     .footer__wr-logo-nav {
-        width: 95%;
+        width: 90%;
         margin-left: 0;
         margin-top: -53px;
+
+        order: 2;
     }
 }
 
 @media(max-width: 430px) {
     .footer__wr-logo {
         height: auto;
-        width: auto;
+        width: 42%;
         margin-top: 0;
     }
 }
@@ -2736,6 +2745,61 @@ margin-top: 106px;
 
 /* ----------- */
 
+/* ------------------------- media 400 ------------------------------------ */
+
+@media(max-width: 400px) {
+    .callback__car-class-card {
+        width: 288px;
+    }  
+}
+
+@media(max-width: 400px) {
+    .callback__img {
+        width: 285px;
+        height: auto;
+        margin-top: 4px;
+    }  
+}
+
+@media(max-width: 400px) {
+    .callback__wr-card-text {
+        height: 130px;
+        width: 248px;
+    }
+}
+
+@media (max-width: 430px) {
+    .callback__card-text-class {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 430px) {
+    .callback__card-text-car {
+        font-size: 22px;
+    }
+}
+
+
+
+
+@media(max-width: 400px) {
+    .about-us__icon {
+        width: 112px;
+        height: 112px;
+    }
+}
+
+
+@media(max-width: 400px) {
+    .about-us__wr-card-text_safely,
+     .about-us__wr-card-text_park,
+      .about-us__wr-card-text_easy {
+        width: 160px;
+    }
+}
+
+
 /* ------------------------- media 340 ------------------------------------ */
 
 @media(max-width: 340px) {
@@ -2743,6 +2807,10 @@ margin-top: 106px;
         margin-left: 10px;
     }
 }
+
+
+
+
 
 
 

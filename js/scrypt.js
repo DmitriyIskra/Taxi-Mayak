@@ -24,12 +24,12 @@ popularForm.addEventListener('focus', (e) => {
 
     if(e.target.matches('.popular__choose-chair')  && windowWidth > 976 ) { // Открытие формы выбора типа кресла
         lastActiveInputChair = e.target;
-        openFormTypeChairs(`26.5956vh`, ` 26.8229vw`); // в зависимости от ширины экрана `250px`, `515px`
+        openFormTypeChairs(`${e.target.offsetTop - 320}px`, `${e.target.offsetLeft + 5}px`); // в зависимости от ширины экрана `250px`, `515px`
     }
     else if(e.target.matches('.popular__choose-chair')  && windowWidth < 976 ) {
         lastActiveInputChair = e.target;
         formChairsType.querySelector('.popular__type-chair-list').style.backgroundColor = 'rgba(0, 0, 0, 0.7)'
-        openFormTypeChairs(`120px`, `75px`);
+        openFormTypeChairs(`${e.target.offsetTop - 320}px`, `${e.target.offsetLeft + 5}px`);
     }
 }, true)
 
@@ -55,7 +55,7 @@ function openFormTypeChairs(top, left) {    // Активация формы в�
         };
         
         if(e.target.matches('.popular__label-type-chair')) {
-            chooseTypeChair(e.target)
+            chooseTypeChair(e.target);
         };
     });
 
@@ -68,9 +68,9 @@ function openFormTypeChairs(top, left) {    // Активация формы в�
     };
 
 
-    function chooseTypeChair(el) {
+    function chooseTypeChair(el) {  // Берем выбранный тип кресла, вставляем его в поле
         lastActiveInputChair.value = el.textContent;
-        closeFormTypeChair(formChairsType);
+        closeFormTypeChair(formChairsType); // Закрываем модальное окно
     };
 
 // // ============ Активация выбора кресла END =========

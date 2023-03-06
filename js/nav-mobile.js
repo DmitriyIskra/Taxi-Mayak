@@ -1,10 +1,11 @@
 
 
 export class IconMobieControl { 
-    constructor(iconMobie, wrMobileMenuCover, popularWrMobileMenu) {
+    constructor(iconMobie, wrMobileMenuCover, popularWrMobileMenu, mainMenuMobile) {
         this.iconMobie = iconMobie;
         this.wrMobileMenuCover = wrMobileMenuCover;
         this.popularWrMobileMenu = popularWrMobileMenu;
+        this.mainMenuMobile = mainMenuMobile;
     };
 
     changeIconMobileMenu() {
@@ -22,12 +23,12 @@ export class IconMobieControl {
     };
 
     registerEvent() {                       // навешиваем события
-        this.iconMobie.addEventListener('click', (event) => {
+        this.iconMobie.addEventListener('click', (event) => {  // По клику на иконку (закрытие, открытие)
             this.controlIconMobileMenu();
         });
 
-        this.popularWrMobileMenu.addEventListener('click', (event) => {
-            if(event.target.matches('.mobile-menu-link')) {
+        this.mainMenuMobile.addEventListener('click', (event) => { // По клику на элементы навигации (закрытие, открытие)
+            if(event.target.matches('.mobile-menu-link') || event.target.matches('.popular__wr-mobile-menu-cover')) {
                 this.controlIconMobileMenu();
             };
         });
@@ -37,5 +38,6 @@ export class IconMobieControl {
 const iconMobie = document.querySelector('.header__icon-mobile');
 const wrMobileMenuCover = document.querySelector('.popular__wr-mobile-menu-cover');
 const popularWrMobileMenu = document.querySelector('.popular__wr-mobile-menu');
+const mainMenuMobile = document.querySelector('.popular__wr-mobile-menu-cover');
 
-export const controlIconMobileMenu = new IconMobieControl(iconMobie,wrMobileMenuCover,popularWrMobileMenu);
+export const controlIconMobileMenu = new IconMobieControl(iconMobie,wrMobileMenuCover,popularWrMobileMenu,mainMenuMobile);
