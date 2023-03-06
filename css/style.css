@@ -1151,7 +1151,7 @@ margin-top: 106px;
 
 .services__card-icon_rent {
     background: no-repeat url(../svg/rent.svg);
-    background-position: bottom center;
+    background-position: bottom -20px center;
 }
 
 .services__card-icon_excursions {

@@ -167,7 +167,11 @@ new Swiper('.swiper', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
-    }
+    },
+
+    spaceBetween: 20,
+
+    loop: true,
 });
 
 
