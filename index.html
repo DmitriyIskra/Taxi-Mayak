@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/> -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=2f54c579-7f78-4e50-ad37-6dac967119e3&lang=ru_RU" type="text/javascript"></script> -->
     <title>Такси Маяк</title> 
 </head>
 <body>    
@@ -216,7 +219,7 @@
                 <header class="wr-price-order__header-map">
                     <h2 class="wr-price-order__title">расчет стоимости</h2>
                 </header>
-                <div class="wr-price-order__map" id="map"></div>
+                <div  id="map" class="wr-price-order__map"></div>
             </div>
             <div class="wr-price-order__order">
                 <form class="wr-price-order__form" action="" name="order">
@@ -342,9 +345,62 @@
 
 
         <div class="callback" id="callback">
-
-            <!-- Картинку в блог img для li ширина 25% внутри позиции по центру при сужении меняем ширину на 50% через @media -->
-
+            <!-- Автопарк для mobile -->
+                <div class="callback__wrapper-swiper">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="callback__car-class-card car-class-card_standart">
+                                    <div class="callback__wr-img">
+                                        <img class="callback__img" src="img/chevrolet-aveo.png" alt="Автомобиль стандарт класса chevrolet aveo">
+                                    </div>
+                                    <div class="callback__wr-card-text callback__wr-card-text-aveo">
+                                        <span class="callback__card-text-class">стандарт</span>
+                                        <span class="callback__card-text-car">chevrolet aveo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="callback__car-class-card car-class-card_comfort">
+                                    <div class="callback__wr-img">
+                                        <img class="callback__img" src="img/octavia.png" alt="Автомобиль комфорт класса skoda octavia">
+                                    </div>
+                                    
+                                    <div class="callback__wr-card-text callback__wr-card-text-octavia">
+                                        <span class="callback__card-text-class">комфорт</span>
+                                        <span class="callback__card-text-car">skoda octavia</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="callback__car-class-card car-class-card_bizness">
+                                    <div class="callback__wr-img">
+                                        <img class="callback__img" src="img/mercedes-e.png" alt="Автомобиль бизнесс класса mercedes e">
+                                    </div>
+                                    
+                                    <div class="callback__wr-card-text callback__wr-card-text-e">
+                                        <span class="callback__card-text-class">бизнесс</span>
+                                        <span class="callback__card-text-car">mercedes e</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="callback__car-class-card car-class-card_miniven">
+                                    <div class="callback__wr-img">
+                                        <img class="callback__img" src="img/mercedes-viano.png" alt="Автомобиль минивен mercedes viano">
+                                    </div>
+                                    
+                                    <div class="callback__wr-card-text callback__wr-card-text-viano">
+                                        <span class="callback__card-text-class">минивен</span>
+                                        <span class="callback__card-text-car">mercedes viano</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            <!-- Автопарк для пк -->
                 <ul class="callback__car-class-list">
                     <li class="callback__car-class-card car-class-card_standart">
                         <div class="callback__wr-img">
@@ -618,6 +674,7 @@
             </address>
         </div>
     </footer>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
     <script src="js/scrypt.js" type="module"></script>
     <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=9279417d-5049-4b3f-8bef-f06d4f964194&lang=ru_RU" type="text/javascript" defer></script> -->
 </body>
