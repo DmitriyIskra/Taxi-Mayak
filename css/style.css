@@ -995,7 +995,7 @@ main {
 }
 
 .callback__wr-img {
-    height: 200px;
+    height: 296px;
 
     overflow: hidden;
 }
@@ -2222,7 +2222,7 @@ margin-top: 106px;
 @media(max-width: 430px) {
     .callback__car-class-card {
         height: 439px;
-        width: 328px;
+        width: 97%;
         margin: 0 auto;
 
         box-shadow: none;
