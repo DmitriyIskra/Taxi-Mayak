@@ -997,13 +997,14 @@ main {
 
 .callback__wr-img {
     height: 200px;
+
+    overflow: hidden;
 }
 
 .callback__img {
     display: inline-block;
     width: 17.344vw;
 }
-
 
 .callback__wr-card-text {
     display: flex;
@@ -2178,9 +2179,11 @@ margin-top: 106px;
 
 @media(max-width: 430px) {
     .callback {
+        padding-top: 70px;
         padding-bottom: 54px;
 
         background-position: top center;
+        background-size: auto 973px;
     }
 }
 
@@ -2189,51 +2192,86 @@ margin-top: 106px;
         display: none;
     }
 }
-.callback__car-class-list {
-    display: none;
-}
-.callback__wrapper-swiper {
-    display: block;
-    width: 27%;
-    height: 419px;
-    margin: 0 auto;
-    padding-top: 0;
-}
-.swiper {
-    height: 100%;
-}
-.callback__car-class-card {
-    width: 230px;
-    margin: 0 auto;
-}
+
 @media(max-width: 430px) {
     .callback__wrapper-swiper {
         display: block;
-        width: 60%;
-        height: 352px;
+        width: 79%;
+        height: 517px;
         margin: 0 auto;
-        padding-top: 50px;
-
-        background-color: #dceff7;
+        padding-top: 0;
     }
 }
 
 @media(max-width: 430px) {
     .swiper {
-        width: 60%;
-        height: 70%;
+        height: 100%;
     }
 }
 
 @media(max-width: 430px) {
     .callback__car-class-card {
+        height: 439px;
+        width: 328px;
+        margin: 0 auto;
+
         box-shadow: none;
+    }
+}
+
+@media(max-width: 430px) {
+    .callback__wr-img {
+        height: 264px;
+    }
+}
+
+@media(max-width: 430px) {
+    .callback__img {
+        height: 465px;
+        width: auto;
+        margin-top: -28px;
+    }
+}
+
+@media(max-width: 430px) {
+    .callback__wr-card-text {
+        height: 144px;
+        width: 263px;
+    }
+}
+
+@media(max-width: 430px) {
+    .callback__card-text-class {
+        font-size: 36px;
+    }
+
+    .callback__card-text-car {
+        font-size: 24px;
     }
 }
 
 @media(max-width: 430px) {
     .callback__wr-collback-form {
         gap: 22px;
+}
+
+@media(max-width: 430px) {
+    .swiper .swiper-pagination-bullet {
+        background-color: rgba(255, 255, 255, 0);
+        opacity: inherit;
+        border: 1px solid rgba(255, 255, 255, 1);
+    }
+    .swiper .swiper-pagination-bullet-active {
+        background-color: rgba(255, 255, 255, 1);
+        border: 1px solid #ffffff;
+        opacity: 1;
+    }
+}
+
+@media(max-width: 430px) {
+    .wr-collback-form {
+        margin-top: 40px;
+    }
 }
 
 @media(max-width: 430px) {
