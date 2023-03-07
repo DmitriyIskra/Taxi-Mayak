@@ -19,6 +19,16 @@ a {
     color: black; 
 }
 
+input[type=date]::-webkit-calendar-picker-indicator {
+    /* opacity: 0; */
+    background: none;
+}
+
+input[type=time]::-webkit-calendar-picker-indicator {
+    /* opacity: 0; */
+    background: none;
+}
+
 /*------ СТАРТ ФОРМА КОЛЛБЭК ОБЩИЕ СВОЙСТВА -----*/
 
     .form-callback {
@@ -731,7 +741,17 @@ main {
     margin-top: 5px;
 }
 
+.wr-price-order__date-arrive {
+    background-image: url(../svg/select-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: top 49% right 13px;
+}
 
+.wr-price-order__time-arrive {
+    background-image: url(../svg/select-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: top 49% right 13px;
+}
 
 .wr-price-order__wr-car-class {
     width: 35.5%;
@@ -744,7 +764,7 @@ main {
 
     background-image: url(../svg/select-arrow.svg);
     background-repeat: no-repeat;
-    background-position: top 49% right 5%;
+    background-position: top 49% right 15px;
 
     appearance: none;
 }
@@ -768,7 +788,7 @@ main {
 
     background-image: url(../svg/select-arrow.svg);
     background-repeat: no-repeat;
-    background-position: top 49% right 8%;
+    background-position: top 49% right 15px;
 
     cursor: pointer;
 }
@@ -783,7 +803,7 @@ main {
 
     background-image: url(../svg/select-arrow.svg);
     background-repeat: no-repeat;
-    background-position: top 49% right 21%;
+    background-position: top 49% right 15px;
 
     appearance: none;
 }
@@ -996,6 +1016,7 @@ main {
 
 .callback__wr-img {
     height: 296px;
+    margin-top: 57px;
 
     overflow: hidden;
 }
@@ -2237,7 +2258,7 @@ margin-top: 106px;
 
 @media(max-width: 430px) {
     .callback__img {
-        height: 465px;
+        height: 236px;
         width: auto;
         margin-top: -28px;
     }
@@ -2542,6 +2563,13 @@ margin-top: 106px;
     }
 }
 
+@media(max-width:430px) {
+    .about-us__icon {
+        width: 107px;
+        height: 107px;
+    }
+}
+
 @media(max-width: 430px) {
     .about-us__wr-card-text {
         padding: 20px 0 25px;
@@ -2549,20 +2577,10 @@ margin-top: 106px;
 }
 
 @media(max-width: 430px) {
-    .about-us__wr-card-text_safely {
-        width: 184px; 
-    }
-}
-
-@media(max-width: 430px) {
-    .about-us__wr-card-text_park {
-        width: 184px; 
-    }
-}
-
-@media(max-width: 430px) {
-    .about-us__wr-card-text_easy {
-        width: 184px; 
+    .about-us__wr-card-text_safely,
+     .about-us__wr-card-text_park,
+      .about-us__wr-card-text_easy {
+        width: 160px; 
     }
 }
 
@@ -2783,27 +2801,9 @@ margin-top: 106px;
 
 
 
-@media(max-width: 400px) {
-    .about-us__icon {
-        width: 112px;
-        height: 112px;
-    }
-}
-
-
-@media(max-width: 400px) {
-    .about-us__wr-card-text_safely,
-     .about-us__wr-card-text_park,
-      .about-us__wr-card-text_easy {
-        width: 160px;
-    }
-}
-
-
-
 /* ------------------------- media 365 ------------------------------------ */
 
-@media(max-width: 400px) {
+@media(max-width: 365px) {
     .about-us__icon {
         width: 107px;
         height: 107px;
@@ -2811,7 +2811,7 @@ margin-top: 106px;
 }
 
 
-@media(max-width: 400px) {
+@media(max-width: 365px) {
     .about-us__wr-card-text_safely,
      .about-us__wr-card-text_park,
       .about-us__wr-card-text_easy {
@@ -2819,7 +2819,7 @@ margin-top: 106px;
     }
 }
 
-@media(max-width: 430px) {
+@media(max-width: 365px) {
     .about-us__card-text {
         font-size: 15px;
     }
