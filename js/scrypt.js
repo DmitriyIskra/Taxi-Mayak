@@ -6,7 +6,7 @@
 // ============ Открытие/закрытие меню мобильной версии по клику на иконку или элементам меню
 
 import {controlIconMobileMenu} from './nav-mobile.js'
-
+// console.log(controlIconMobileMenu)
 controlIconMobileMenu.registerEvent();     // вызываем навешивание событий
 
 // ============ Открытие/закрытие меню мобильной версии по клику на иконку или элементам меню ===================
@@ -17,8 +17,9 @@ controlIconMobileMenu.registerEvent();     // вызываем навешива�
 
 import ChangeDirection from './changeDirection.js'
 
-const changeDirection = new ChangeDirection(document.querySelector('.popular__direction'));
+const changeDirection = new ChangeDirection(document.querySelector('.popular__form'));
 changeDirection.registerEvent();
+
 // ---- ВЫЗОВ И РАБОТА МОДАЛЬНОГО ОКНА
 // Данные для работы формы popular
 const popularForm = document.querySelector('.popular__form');
@@ -82,7 +83,7 @@ function openFormTypeChairs(top, left) {    // Активация формы в�
 // // ============ Активация выбора кресла END =========
 
 // // ============ Расчет цены START =========
-import calcPrice from './show-price.js'
+import {calcPrice} from './show-price.js';
 
 calcPrice.registerEvent()
 
