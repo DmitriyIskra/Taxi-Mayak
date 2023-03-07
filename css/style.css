@@ -1618,6 +1618,18 @@ margin-top: 106px;
 
 
 
+/* ===============------------  -------------=============== */
+
+
+/* ===============------------ MEDIA 1290 -------------=============== */
+/* ------------- FORM ORDER */
+
+@media(max-width:1366px) {
+    .wr-price-order__amount-chair {
+        background-position: top 49% right 8px;
+    }
+}
+
 
 /* ------------- ABOUT US */
 
@@ -1626,6 +1638,7 @@ margin-top: 106px;
         width: 94%;
     }
 }
+
 
 @media (max-width: 1366px) {
     .about-us__wr-img-title {
@@ -1887,18 +1900,33 @@ margin-top: 106px;
     }
 }
 
-@media (max-width:1290px) {
+@media (max-width: 1290px) {
     .about-us__wr-text {
         padding: 0 50px;
     }
 }
 
-@media (max-width:1290px) {
+@media (max-width: 1290px) {
     .about-us__text {
         font-size: 19px;
     }
 }
 
+
+
+/* ------------- FOOTER */
+
+@media (max-width: 1290px) {
+    .footer__contacts {
+        margin-right: 0;
+    }
+}
+
+@media(max-width: 1290px) {
+    .footer__social-icons {
+        gap: 0;
+    }
+}
 
 /* ===============------------  -------------=============== */
 
@@ -2260,7 +2288,6 @@ margin-top: 106px;
     .callback__img {
         height: auto;
         width: 100%;
-        margin-top: -28px;
     }
 }
 
