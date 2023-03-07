@@ -91,63 +91,133 @@
                     <header class="popular__header">
                         <h2 class="popular__title">популярные направления</h2>
                     </header>
-    
+                    <div class="popular__direction">
+                        <span class="popular__button-to-sea popular__direction_active">На море</span>
+                        <span class="popular__separator">|</span>
+                        <span class="popular__button-back">Обратно</span>
+                    </div>
                     <div class="popular__wr-data">
-                        <div class="popular__wr-from">
-                            <label class="popular__label-from popular__label" for="popular__select-from">Откуда</label>
-                            <select class="popular__select-from popular__select" id="popular__select-from" type="text" name="from">
-                                <option value=""></option>
-                                <option value="aero">Симферополь аэропорт</option>
-                                <option value="trainstation">Симферополь жд вокзал</option>
-                            </select>
-                        </div>
-    
-                        <div class="popular__wr-where popular__wr-selects">
-                            <label class="popular__label-where popular__label" for="popular__select-where">Куда</label>
-                            <select class="popular__select-where popular__select" id="popular__select-where" type="text" name="where">
-                                <option></option>
-                                <option value="alushta">Алушта</option>
-                                <option value="alupka">Алупка</option>
-                                <option value="balaklava">Балаклава</option>
-                                <option value="beregovoe_ubk">Береговое (ЮБК)</option>
-                                <option value="beregovoe_nik">Береговое (Николаевка)</option>
-                                <option value="beregovoe_feo">Береговое (Феодосия)</option>
-                                <option value="gaspra">Гаспра</option>
-                                <option value="gurzuf">Гурзуф</option> 
-                                <option value="evpatoriya">Евпатория</option>
-                                <option value="zaozernoe">Заозерное</option>
-                                <option value="kaciveli">Кацивели</option>
-                                <option value="kacha">Кача</option>
-                                <option value="kerch">Керчь</option>
-                                <option value="koktebel">Коктебель</option>
-                                <option value="livadiya">Ливадия</option>
-                                <option value="malorechenskoe">Малореченское</option>
-                                <option value="nikolaevka">Николаевка</option>
-                                <option value="novofedorovka">Новофедоровка</option>
-                                <option value="noviysvet">Новый-Свет</option>
-                                <option value="olenevka">Оленевка</option>
-                                <option value="ordzhonikidze">Орджоникидзе</option>
-                                <option value="Orlovka">Орловка</option>
-                                <option value="partenit">Партенит</option>
-                                <option value="peschanoe">Песчаное</option>
-                                <option value="ponizovka">Понизовка</option>
-                                <option value="popovka">Поповка</option>
-                                <option value="ribache">Рыбачье</option>
-                                <option value="saki">Саки</option>
-                                <option value="priboy">Саки(Прибой)</option>
-                                <option value="sanatornoye">Санаторное</option>
-                                <option value="sevastopol">Севастополь</option>
-                                <option value="simeiz">Симеиз</option>
-                                <option value="solnechnogorskoe">Солнечногорское</option>
-                                <option value="sudak">Судак</option>
-                                <option value="feodosiya">Феодосия</option>                               
-                                <option value="foros">Форос</option>
-                                <option value="chernomorskoe">Черноморское</option>
-                                <option value="shtormovoe">Штормовое</option>
-                                <option value="yalta">Ялта</option> 
-                            </select>
+
+                        <div class="popular__wr-direction_tosea popular__select-direction_active">
+                            <div class="popular__wr-from popular__select-direction_unactive">
+                                <label class="popular__label-from popular__label" for="popular__select-from">Откуда</label>
+                                <select class="popular__select-from popular__select popular__select-direction_active" id="popular__select-from" type="text" name="from">
+                                    <option value=""></option>
+                                    <option value="aero">Симферополь аэропорт</option>
+                                    <option value="trainstation">Симферополь жд вокзал</option>
+                                </select>
+                            </div>
+        
+                            <div class="popular__wr-where popular__wr-selects popular__select-direction_unactive">
+                                <label class="popular__label-where popular__label" for="popular__select-where">Куда</label>
+                                <select class="popular__select-where popular__select popular__select-direction_active" id="popular__select-where" type="text" name="where">
+                                    <option></option>
+                                    <option value="alushta">Алушта</option>
+                                    <option value="alupka">Алупка</option>
+                                    <option value="balaklava">Балаклава</option>
+                                    <option value="beregovoe_ubk">Береговое (ЮБК)</option>
+                                    <option value="beregovoe_nik">Береговое (Николаевка)</option>
+                                    <option value="beregovoe_feo">Береговое (Феодосия)</option>
+                                    <option value="gaspra">Гаспра</option>
+                                    <option value="gurzuf">Гурзуф</option> 
+                                    <option value="evpatoriya">Евпатория</option>
+                                    <option value="zaozernoe">Заозерное</option>
+                                    <option value="kaciveli">Кацивели</option>
+                                    <option value="kacha">Кача</option>
+                                    <option value="kerch">Керчь</option>
+                                    <option value="koktebel">Коктебель</option>
+                                    <option value="livadiya">Ливадия</option>
+                                    <option value="malorechenskoe">Малореченское</option>
+                                    <option value="nikolaevka">Николаевка</option>
+                                    <option value="novofedorovka">Новофедоровка</option>
+                                    <option value="noviysvet">Новый-Свет</option>
+                                    <option value="olenevka">Оленевка</option>
+                                    <option value="ordzhonikidze">Орджоникидзе</option>
+                                    <option value="Orlovka">Орловка</option>
+                                    <option value="partenit">Партенит</option>
+                                    <option value="peschanoe">Песчаное</option>
+                                    <option value="ponizovka">Понизовка</option>
+                                    <option value="popovka">Поповка</option>
+                                    <option value="ribache">Рыбачье</option>
+                                    <option value="saki">Саки</option>
+                                    <option value="priboy">Саки(Прибой)</option>
+                                    <option value="sanatornoye">Санаторное</option>
+                                    <option value="sevastopol">Севастополь</option>
+                                    <option value="simeiz">Симеиз</option>
+                                    <option value="solnechnogorskoe">Солнечногорское</option>
+                                    <option value="sudak">Судак</option>
+                                    <option value="feodosiya">Феодосия</option>                               
+                                    <option value="foros">Форос</option>
+                                    <option value="chernomorskoe">Черноморское</option>
+                                    <option value="shtormovoe">Штормовое</option>
+                                    <option value="yalta">Ялта</option> 
+                                </select>
+                            </div>
                         </div>
                         
+                        
+                        <!-- Обратное направление -->
+                        <div class="popular__wr-direction_toback">
+                            <div class="popular__wr-from">
+                                <label class="popular__label-from popular__label" for="popular__select-from">Откуда</label>
+                                <select class="popular__select-from popular__select" id="popular__select-from" type="text" name="from">
+                                    <option></option>
+                                    <option value="alushta">Алушта</option>
+                                    <option value="alupka">Алупка</option>
+                                    <option value="balaklava">Балаклава</option>
+                                    <option value="beregovoe_ubk">Береговое (ЮБК)</option>
+                                    <option value="beregovoe_nik">Береговое (Николаевка)</option>
+                                    <option value="beregovoe_feo">Береговое (Феодосия)</option>
+                                    <option value="gaspra">Гаспра</option>
+                                    <option value="gurzuf">Гурзуф</option> 
+                                    <option value="evpatoriya">Евпатория</option>
+                                    <option value="zaozernoe">Заозерное</option>
+                                    <option value="kaciveli">Кацивели</option>
+                                    <option value="kacha">Кача</option>
+                                    <option value="kerch">Керчь</option>
+                                    <option value="koktebel">Коктебель</option>
+                                    <option value="livadiya">Ливадия</option>
+                                    <option value="malorechenskoe">Малореченское</option>
+                                    <option value="nikolaevka">Николаевка</option>
+                                    <option value="novofedorovka">Новофедоровка</option>
+                                    <option value="noviysvet">Новый-Свет</option>
+                                    <option value="olenevka">Оленевка</option>
+                                    <option value="ordzhonikidze">Орджоникидзе</option>
+                                    <option value="Orlovka">Орловка</option>
+                                    <option value="partenit">Партенит</option>
+                                    <option value="peschanoe">Песчаное</option>
+                                    <option value="ponizovka">Понизовка</option>
+                                    <option value="popovka">Поповка</option>
+                                    <option value="ribache">Рыбачье</option>
+                                    <option value="saki">Саки</option>
+                                    <option value="priboy">Саки(Прибой)</option>
+                                    <option value="sanatornoye">Санаторное</option>
+                                    <option value="sevastopol">Севастополь</option>
+                                    <option value="simeiz">Симеиз</option>
+                                    <option value="solnechnogorskoe">Солнечногорское</option>
+                                    <option value="sudak">Судак</option>
+                                    <option value="feodosiya">Феодосия</option>                               
+                                    <option value="foros">Форос</option>
+                                    <option value="chernomorskoe">Черноморское</option>
+                                    <option value="shtormovoe">Штормовое</option>
+                                    <option value="yalta">Ялта</option> 
+                                </select>
+                            </div>
+    
+                            <div class="popular__wr-where  popular__wr-selects">
+                                <label class="popular__label-where popular__label" for="popular__select-where">Куда</label>
+                                <select class="popular__select-where popular__select" id="popular__select-where" type="text" name="where">
+                                    <option value=""></option>
+                                    <option value="aero">Симферополь аэропорт</option>
+                                    <option value="trainstation">Симферополь жд вокзал</option>
+                                </select>
+                            </div>
+                        </div>                        
+
+                        <!-- ========================= -->
+
+
+
                         <div class="popular__wr-car-class popular__wr-selects">
                             <label class="popular__label-car-class popular__label" for="popular__select-car-class">Класс авто</label>
                             <select class="popular__select-car-class popular__select" id="popular__select-car-class" type="text" name="car-class">
@@ -596,10 +666,20 @@
                 <li class="wr-checkers__checkers-item wr-checkers__checkers_left"></li>
                 <li class="wr-checkers__checkers-item wr-checkers__checkers_left"></li>
                 <li class="wr-checkers__checkers-item wr-checkers__checkers_left"></li>
+                <li class="wr-checkers__checkers-item wr-checkers__checkers_left"></li>
+                <li class="wr-checkers__checkers-item wr-checkers__checkers_left"></li>
+                <li class="wr-checkers__checkers-item wr-checkers__checkers_left"></li>
+                <li class="wr-checkers__checkers-item wr-checkers__checkers_left"></li>
+                <li class="wr-checkers__checkers-item wr-checkers__checkers_left"></li>
             </ul>
         </div>
         <div class="wr-checkers_right">
             <ul class="wr-checkers__checkers wr-checkers__checkers_right">
+                <li class="wr-checkers__checkers-item wr-checkers__checkers_right"></li>
+                <li class="wr-checkers__checkers-item wr-checkers__checkers_right"></li>
+                <li class="wr-checkers__checkers-item wr-checkers__checkers_right"></li>
+                <li class="wr-checkers__checkers-item wr-checkers__checkers_right"></li>
+                <li class="wr-checkers__checkers-item wr-checkers__checkers_right"></li>
                 <li class="wr-checkers__checkers-item wr-checkers__checkers_right"></li>
                 <li class="wr-checkers__checkers-item wr-checkers__checkers_right"></li>
                 <li class="wr-checkers__checkers-item wr-checkers__checkers_right"></li>
@@ -678,8 +758,8 @@
             </address>
         </div>
     </footer>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+
     <script src="js/scrypt.js" type="module"></script>
-    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=9279417d-5049-4b3f-8bef-f06d4f964194&lang=ru_RU" type="text/javascript" defer></script> -->
+
 </body>
 </html>

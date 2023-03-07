@@ -12,8 +12,14 @@ controlIconMobileMenu.registerEvent();     // вызываем навешива�
 // ============ Открытие/закрытие меню мобильной версии по клику на иконку или элементам меню ===================
 
 
-// // ============ УПРАВЛЕНИЕ ФОРМОЙ ПОПУЛЯРНЫЕ НАПРАВЛЕНИЯ ВЫЗОВ И РАБОТА МОДАЛЬНОГО ОКНА
+// // ============ УПРАВЛЕНИЕ ФОРМОЙ ПОПУЛЯРНЫЕ НАПРАВЛЕНИЯ 
+// ---- СМЕНА полей направлений
 
+import ChangeDirection from './changeDirection.js'
+
+const changeDirection = new ChangeDirection(document.querySelector('.popular__direction'));
+changeDirection.registerEvent();
+// ---- ВЫЗОВ И РАБОТА МОДАЛЬНОГО ОКНА
 // Данные для работы формы popular
 const popularForm = document.querySelector('.popular__form');
 const formChairsType = document.querySelector('.popular__wr-modal-type-chair');
