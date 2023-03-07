@@ -741,17 +741,6 @@ main {
     margin-top: 5px;
 }
 
-.wr-price-order__date-arrive {
-    background-image: url(../svg/select-arrow.svg);
-    background-repeat: no-repeat;
-    background-position: top 49% right 13px;
-}
-
-.wr-price-order__time-arrive {
-    background-image: url(../svg/select-arrow.svg);
-    background-repeat: no-repeat;
-    background-position: top 49% right 13px;
-}
 
 .wr-price-order__wr-car-class {
     width: 35.5%;
@@ -1519,6 +1508,21 @@ margin-top: 106px;
 
 /* ------------------------------------------- КОНЕЦ FOOTER ------------------------------------------- */
 
+@media(min-width: 430px) {
+    .wr-price-order__date-arrive {
+        appearance: none;
+        background-image: url(../svg/select-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: top 49% right 13px;
+    }
+    
+    .wr-price-order__time-arrive {
+        appearance: none;
+        background-image: url(../svg/select-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: top 49% right 13px;
+    }
+}
 
 /* 360 768 1080 1179 1290   */
 /* --------- @@@@@@ MEDIA @@@@@@@ ------------- */
@@ -2144,6 +2148,16 @@ margin-top: 106px;
         height: 45px;
         width: 100%;
     }
+}
+
+@media(max-width: 430px) {
+    .wr-price-order__date-arrive,
+     .wr-price-order__time-arrive {
+        background-image: url(../img/arrow-to-bottom-time-date-mob.png);
+        background-repeat: no-repeat;
+        background-position: top 49% right 2px;
+        background-size: auto 9px;
+     }
 }
 
 @media(max-width: 430px) {
