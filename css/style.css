@@ -741,6 +741,9 @@ main {
     margin-top: 5px;
 }
 
+.wr-price-order__arrow-mobile {
+    display: none;
+}
 
 .wr-price-order__wr-car-class {
     width: 35.5%;
@@ -2141,6 +2144,13 @@ margin-top: 106px;
 }
 
 @media(max-width: 430px) {
+    .wr-price-order__wr-date-arrive,
+     .wr-price-order__wr-time-arrive {
+        position: relative;
+     }
+}
+
+@media(max-width: 430px) {
     .wr-price-order__date-arrive,
      .wr-price-order__time-arrive,
       .wr-price-order__number-flight,
@@ -2151,13 +2161,17 @@ margin-top: 106px;
 }
 
 @media(max-width: 430px) {
-    .wr-price-order__date-arrive,
-     .wr-price-order__time-arrive {
-        background-image: url(../img/arrow-to-bottom-time-date-mob.png);
-        background-repeat: no-repeat;
-        background-position: top 49% right 2px;
-        background-size: auto 9px;
-     }
+    .wr-price-order__arrow-mobile {
+        position: absolute;
+        top: 31px;
+        right: 2px;
+
+        display: block;
+        height:auto;
+        width:21px;
+
+        border-radius: 3px;
+    }
 }
 
 @media(max-width: 430px) {
