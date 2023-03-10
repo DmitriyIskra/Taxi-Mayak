@@ -301,12 +301,12 @@
                     <div class="wr-price-order__name-fonnumber">
                         <div class="wr-price-order__wr-name">
                             <label class="wr-price-order__label-name wr-price-order__labels" for="wr-price-order__name">Имя и фамилия</label>
-                            <input class="wr-price-order__name wr-price-order__look-inputs" id="wr-price-order__name" type="text" name="name">
+                            <input class="wr-price-order__name wr-price-order__look-inputs" id="wr-price-order__name" type="text" name="name" required>
                         </div>
 
                         <div class="wr-price-order__wr-tel">
                             <label class="wr-price-order__label-tel wr-price-order__labels" for="wr-price-order__tel">Номер телефона</label>
-                            <input class="wr-price-order__tel wr-price-order__look-inputs" id="wr-price-order__tel" type="text" name="tel">
+                            <input class="wr-price-order__tel wr-price-order__look-inputs" id="wr-price-order__tel" type="text" name="tel" required>
                         </div>
                     </div>
 
@@ -524,8 +524,8 @@
 
                     <form class="callback__form form-callback" action="" name="callback__form">
                         <div class="callback__wr-form-inputs wr-form-inputs">
-                            <input class="callback__form-name callback-form-inputs" type="text" name="name" placeholder="Имя">
-                            <input class="callback__form-tel callback-form-inputs" type="tel" name="tel" placeholder="+7(___)___ __ __">
+                            <input class="callback__form-name callback-form-inputs" type="text" name="name" placeholder="Имя" required>
+                            <input class="callback__form-tel callback-form-inputs" type="tel" name="tel" placeholder="+7(___)___ __ __" required>
                         </div>
                         <div class="callback__wr-form-button">
                             <button class="callback__form-button callback-form-button" type="submit" name="submit">отправить</button>
@@ -736,8 +736,8 @@
 
             <form class="footer__form form-callback" action="" name="footer__form">
                 <div class="footer__wr-form-inputs">
-                    <input class="footer__form-name callback-form-inputs" type="text" name="name" placeholder="Имя">
-                    <input class="footer__form-tel callback-form-inputs" type="tel" name="tel" placeholder="+7(___)___ __ __">
+                    <input class="footer__form-name callback-form-inputs" type="text" name="name" placeholder="Имя" required>
+                    <input class="footer__form-tel callback-form-inputs" type="tel" name="tel" placeholder="+7(___)___ __ __" required>
                 </div>
                 <div class="footer__wr-form-button">
                     <button class="footer__form-button callback-form-button" type="submit" name="submit">отправить</button>
@@ -768,26 +768,78 @@
         var myMap;
         
         function init() {
-        
-            myMap = new ymaps.Map("map", {
-                center: [43.238253, 76.945465], // Координаты центра карты
-                zoom: 13 // Маштаб карты
-            }); 
-        
-            myMap.controls.add(
-                new ymaps.control.ZoomControl()  // Добавление элемента управления картой
-            ); 
-        
-            myPlacemark = new ymaps.Placemark([43.238253,76.945465], { // Координаты метки объекта
-                balloonContent: "<div class='ya_map'>Заезжайте в гости!</div>" // Подсказка метки
-            }, {
-                preset: "twirl#redDotIcon" // Тип метки
+            // Стоимость за километр.
+            var DELIVERY_TARIFF = 20,
+            // Минимальная стоимость.
+            MINIMUM_COST = 500,
+            myMap = new ymaps.Map('map', {
+                center: [60.906882, 30.067233],
+                zoom: 9,
+                controls: []
+            }),
+            // Создадим панель маршрутизации.
+            routePanelControl = new ymaps.control.RoutePanel({
+                options: {
+                    // Добавим заголовок панели.
+                    showHeader: true,
+                    title: 'Расчёт доставки'
+                }
+            }),
+            zoomControl = new ymaps.control.ZoomControl({
+                options: {
+                    size: 'small',
+                    float: 'none',
+                    position: {
+                        bottom: 145,
+                        right: 10
+                    }
+                }
             });
-            
-            myMap.geoObjects.add(myPlacemark); // Добавление метки
-            myPlacemark.balloon.open(); // Открытие подсказки метки
-            
-        };
+            // Пользователь сможет построить только автомобильный маршрут.
+            routePanelControl.routePanel.options.set({
+                types: {auto: true}
+            });
+
+            // Если вы хотите задать неизменяемую точку "откуда", раскомментируйте код ниже.
+            /*routePanelControl.routePanel.state.set({
+                fromEnabled: false,
+                from: 'Москва, Льва Толстого 16'
+            });*/
+
+            myMap.controls.add(routePanelControl).add(zoomControl);
+
+            // Получим ссылку на маршрут.
+            routePanelControl.routePanel.getRouteAsync().then(function (route) {
+
+                // Зададим максимально допустимое число маршрутов, возвращаемых мультимаршрутизатором.
+                route.model.setParams({results: 1}, true);
+
+                // Повесим обработчик на событие построения маршрута.
+                route.model.events.add('requestsuccess', function () {
+
+                    var activeRoute = route.getActiveRoute();
+                    if (activeRoute) {
+                        // Получим протяженность маршрута.
+                        var length = route.getActiveRoute().properties.get("distance"),
+                        // Вычислим стоимость доставки.
+                            price = calculate(Math.round(length.value / 1000)),
+                        // Создадим макет содержимого балуна маршрута.
+                            balloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                                '<span>Расстояние: ' + length.text + '.</span><br/>' +
+                                '<span style="font-weight: bold; font-style: italic">Стоимость доставки: ' + price + ' р.</span>');
+                        // Зададим этот макет для содержимого балуна.
+                        route.options.set('routeBalloonContentLayout', balloonContentLayout);
+                        // Откроем балун.
+                        activeRoute.balloon.open();
+                    }
+                });
+
+            });
+    // Функция, вычисляющая стоимость доставки.
+    function calculate(routeLength) {
+        return Math.max(routeLength * DELIVERY_TARIFF, MINIMUM_COST);
+    }
+}
         
     </script>
 </body>
