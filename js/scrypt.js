@@ -94,7 +94,10 @@ calcPrice.registerEvent()
 
         function init() {
             // Стоимость за километр.
-            var DELIVERY_TARIFF = 30,
+            var DELIVERY_TARIFF_STANDART = 30;
+            var DELIVERY_TARIFF_KOMFORT = 35;
+            var DELIVERY_TARIFF_BIZNESS = 40;
+            var DELIVERY_TARIFF_MINIVEN = 45,
             // Минимальная стоимость.
             MINIMUM_COST = 1000,
             myMap = new ymaps.Map('map', {
@@ -157,8 +160,12 @@ calcPrice.registerEvent()
                             price = calculate(Math.round(length.value / 1000)),
                         // Создадим макет содержимого балуна маршрута.
                             balloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                                '<span>ориентировочная стоимость поездки:' + '</span><br/>' +
                                 '<span>Расстояние: ' + length.text + '.</span><br/>' +
-                                '<span style="font-weight: bold; font-style: italic">Ориентировочная стоимость: ' + price + ' р.</span>');
+                                '<span style="font-weight: bold; font-style: italic">Стандарт: ' + price[0] + ' р.</span><br/>' + 
+                                '<span style="font-weight: bold; font-style: italic">Комфорт: ' + price[1] + ' р.</span><br/>' +
+                                '<span style="font-weight: bold; font-style: italic">Бизнесс: ' + price[2] + ' р.</span><br/>' +
+                                '<span style="font-weight: bold; font-style: italic">Минивен: ' + price[3] + ' р.</span><br/>');
                         // Зададим этот макет для содержимого балуна.
                         route.options.set('routeBalloonContentLayout', balloonContentLayout);
                         // Откроем балун.
@@ -169,7 +176,10 @@ calcPrice.registerEvent()
             });
             // Функция, вычисляющая стоимость доставки.
             function calculate(routeLength) {
-                return Math.max(routeLength * DELIVERY_TARIFF, MINIMUM_COST); 
+                return [Math.max(routeLength * DELIVERY_TARIFF_STANDART, MINIMUM_COST),
+                        Math.max(routeLength * DELIVERY_TARIFF_KOMFORT, MINIMUM_COST),
+                        Math.max(routeLength * DELIVERY_TARIFF_BIZNESS, MINIMUM_COST),
+                        Math.max(routeLength * DELIVERY_TARIFF_MINIVEN, MINIMUM_COST)]; 
             }
         }
 

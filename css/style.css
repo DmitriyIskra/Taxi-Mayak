@@ -729,15 +729,23 @@ main {
     overflow: hidden;
 }
 
+.ymaps-2-1-79-controls__control_toolbar {
+    width: 100%;
+}
+
 .ymaps-2-1-79-control-popup__content {
     border-radius: 6px;
     border: 1px solid #9BD0C0;
-    width: 119%;
+    width: 100%;
 }
 
 .ymaps-2-1-79-control-popup {
     border-radius: 6px;
     /* border: 1px solid #9BD0C0; */ 
+}
+
+.ymaps-2-1-79-copyright__link {
+    visibility: hidden;
 }
 
 /* --- END КАРТА--- */
@@ -2139,6 +2147,11 @@ margin-top: 106px;
     }
 }
 
+@media(max-width: 430px) {
+    .ymaps-2-1-79-controls__control_toolbar {
+        width: 88%;
+    }
+}
 
 @media(max-width: 430px) {
     .wr-price-order__order {
