@@ -717,7 +717,7 @@ main {
         }
     /* ------------------------------------------ */
 
-.wr-price-order__map {
+#map {
     height: 532px;
     width: 93.8%;
     
@@ -782,6 +782,11 @@ main {
     width: 90.6%;
     margin-top: 5px;
 }
+
+.wr-price-order__date-arrive,
+ .wr-price-order__time-arrive {
+    cursor: pointer;
+ }
 
 .wr-price-order__arrow-mobile {
     display: none;
@@ -1804,7 +1809,7 @@ margin-top: 106px;
 }
 
 @media (max-width: 1290px) {
-    .wr-price-order__map {
+    #map {
         width: 100%;
     }
 }
@@ -2113,7 +2118,7 @@ margin-top: 106px;
 }
 
 @media(max-width: 430px) {
-    .wr-price-order__map {
+    #map {
         height: 321px;
         margin-top: 20px;
     }

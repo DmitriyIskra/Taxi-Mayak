@@ -1,0 +1,330 @@
+// -------- Калькулятор ---------//
+
+    let price = {
+           
+
+
+                стандарт : {
+
+                    alushta : 1233
+                    yalta : 
+                    evpatoriya : 
+                    zaozernoe : 
+                    shtormovoe : 
+                    popovka : 
+                    olenevka : 
+                    chernomorskoe : 
+                    saki : 
+                    priboy : 
+                    novofedorovka : 
+                    nikolaevka : 
+                    beregovoe_ubk : 
+                    beregovoe_nik :
+                    beregovoe_feo : 
+                    peschanoe : 
+                    sevastopol : 
+                    balaklava :
+                    orlovka : 
+                    kacha : 
+                    sudak : 
+                    noviysvet:                
+                    feodosiya : 
+                    kerch : 
+                    koktebel : 
+                    ordzhonikidze : 
+                    ribache : 
+                    solnechnogorskoe : 
+                    malorechenskoe : 
+                    partenit : 
+                    gurzuf : 
+                    livadiya : 
+                    gaspra : 
+                    alupka : 
+                    simeiz : 
+                    kaciveli : 
+                    ponizovka : 
+                    sanatornoye : 
+                    foros : 
+                    Андреевка: 
+                    Бахчисарай: 
+                    Белогорск: 
+                    Вилино: 
+                    Карасан: 
+                    Кореиз: 
+                    Красногвардейское: 
+                    Краснокаменка: 
+                    Курпаты: 
+                    Ласпи: 
+                    Ленино: 
+                    Линейное: 
+                    Любимовка: 
+                    Малый маяк: 
+                    Массандра: 
+                    Мирный: 
+                    Мисхор: 
+                    Молочное: 
+                    Мрия: 
+                    Нижняя Ореанда: 
+                    Никита: 
+                    Новоозерное: 
+                    Окунёвка: 
+                    Олива: 
+                    Оползневое: 
+                    Орлиное: 
+                    Отрадное: 
+                    Перевальное: 
+                    Песчаное: 
+                    Приветное: 
+                    Пушкино: 
+                    Солнечное: 
+                    Симферополь: 
+                    Тайган: 
+                    Угловое: 
+                    Фрунзе: 
+                    Щелкино: 
+                },
+                
+                комфорт : {
+
+                    alushta : 1233
+                    yalta : 
+                    evpatoriya : 
+                    zaozernoe : 
+                    shtormovoe : 
+                    popovka : 
+                    olenevka : 
+                    chernomorskoe : 
+                    saki : 
+                    priboy : 
+                    novofedorovka : 
+                    nikolaevka : 
+                    beregovoe_ubk : 
+                    beregovoe_nik :
+                    beregovoe_feo : 
+                    peschanoe : 
+                    sevastopol : 
+                    balaklava :
+                    orlovka : 
+                    kacha : 
+                    sudak : 
+                    noviysvet:                
+                    feodosiya : 
+                    kerch : 
+                    koktebel : 
+                    ordzhonikidze : 
+                    ribache : 
+                    solnechnogorskoe : 
+                    malorechenskoe : 
+                    partenit : 
+                    gurzuf : 
+                    livadiya : 
+                    gaspra : 
+                    alupka : 
+                    simeiz : 
+                    kaciveli : 
+                    ponizovka : 
+                    sanatornoye : 
+                    foros : 
+                    Андреевка: 
+                    Бахчисарай: 
+                    Белогорск: 
+                    Вилино: 
+                    Карасан: 
+                    Кореиз: 
+                    Красногвардейское: 
+                    Краснокаменка: 
+                    Курпаты: 
+                    Ласпи: 
+                    Ленино: 
+                    Линейное: 
+                    Любимовка: 
+                    Малый маяк: 
+                    Массандра: 
+                    Мирный: 
+                    Мисхор: 
+                    Молочное: 
+                    Мрия: 
+                    Нижняя Ореанда: 
+                    Никита: 
+                    Новоозерное: 
+                    Окунёвка: 
+                    Олива: 
+                    Оползневое: 
+                    Орлиное: 
+                    Отрадное: 
+                    Перевальное: 
+                    Песчаное: 
+                    Приветное: 
+                    Пушкино: 
+                    Солнечное: 
+                    Симферополь: 
+                    Тайган: 
+                    Угловое: 
+                    Фрунзе: 
+                    Щелкино: 
+                },
+                
+                бизнесс : {
+
+                    alushta : 1233
+                    yalta : 
+                    evpatoriya : 
+                    zaozernoe : 
+                    shtormovoe : 
+                    popovka : 
+                    olenevka : 
+                    chernomorskoe : 
+                    saki : 
+                    priboy : 
+                    novofedorovka : 
+                    nikolaevka : 
+                    beregovoe_ubk : 
+                    beregovoe_nik :
+                    beregovoe_feo : 
+                    peschanoe : 
+                    sevastopol : 
+                    balaklava :
+                    orlovka : 
+                    kacha : 
+                    sudak : 
+                    noviysvet:                
+                    feodosiya : 
+                    kerch : 
+                    koktebel : 
+                    ordzhonikidze : 
+                    ribache : 
+                    solnechnogorskoe : 
+                    malorechenskoe : 
+                    partenit : 
+                    gurzuf : 
+                    livadiya : 
+                    gaspra : 
+                    alupka : 
+                    simeiz : 
+                    kaciveli : 
+                    ponizovka : 
+                    sanatornoye : 
+                    foros : 
+                    Андреевка: 
+                    Бахчисарай: 
+                    Белогорск: 
+                    Вилино: 
+                    Карасан: 
+                    Кореиз: 
+                    Красногвардейское: 
+                    Краснокаменка: 
+                    Курпаты: 
+                    Ласпи: 
+                    Ленино: 
+                    Линейное: 
+                    Любимовка: 
+                    Малый маяк: 
+                    Массандра: 
+                    Мирный: 
+                    Мисхор: 
+                    Молочное: 
+                    Мрия: 
+                    Нижняя Ореанда: 
+                    Никита: 
+                    Новоозерное: 
+                    Окунёвка: 
+                    Олива: 
+                    Оползневое: 
+                    Орлиное: 
+                    Отрадное: 
+                    Перевальное: 
+                    Песчаное: 
+                    Приветное: 
+                    Пушкино: 
+                    Солнечное: 
+                    Симферополь: 
+                    Тайган: 
+                    Угловое: 
+                    Фрунзе: 
+                    Щелкино: 
+                },
+                
+                минивен : {
+                    
+                    alushta : 1233
+                    yalta : 
+                    evpatoriya : 
+                    zaozernoe : 
+                    shtormovoe : 
+                    popovka : 
+                    olenevka : 
+                    chernomorskoe : 
+                    saki : 
+                    priboy : 
+                    novofedorovka : 
+                    nikolaevka : 
+                    beregovoe_ubk : 
+                    beregovoe_nik :
+                    beregovoe_feo : 
+                    peschanoe : 
+                    sevastopol : 
+                    balaklava :
+                    orlovka : 
+                    kacha : 
+                    sudak : 
+                    noviysvet:                
+                    feodosiya : 
+                    kerch : 
+                    koktebel : 
+                    ordzhonikidze : 
+                    ribache : 
+                    solnechnogorskoe : 
+                    malorechenskoe : 
+                    partenit : 
+                    gurzuf : 
+                    livadiya : 
+                    gaspra : 
+                    alupka : 
+                    simeiz : 
+                    kaciveli : 
+                    ponizovka : 
+                    sanatornoye : 
+                    foros : 
+                    Андреевка: 
+                    Бахчисарай: 
+                    Белогорск: 
+                    Вилино: 
+                    Карасан: 
+                    Кореиз: 
+                    Красногвардейское: 
+                    Краснокаменка: 
+                    Курпаты: 
+                    Ласпи: 
+                    Ленино: 
+                    Линейное: 
+                    Любимовка: 
+                    Малый маяк: 
+                    Массандра: 
+                    Мирный: 
+                    Мисхор: 
+                    Молочное: 
+                    Мрия: 
+                    Нижняя Ореанда: 
+                    Никита: 
+                    Новоозерное: 
+                    Окунёвка: 
+                    Олива: 
+                    Оползневое: 
+                    Орлиное: 
+                    Отрадное: 
+                    Перевальное: 
+                    Песчаное: 
+                    Приветное: 
+                    Пушкино: 
+                    Солнечное: 
+                    Симферополь: 
+                    Тайган: 
+                    Угловое: 
+                    Фрунзе: 
+                    Щелкино: 
+                },
+                
+            
+   
+    },
+            

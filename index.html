@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/> -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=2f54c579-7f78-4e50-ad37-6dac967119e3&lang=ru_RU" type="text/javascript"></script> -->
     <title>Такси Маяк</title> 
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=05486df5-e6c5-4af5-9e77-9d2577baec00" type="text/javascript"></script>
+
 </head>
 <body>    
     <header class="header">
@@ -289,7 +289,8 @@
                 <header class="wr-price-order__header-map">
                     <h2 class="wr-price-order__title">расчет стоимости</h2>
                 </header>
-                <div  id="map" class="wr-price-order__map"></div>
+                <!-- class="wr-price-order__map" -->
+                <div id="map"></div>
             </div>
             <div class="wr-price-order__order">
                 <form class="wr-price-order__form" action="" name="order">
@@ -761,5 +762,33 @@
 
     <script src="js/scrypt.js" type="module"></script>
 
+    <script type="text/javascript">
+
+        ymaps.ready(init); 
+        var myMap;
+        
+        function init() {
+        
+            myMap = new ymaps.Map("map", {
+                center: [43.238253, 76.945465], // Координаты центра карты
+                zoom: 13 // Маштаб карты
+            }); 
+        
+            myMap.controls.add(
+                new ymaps.control.ZoomControl()  // Добавление элемента управления картой
+            ); 
+        
+            myPlacemark = new ymaps.Placemark([43.238253,76.945465], { // Координаты метки объекта
+                balloonContent: "<div class='ya_map'>Заезжайте в гости!</div>" // Подсказка метки
+            }, {
+                preset: "twirl#redDotIcon" // Тип метки
+            });
+            
+            myMap.geoObjects.add(myPlacemark); // Добавление метки
+            myPlacemark.balloon.open(); // Открытие подсказки метки
+            
+        };
+        
+    </script>
 </body>
 </html>
