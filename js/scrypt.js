@@ -89,30 +89,89 @@ calcPrice.registerEvent()
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------
 // ======================== КАРТА
-// ymaps.ready(init); 
-// var myMap;
+        ymaps.ready(init); 
+        let myMap;
 
-// function init() {
+        function init() {
+            // Стоимость за километр.
+            var DELIVERY_TARIFF = 30,
+            // Минимальная стоимость.
+            MINIMUM_COST = 1000,
+            myMap = new ymaps.Map('map', {
+                center: [44.948169, 34.099893],
+                zoom: 9,
+                controls: []
+            }),
+            // Создадим панель маршрутизации.
+            routePanelControl = new ymaps.control.RoutePanel({
+                options: {
+                    // Добавим заголовок панели.
+                    showHeader: false,
+                    title: 'Расчёт маршрута',
+                    maxWidth: '100%'
+                }
+            }),
+            zoomControl = new ymaps.control.ZoomControl({
+                options: {
+                    size: 'small',
+                    float: 'none',
+                    position: {
+                        bottom: 250,
+                        right: 10
+                    }
+                }
+            });
+            // balloon = new ymaps.Balloon({ /// Позже разобраться как написать опции для балуна стандартного
+            //     options: {
+            //         autoPan: true,
+            //         maxWidth: '30px'
+            //     }
+            // });
+            // Пользователь сможет построить только автомобильный маршрут.
+            routePanelControl.routePanel.options.set({
+                types: {auto: true}
+            });
 
-//     myMap = new ymaps.Map("map", {
-//         center: [43.238253, 76.945465], // Координаты центра карты
-//         zoom: 13 // Маштаб карты
-//     }); 
+            // Если вы хотите задать неизменяемую точку "откуда", раскомментируйте код ниже.
+            /*routePanelControl.routePanel.state.set({
+                fromEnabled: false,
+                from: 'Москва, Льва Толстого 16'
+            });*/
 
-//     myMap.controls.add(
-//         new ymaps.control.ZoomControl()  // Добавление элемента управления картой
-//     ); 
+            myMap.controls.add(routePanelControl).add(zoomControl).add(zoomControl);
 
-//     myPlacemark = new ymaps.Placemark([43.238253,76.945465], { // Координаты метки объекта
-//         balloonContent: "<div class='ya_map'>Заезжайте в гости!</div>" // Подсказка метки
-//     }, {
-//         preset: "twirl#redDotIcon" // Тип метки
-//     });
-    
-//     myMap.geoObjects.add(myPlacemark); // Добавление метки
-//     myPlacemark.balloon.open(); // Открытие подсказки метки
-    
-// };
+            // Получим ссылку на маршрут.
+            routePanelControl.routePanel.getRouteAsync().then(function (route) {
+
+                // Зададим максимально допустимое число маршрутов, возвращаемых мультимаршрутизатором.
+                route.model.setParams({results: 1}, true);
+
+                // Повесим обработчик на событие построения маршрута.
+                route.model.events.add('requestsuccess', function () {
+
+                    var activeRoute = route.getActiveRoute();
+                    if (activeRoute) {
+                        // Получим протяженность маршрута.
+                        var length = route.getActiveRoute().properties.get("distance"),
+                        // Вычислим стоимость доставки.
+                            price = calculate(Math.round(length.value / 1000)),
+                        // Создадим макет содержимого балуна маршрута.
+                            balloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                                '<span>Расстояние: ' + length.text + '.</span><br/>' +
+                                '<span style="font-weight: bold; font-style: italic">Ориентировочная стоимость: ' + price + ' р.</span>');
+                        // Зададим этот макет для содержимого балуна.
+                        route.options.set('routeBalloonContentLayout', balloonContentLayout);
+                        // Откроем балун.
+                        activeRoute.balloon.open();
+                    }
+                });
+
+            });
+            // Функция, вычисляющая стоимость доставки.
+            function calculate(routeLength) {
+                return Math.max(routeLength * DELIVERY_TARIFF, MINIMUM_COST); 
+            }
+        }
 
 
 

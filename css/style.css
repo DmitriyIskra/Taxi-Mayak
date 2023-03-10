@@ -717,15 +717,30 @@ main {
         }
     /* ------------------------------------------ */
 
+
+/* --- КАРТА --- */
 #map {
     height: 532px;
     width: 93.8%;
     
     border: 1px solid #3B7A67;
     border-radius: 10px;
+
+    overflow: hidden;
 }
 
+.ymaps-2-1-79-control-popup__content {
+    border-radius: 6px;
+    border: 1px solid #9BD0C0;
+    width: 119%;
+}
 
+.ymaps-2-1-79-control-popup {
+    border-radius: 6px;
+    /* border: 1px solid #9BD0C0; */ 
+}
+
+/* --- END КАРТА--- */
 
 .wr-price-order__form {
     margin-left: 63px;
