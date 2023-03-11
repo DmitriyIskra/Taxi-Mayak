@@ -12,7 +12,9 @@ controlIconMobileMenu.registerEvent();     // вызываем навешива�
 // ============ Открытие/закрытие меню мобильной версии по клику на иконку или элементам меню ===================
 
 
+
 // // ============ УПРАВЛЕНИЕ ФОРМОЙ ПОПУЛЯРНЫЕ НАПРАВЛЕНИЯ 
+
 // ---- СМЕНА полей направлений
 
 import ChangeDirection from './changeDirection.js'
@@ -20,8 +22,10 @@ import ChangeDirection from './changeDirection.js'
 const changeDirection = new ChangeDirection(document.querySelector('.popular__form'));
 changeDirection.registerEvent();
 
-// ---- ВЫЗОВ И РАБОТА МОДАЛЬНОГО ОКНА
-// Данные для работы формы popular
+
+
+// --- вызов и работа модального окна в POPULAR
+    // Данные для работы формы popular
 const popularForm = document.querySelector('.popular__form');
 const formChairsType = document.querySelector('.popular__wr-modal-type-chair');
 const windowWidth = window.innerWidth;
@@ -54,7 +58,7 @@ function openFormTypeChairs(top, left) {    // Активация формы в�
     }
 }
 
-    // -- управление формой выбора типа кресла
+    // управление формой выбора типа кресла
     formChairsType.addEventListener('click', (e) => {   
         if(e.target.matches('.popular__close')) {
             closeFormTypeChair(formChairsType);
@@ -80,12 +84,23 @@ function openFormTypeChairs(top, left) {    // Активация формы в�
         closeFormTypeChair(formChairsType); // Закрываем модальное окно
     };
 
-// // ============ Активация выбора кресла END =========
+    //  Активация выбора кресла END 
 
-// // ============ Расчет цены START =========
+// --- END вызов и работа модального окна в POPULAR
+
+
+
+
+// // --- РАСЧЕТ ЦЕНЫ START 
 import {calcPrice} from './show-price.js';
 
-calcPrice.registerEvent()
+calcPrice.registerEvent();
+
+// // ============ END УПРАВЛЕНИЕ ФОРМОЙ ПОПУЛЯРНЫЕ НАПРАВЛЕНИЯ 
+
+
+
+
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------
 // ======================== КАРТА
@@ -124,22 +139,10 @@ calcPrice.registerEvent()
                     }
                 }
             });
-            // balloon = new ymaps.Balloon({ /// Позже разобраться как написать опции для балуна стандартного
-            //     options: {
-            //         autoPan: true,
-            //         maxWidth: '30px'
-            //     }
-            // });
-            // Пользователь сможет построить только автомобильный маршрут.
             routePanelControl.routePanel.options.set({
                 types: {auto: true}
             });
 
-            // Если вы хотите задать неизменяемую точку "откуда", раскомментируйте код ниже.
-            /*routePanelControl.routePanel.state.set({
-                fromEnabled: false,
-                from: 'Москва, Льва Толстого 16'
-            });*/
 
             myMap.controls.add(routePanelControl).add(zoomControl).add(zoomControl);
 
@@ -160,7 +163,7 @@ calcPrice.registerEvent()
                             price = calculate(Math.round(length.value / 1000)),
                         // Создадим макет содержимого балуна маршрута.
                             balloonContentLayout = ymaps.templateLayoutFactory.createClass(
-                                '<span>ориентировочная стоимость поездки:' + '</span><br/>' +
+                                '<span>Ориентировочная стоимость поездки:' + '</span><br/>' +
                                 '<span>Расстояние: ' + length.text + '.</span><br/>' +
                                 '<span style="font-weight: bold; font-style: italic">Стандарт: ' + price[0] + ' р.</span><br/>' + 
                                 '<span style="font-weight: bold; font-style: italic">Комфорт: ' + price[1] + ' р.</span><br/>' +
@@ -189,77 +192,13 @@ calcPrice.registerEvent()
 
 
 // // ============ УПРАВЛЕНИЕ ФОРМОЙ ЗАКАЗАТЬ
-
 const orderForm = document.querySelector('.wr-price-order__form');
-const typeChairOrder = document.querySelector('.wr-price-order__wr-modal-type-chair');
-let lastActiveInputChairOrder;
+import controlFormOrder from './controlFormOrder.js'
 
-// console.log(orderForm)
-
-orderForm.addEventListener('click', (e) => { 
-    if(e.target.matches('.wr-price-order__type-chair')) { // Открытие формы выбора типа кресла
-        openFormTypechairsOrder(e.target);
-    };
-}, true);
+const contrFormOrder = new controlFormOrder(orderForm);
+contrFormOrder.registerEvents();
 
 
-function openFormTypechairsOrder(elem) {  // Открываем модальное окно
-    lastActiveInputChairOrder = elem;   // Присваиваем последний активный элемент
-    typeChairOrder.classList.toggle('wr-modal-type-chair-order_active');
-    typeChairOrder.style.width = `${elem.offsetWidth}px`
-    typeChairOrder.style.left = `${elem.offsetLeft + 15}px`;
-    typeChairOrder.style.top = `${elem.offsetTop - 250}px`;
-
-    if(lastActiveInputChairOrder.value !== '') {
-        console.log(lastActiveInputChairOrder.value)
-        let element = typeChairOrder.querySelector(`[data-set="${lastActiveInputChairOrder.value}"]`); 
-        element.checked = true;
-    }
-};
-
-
-        // Форма выбора типа кресла
-
-typeChairOrder.addEventListener('click', e => {
-    if(e.target.matches('.wr-price-order__close')) {
-        closeModalFormOrder(e.target);
-    };
-
-    if(e.target.matches('.wr-price-order__label-type-chair')) {
-        addTypeChair(e.target)
-    }
-});
-
-function addTypeChair(elem) { // Заполняем поле выбранным типом кресла 
-    lastActiveInputChairOrder.value = elem.textContent;
-    closeModalFormOrder();
-}
-
-function closeModalFormOrder(elem) { // Функция закрытия модального окна по кнопке close
-    typeChairOrder.classList.remove('wr-modal-type-chair-order_active');
-};
-
-
-
-// ==============----------------КАРТА
-
-    // import 'https://api-maps.yandex.ru/2.1/?apikey=05486df5-e6c5-4af5-9e77-9d2577baec00&lang=ru_RU';
-    // Функция ymaps.ready() будет вызвана, когда
-    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-    // ymaps.ready(init);
-    // function init(){
-        // Создание карты.
-    //     let myMap = new ymaps.Map("map", {
-    //         // Координаты центра карты.
-    //         // Порядок по умолчанию: «широта, долгота».
-    //         // Чтобы не определять координаты центра карты вручную,
-    //         // воспользуйтесь инструментом Определение координат.
-    //         center: [55.76, 37.64],
-    //         // Уровень масштабирования. Допустимые значения:
-    //         // от 0 (весь мир) до 19.
-    //         zoom: 7
-    //     });
-    // }
 
 
 

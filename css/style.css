@@ -206,6 +206,10 @@ input[type=time]::-webkit-calendar-picker-indicator {
     height: 53px;
 }
 
+.header__logo-text {
+    display: none;
+}
+
 .header__nav {
     min-width: 519px;
     width: 32.5%;
@@ -553,6 +557,7 @@ main {
 }
 
 .popular__button-submit {
+    display: flex;
     height: 55px;
     width: 100%;
 
@@ -566,6 +571,9 @@ main {
     border-radius: 10px;
     color: #ffffff;
     cursor: pointer;
+
+    justify-content: center;
+    align-items: center;
 }
 
 .popular__button-submit:active {
@@ -939,8 +947,23 @@ main {
     box-shadow: none;
 }
 
+/* ----------- Модальное окно результат отправки */
 
-/* ----------- Форма выбора кресла */
+.wr-price-order__result-send {
+    display: none;
+
+    position: absolute;
+    bottom: 87px;
+    left: 631px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* ----------- Конец Модальное окно результат отправки */
+
+/* ----------- Модальное окно форма выбора кресла */
 
 .wr-price-order__wr-modal-type-chair {
     position: absolute;
@@ -1413,6 +1436,14 @@ margin-top: 106px;
 
 /* ------------------------------------------- СТАРТ ШАШКИ ------------------------------------------- */
 
+.wr-checkers__checkers {
+    display: flex;
+    margin-top: 1px;
+
+    flex-direction: column;
+    gap: 33px;
+}
+
 .wr-checkers_left {
     position: absolute;
     top: 0;
@@ -1438,7 +1469,7 @@ margin-top: 106px;
 .wr-checkers__checkers-item {
     width: 87px;
     height: 154px;
-    margin-bottom: 30.8px;
+    /* margin-bottom: 30.8px; */
 
     background-image: url(../svg/checkers.svg);
     background-repeat: no-repeat;
@@ -1746,6 +1777,7 @@ margin-top: 106px;
 
 @media (max-width: 1290px) {
     .header__wr-logo {
+        display: flex;
         width: auto;
 
         flex-grow: 1;
@@ -1756,6 +1788,17 @@ margin-top: 106px;
     .header__logo {
         width: 153px;
         height: 100%;
+    }
+}
+
+@media (max-width: 1290px) {
+    .header__logo-text {
+        display: flex;
+
+        font-size: 17px;
+
+        flex-direction: column;
+        align-self: flex-end;
     }
 }
 
@@ -2043,10 +2086,12 @@ margin-top: 106px;
     }
 }
 
+
 @media(max-width: 430px) {
     .header__logo {
-        width: auto;
+        width: 75px;
         height: 100%;
+        margin-left: 10px;
     }
 
     .link-logo {
@@ -2055,13 +2100,13 @@ margin-top: 106px;
 }
 
 @media(max-width: 430px) {
-    .header__logo {
-        width: 134px;
-        height: 100%;
-    }
+    .header__logo-text {
+        margin-bottom: 6px;
+        margin-left: 5px;
 
-    .link-logo {
-        background-size: 58px auto;
+        font-size: 13px;
+
+        align-self: flex-end;
     }
 }
 
@@ -2930,6 +2975,23 @@ margin-top: 106px;
 
 
 /* ------------------------- media 365 ------------------------------------ */
+
+@media(max-width) {
+    .header__logo {
+        width: 70px;
+    }
+}
+
+@media(max-width: 430px) {
+    .header__logo-text {
+        margin-bottom: 7px;
+        /* margin-left: 5px; */
+
+        font-size: 12px;
+
+        align-self: flex-end;
+    }
+}
 
 @media(max-width: 365px) {
     .about-us__icon {
