@@ -4,6 +4,7 @@ export default class ControlFormOrder {
         this.typeChairOrder = document.querySelector('.wr-price-order__wr-modal-type-chair');
         this.orderResultSend = document.querySelector('.wr-price-order__result-send');
         this.lastActiveInputChairOrder = null;
+        this.formData = null;
     }
 
     openFormTypechairsOrder(elem) {  // Открываем модальное окно
@@ -43,11 +44,13 @@ export default class ControlFormOrder {
     }
 
     async formSend(el) {
-        let formData = new formData(el);
-
+        this.formData = new FormData(el);
+        for(let val of this.formData.values()) {
+            console.log(val)
+        }
         let response = await fetch('sendmail.php', {
             method: 'POST',
-            body: formData
+            body: this.formData
         })
 
         if(response.ok) {

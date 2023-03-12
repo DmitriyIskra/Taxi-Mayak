@@ -792,7 +792,7 @@ main {
     display: flex;
 
     min-width: 585px;
-    width: 90%;
+    width: 98%;
     margin-top: 28px;
 
     align-items: flex-end;
@@ -810,7 +810,7 @@ main {
 .wr-price-order__number-flight,
 .wr-price-order__number-wagon {
     height: 50px;
-    width: 90.6%;
+    width: 92.6%;
     margin-top: 5px;
 }
 
