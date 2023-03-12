@@ -1,4 +1,4 @@
-export default class controlFormOrder {
+export default class ControlFormOrder {
     constructor(element) {
         this.element = element;
         this.typeChairOrder = document.querySelector('.wr-price-order__wr-modal-type-chair');
@@ -28,10 +28,35 @@ export default class controlFormOrder {
         this.typeChairOrder.classList.remove('wr-modal-type-chair-order_active');
     };
 
-    positionModalResultOrder(el) { // Позиция модального окна результат отправки
-        this.orderResultSend.style.display = 'block';
-        this.orderResultSend.style.top = `${el.offsetTop + 60}px`;
-        this.orderResultSend.style.left = `${el.offsetLeft}px`;
+    positionModalResultOrder(status) { // Позиция модального окна результат отправки
+        if(status) {
+            this.orderResultSend.style.display = 'block';
+            this.orderResultSend.style.top = `${el.offsetTop + 60}px`;
+            this.orderResultSend.style.left = `${el.offsetLeft}px`;
+        }
+        else {
+            this.orderResultSend.textContent = 'Ошибка, попробуйте позже или позвоните нам'
+            this.orderResultSend.style.display = 'block';
+            this.orderResultSend.style.top = `${el.offsetTop + 60}px`;
+            this.orderResultSend.style.left = `${el.offsetLeft}px`;
+        }
+    }
+
+    async formSend(el) {
+        let formData = new formData(el);
+
+        let response = await fetch('sendmail.php', {
+            method: 'POST',
+            body: formData
+        })
+
+        if(response.ok) {
+            this.positionModalResultOrder(true);
+            el.reset();
+        }
+        else {
+            this.positionModalResultOrder(false);
+        }
     }
 
     registerEvents() {
@@ -40,13 +65,14 @@ export default class controlFormOrder {
                 this.openFormTypechairsOrder(e.target);
             };
         
-            if(e.target.matches('.wr-price-order__button-submit')) {
-                this.positionModalResultOrder(e.target);
-            }            
+            // if(e.target.matches('.wr-price-order__button-submit')) {
+            //     this.positionModalResultOrder(e.target);
+            // }            
         }, true);
 
         this.element.addEventListener('submit', (e) => { // Отмена стандартного поведения формы заказа
-            e.preventDefault();  
+            e.preventDefault();
+            this.formSend(this.element)
         })
 
         this.typeChairOrder.addEventListener('click', e => {

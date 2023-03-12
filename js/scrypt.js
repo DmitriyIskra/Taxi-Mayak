@@ -1,7 +1,3 @@
-// При выборе вариантов кресла могут нажать на друге выбор кресла не выбрав это, надо сохранять последний элемент к которому было применено открытие выбора кресел
-// Формы для выбора после выбора обязательно очищать и после отправки тоже
-
-
 
 // ============ Открытие/закрытие меню мобильной версии по клику на иконку или элементам меню
 
@@ -13,9 +9,12 @@ controlIconMobileMenu.registerEvent();     // вызываем навешива�
 
 
 
+
+
+
 // // ============ УПРАВЛЕНИЕ ФОРМОЙ ПОПУЛЯРНЫЕ НАПРАВЛЕНИЯ 
 
-// ---- СМЕНА полей направлений
+// --- СМЕНА полей направлений на море/обратно
 
 import ChangeDirection from './changeDirection.js'
 
@@ -25,73 +24,17 @@ changeDirection.registerEvent();
 
 
 // --- вызов и работа модального окна в POPULAR
-    // Данные для работы формы popular
 const popularForm = document.querySelector('.popular__form');
 const formChairsType = document.querySelector('.popular__wr-modal-type-chair');
 const windowWidth = window.innerWidth;
-let lastActiveInputChair;
 
-popularForm.addEventListener('focus', (e) => { 
-
-    if(e.target.matches('.popular__choose-chair')  && windowWidth > 976 ) { // Открытие формы выбора типа кресла
-        lastActiveInputChair = e.target;
-        openFormTypeChairs(`${e.target.offsetTop - 320}px`, `${e.target.offsetLeft + 5}px`); // в зависимости от ширины экрана `250px`, `515px`
-    }
-    else if(e.target.matches('.popular__choose-chair')  && windowWidth < 976 ) {
-        lastActiveInputChair = e.target;
-        formChairsType.querySelector('.popular__type-chair-list').style.backgroundColor = 'rgba(0, 0, 0, 0.7)'
-        openFormTypeChairs(`${e.target.offsetTop - 320}px`, `${e.target.offsetLeft + 5}px`);
-    }
-}, true)
+import FormPopular from './controlFormPopular.js';
+const formPopular = new FormPopular(popularForm, formChairsType, windowWidth);
+formPopular.registerEvents();
 
 
 
-function openFormTypeChairs(top, left) {    // Активация формы выбора при нажатии на выбор кресла
-    formChairsType.classList.add('wr-type-chair_active');
-
-    formChairsType.style.top = top;  // Задаем координаты
-    formChairsType.style.left = left;
-
-    if(lastActiveInputChair.value !== '') {  // Если кресло выбрано, и открывается повторно выствляется нужный radio
-        let elem = formChairsType.querySelector(`[data-set="${lastActiveInputChair.value}"]`); 
-        elem.checked = true;
-    }
-}
-
-    // управление формой выбора типа кресла
-    formChairsType.addEventListener('click', (e) => {   
-        if(e.target.matches('.popular__close')) {
-            closeFormTypeChair(formChairsType);
-            resetFormTypeChair(formChairsType);
-        };
-        
-        if(e.target.matches('.popular__label-type-chair')) {
-            chooseTypeChair(e.target);
-        };
-    });
-
-    function closeFormTypeChair(el) {  // Закрытие формы типа кресла
-        el.classList.remove('wr-type-chair_active');
-    };
-
-    function resetFormTypeChair(el) {  // Cброс формы типа кресла
-        el.reset();
-    };
-
-
-    function chooseTypeChair(el) {  // Берем выбранный тип кресла, вставляем его в поле
-        lastActiveInputChair.value = el.textContent;
-        closeFormTypeChair(formChairsType); // Закрываем модальное окно
-    };
-
-    //  Активация выбора кресла END 
-
-// --- END вызов и работа модального окна в POPULAR
-
-
-
-
-// // --- РАСЧЕТ ЦЕНЫ START 
+// --- расчет цены 
 import {calcPrice} from './show-price.js';
 
 calcPrice.registerEvent();
@@ -193,10 +136,10 @@ calcPrice.registerEvent();
 
 // // ============ УПРАВЛЕНИЕ ФОРМОЙ ЗАКАЗАТЬ
 const orderForm = document.querySelector('.wr-price-order__form');
-import controlFormOrder from './controlFormOrder.js'
+import ControlFormOrder from './controlFormOrder.js'
 
-const contrFormOrder = new controlFormOrder(orderForm);
-contrFormOrder.registerEvents();
+const controlFormOrder = new ControlFormOrder(orderForm);
+controlFormOrder.registerEvents();
 
 
 
