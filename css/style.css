@@ -2265,6 +2265,9 @@ margin-top: 106px;
     .wr-price-order__wr-date-arrive,
      .wr-price-order__wr-time-arrive {
         position: relative;
+
+        display: flex;
+        flex-direction: column;
      }
 }
 

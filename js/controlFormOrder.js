@@ -45,9 +45,7 @@ export default class ControlFormOrder {
 
     async formSend(el) {
         this.formData = new FormData(el);
-        for(let val of this.formData.values()) {
-            console.log(val)
-        }
+        
         let response = await fetch('sendmail.php', {
             method: 'POST',
             body: this.formData
