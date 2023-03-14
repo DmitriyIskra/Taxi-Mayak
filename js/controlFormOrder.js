@@ -29,22 +29,23 @@ export default class ControlFormOrder {
         this.typeChairOrder.classList.remove('wr-modal-type-chair-order_active');
     };
 
-    positionModalResultOrder(status) { // Позиция модального окна результат отправки
+    positionModalResultOrder(button, status) { // Позиция модального окна результат отправки
+        console.log(button)
         if(status) {
             this.orderResultSend.style.display = 'block';
-            this.orderResultSend.style.top = `${el.offsetTop + 60}px`;
-            this.orderResultSend.style.left = `${el.offsetLeft}px`;
+            this.orderResultSend.style.top = `${button.offsetTop + 60}px`;
+            this.orderResultSend.style.left = `${button.offsetLeft}px`;
         }
         else {
             this.orderResultSend.textContent = 'Ошибка, попробуйте позже или позвоните нам'
             this.orderResultSend.style.display = 'block';
-            this.orderResultSend.style.top = `${el.offsetTop + 60}px`;
-            this.orderResultSend.style.left = `${el.offsetLeft}px`;
+            this.orderResultSend.style.top = `${button.offsetTop + 60}px`;
+            this.orderResultSend.style.left = `${button.offsetLeft}px`;
         }
     }
 
-    async formSend(el) {
-        this.formData = new FormData(el);
+    async formSend(form) {
+        this.formData = new FormData(form);
         
         let response = await fetch('sendmail.php', {
             method: 'POST',
@@ -52,11 +53,11 @@ export default class ControlFormOrder {
         })
 
         if(response.ok) {
-            this.positionModalResultOrder(true);
-            el.reset();
+            this.positionModalResultOrder(form.button, true);
+            form.reset();
         }
         else {
-            this.positionModalResultOrder(false);
+            this.positionModalResultOrder(form.button, false);
         }
     }
 

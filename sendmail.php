@@ -13,7 +13,7 @@
     // Откого письмо
     $mail->setFrom('dmitriyiskra@mail.ru', 'Такси по Крыму');
     // Кому отправить
-    $mail->addAddress('mayak.evgeny@yandex.ru');
+    $mail->addAddress('dmitriy.iskra86@gmail.com');
     // Тема письма
     $mail->Subject = 'Заявка с сайта';
 
