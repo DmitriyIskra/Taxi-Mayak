@@ -1,5 +1,5 @@
 export const price = {
-    standart: {
+    econom: {
         aero: {
             alushta : 1600,
             yalta : 2300,

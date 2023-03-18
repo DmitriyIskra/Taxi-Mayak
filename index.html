@@ -225,7 +225,7 @@
                             <label class="popular__label-car-class popular__label" for="popular__select-car-class">Класс авто</label>
                             <select class="popular__select-car-class popular__select" id="popular__select-car-class" type="text" name="car-class">
                                 <option value=""></option>
-                                <option value="standart">Стандарт</option>
+                                <option value="econom">Эконом</option>
                                 <option value="comfort">Комфорт</option>
                                 <option value="business">Бизнесс</option>
                                 <option value="minivan">Минивен</option>
@@ -317,13 +317,13 @@
                         <div class="wr-price-order__wr-date-arrive">
                             <label class="wr-price-order__label-date-arrive wr-price-order__labels" for="wr-price-order__date-arrive">Дата прибытия</label>
                             <input class="wr-price-order__date-arrive wr-price-order__look-inputs" id="wr-price-order__date-arrive" type="date" name="date-arrive">
-                            <img class="wr-price-order__arrow-mobile" src="img/arrow-to-bottom-time-date-mob.png">
+                            <!-- <img class="wr-price-order__arrow-mobile" src="img/arrow-to-bottom-time-date-mob.png"> -->
                         </div>
 
                         <div class="wr-price-order__wr-time-arrive">
                             <label class="wr-price-order__label-time-arrive wr-price-order__labels" for="wr-price-order__time-arrive">Время прибытия</label>
                             <input class="wr-price-order__time-arrive wr-price-order__look-inputs" id="wr-price-order__time-arrive" type="time" name="time-arrive">
-                            <img class="wr-price-order__arrow-mobile" src="img/arrow-to-bottom-time-date-mob.png">
+                            <!-- <img class="wr-price-order__arrow-mobile" src="img/arrow-to-bottom-time-date-mob.png"> -->
                         </div>
 
                         <div class="wr-price-order__wr-number-flight">
@@ -340,7 +340,7 @@
                     <div class="wr-price-order__wr-car-class">
                         <select class="wr-price-order__car-class-list" id="wr-price-order__car-class-list" name="car-class">
                             <option value="">Класс авто</option>
-                            <option value="standart">Стандарт</option>
+                            <option value="econom">Эконом</option>
                             <option value="comfort">Комфорт</option>
                             <option value="business">Бизнесс</option>
                             <option value="minivan">Минивен</option>
@@ -416,7 +416,7 @@
                 </form>
             </div>
 
-            <div class="wr-price-order__result-send">Ваше сообщение отправленно</div>
+            <div class="wr-price-order__result-send">Ваше сообщение отправлено</div>
         </div>
 
 
@@ -427,12 +427,12 @@
                     <div class="swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="callback__car-class-card car-class-card_standart">
+                                <div class="callback__car-class-card car-class-card_econom">
                                     <div class="callback__wr-img">
-                                        <img class="callback__img" src="img/chevrolet-aveo.png" alt="Автомобиль стандарт класса chevrolet aveo">
+                                        <img class="callback__img" src="img/chevrolet-aveo.png" alt="Автомобиль эконом класса chevrolet aveo">
                                     </div>
                                     <div class="callback__wr-card-text callback__wr-card-text-aveo">
-                                        <span class="callback__card-text-class">стандарт</span>
+                                        <span class="callback__card-text-class">эконом</span>
                                         <span class="callback__card-text-car">chevrolet aveo</span>
                                     </div>
                                 </div>
@@ -479,12 +479,12 @@
                 </div>
             <!-- Автопарк для пк -->
                 <ul class="callback__car-class-list">
-                    <li class="callback__car-class-card car-class-card_standart">
+                    <li class="callback__car-class-card car-class-card_econom">
                         <div class="callback__wr-img">
-                            <img class="callback__img" src="img/chevrolet-aveo.png" alt="Автомобиль стандарт класса chevrolet aveo">
+                            <img class="callback__img" src="img/chevrolet-aveo.png" alt="Автомобиль эконом класса chevrolet aveo">
                         </div>
                         <div class="callback__wr-card-text callback__wr-card-text-aveo">
-                            <span class="callback__card-text-class">стандарт</span>
+                            <span class="callback__card-text-class">эконом</span>
                             <span class="callback__card-text-car">chevrolet aveo</span>
                         </div>
                     </li>
@@ -534,6 +534,8 @@
                             <button class="callback__form-button callback-form-button" type="submit" name="submit">отправить</button>
                         </div>
                     </form>
+
+                    <div class="callback__result-send">Ваше сообщение отправленно</div>
                 </div>
         </div> 
 
@@ -737,6 +739,8 @@
                 <div class="footer__wr-form-button">
                     <button class="footer__form-button callback-form-button" type="submit" name="submit">отправить</button>
                 </div>
+
+                <div class="footer__result-send">Ваше сообщение отправлено</div>
             </form>
 
             <address class="footer__contacts contacts">

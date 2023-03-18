@@ -52,12 +52,12 @@ calcPrice.registerEvent();
 
         function init() {
             // Стоимость за километр.
-            var DELIVERY_TARIFF_STANDART = 30;
-            var DELIVERY_TARIFF_KOMFORT = 35;
-            var DELIVERY_TARIFF_BIZNESS = 40;
-            var DELIVERY_TARIFF_MINIVEN = 45,
+            var DELIVERY_TARIFF_ECONOM = 25;
+            var DELIVERY_TARIFF_KOMFORT = 29;
+            var DELIVERY_TARIFF_BIZNESS = 65;
+            var DELIVERY_TARIFF_MINIVEN = 50,
             // Минимальная стоимость.
-            MINIMUM_COST = 1000,
+            MINIMUM_COST = 500,
             myMap = new ymaps.Map('map', {
                 center: [44.948169, 34.099893],
                 zoom: 9,
@@ -108,7 +108,7 @@ calcPrice.registerEvent();
                             balloonContentLayout = ymaps.templateLayoutFactory.createClass(
                                 '<span>Ориентировочная стоимость поездки:' + '</span><br/>' +
                                 '<span>Расстояние: ' + length.text + '.</span><br/>' +
-                                '<span style="font-weight: bold; font-style: italic">Стандарт: ' + price[0] + ' р.</span><br/>' + 
+                                '<span style="font-weight: bold; font-style: italic">Эконом: ' + price[0] + ' р.</span><br/>' + 
                                 '<span style="font-weight: bold; font-style: italic">Комфорт: ' + price[1] + ' р.</span><br/>' +
                                 '<span style="font-weight: bold; font-style: italic">Бизнесс: ' + price[2] + ' р.</span><br/>' +
                                 '<span style="font-weight: bold; font-style: italic">Минивен: ' + price[3] + ' р.</span><br/>');
@@ -122,7 +122,7 @@ calcPrice.registerEvent();
             });
             // Функция, вычисляющая стоимость доставки.
             function calculate(routeLength) {
-                return [Math.max(routeLength * DELIVERY_TARIFF_STANDART, MINIMUM_COST),
+                return [Math.max(routeLength * DELIVERY_TARIFF_ECONOM, MINIMUM_COST),
                         Math.max(routeLength * DELIVERY_TARIFF_KOMFORT, MINIMUM_COST),
                         Math.max(routeLength * DELIVERY_TARIFF_BIZNESS, MINIMUM_COST),
                         Math.max(routeLength * DELIVERY_TARIFF_MINIVEN, MINIMUM_COST)]; 
@@ -162,4 +162,27 @@ new Swiper('.swiper', {
 
 
 
+
+// ======================= CALLBACK FORM
+
+const blockFormCallback = document.querySelector('.callback__wr-collback-form');
+
+import FormCallback from './controlFormCallback.js';
+
+const formCallback = new FormCallback(blockFormCallback);
+
+formCallback.registerEvents();
+
+
+
+
+// ======================= FOOTER FORM
+
+const blockFormFooter = document.querySelector('.footer__form');
+
+import FormFooter from './controlFormFooter.js';
+
+const formFooter = new FormFooter(blockFormFooter);
+
+formFooter.registerEvents();
 

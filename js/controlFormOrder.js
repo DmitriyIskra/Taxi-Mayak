@@ -30,7 +30,6 @@ export default class ControlFormOrder {
     };
 
     positionModalResultOrder(button, status) { // Позиция модального окна результат отправки
-        console.log(button)
         if(status) {
             this.orderResultSend.style.display = 'block';
             this.orderResultSend.style.top = `${button.offsetTop + 60}px`;

@@ -819,9 +819,9 @@ main {
     cursor: pointer;
  }
 
-.wr-price-order__arrow-mobile {
+/* .wr-price-order__arrow-mobile {
     display: none;
-}
+} */
 
 .wr-price-order__wr-car-class {
     width: 35.5%;
@@ -926,6 +926,7 @@ main {
 }
 
 .wr-price-order__button-submit {
+    display: block;
     height: 55px;
     width: 100%;
 
@@ -942,7 +943,7 @@ main {
 
     cursor: pointer;
 }
-
+ 
 .wr-price-order__button-submit:active {
     box-shadow: none;
 }
@@ -953,7 +954,7 @@ main {
     display: none;
 
     position: absolute;
-    bottom: 87px;
+    top: 575px;
     left: 631px;
 
     font-family: 'Roboto', sans-serif;
@@ -1159,6 +1160,8 @@ main {
 
 
 .callback__wr-collback-form {
+    position: relative;
+
     display: flex;
     
     flex-direction: column;
@@ -1209,6 +1212,23 @@ margin-top: 106px;
 .callback__form-button {
     width: 100%;
 }
+
+.callback__result-send {
+    display: none;
+
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    transform: translateX(-50%);
+}
+
 
 /* ------------------------------------------- КОНЕЦ АВТОМОБИЛИ КОЛЛБЭК ------------------------------------------- */
 
@@ -1556,6 +1576,8 @@ margin-top: 106px;
 }
 
 .footer__form {
+    position: relative;
+
     width: 93.8%;
     margin-top: 23px;
 
@@ -1582,6 +1604,20 @@ margin-top: 106px;
 
 .footer__form-button {
     width: 100%;
+}
+
+.footer__result-send {
+    position: absolute;
+    bottom: -42px;
+    left: 22%;
+
+    display: none;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 23px;
+    text-transform: uppercase;
+    color: #ffffff;
 }
 
 .footer__contacts {
@@ -1757,6 +1793,17 @@ margin-top: 106px;
     .about-us__wr-img {
         width: 51.5%;
         margin-left: 18px; 
+    }
+}
+
+
+
+@media(max-width: 1366px) {
+    .footer__result-send {
+        bottom: -34px;
+        left: 17%;
+    
+        font-size: 20px;
     }
 }
 
@@ -2034,6 +2081,12 @@ margin-top: 106px;
 
 /* ------------- FOOTER */
 
+@media(max-width:1280px) {
+    .footer__result-send {
+        left: 15%;
+    }
+}
+
 @media (max-width: 1290px) {
     .footer__contacts {
         margin-right: 0;
@@ -2281,7 +2334,7 @@ margin-top: 106px;
     }
 }
 
-@media(max-width: 430px) {
+/* @media(max-width: 430px) {
     .wr-price-order__arrow-mobile {
         position: absolute;
         top: 31px;
@@ -2293,7 +2346,7 @@ margin-top: 106px;
 
         border-radius: 3px;
     }
-}
+} */
 
 @media(max-width: 430px) {
     .wr-price-order__look-inputs,
@@ -2525,6 +2578,17 @@ margin-top: 106px;
 @media(max-width: 430px) {
     .callback__form-button {
         font-size: 16px;
+    }
+}
+
+@media(max-width: 430px) {
+    .callback__result-send {
+        bottom: -30px;
+
+        width: 100%;
+
+        font-size: 15px;
+        text-align: center;
     }
 }
 
@@ -2859,6 +2923,18 @@ margin-top: 106px;
         width: 100%;
         padding-left: 0;
         margin-top: 12px;
+    }
+}
+
+@media(max-width: 430px) {
+    .footer__result-send {
+        bottom: -27px;
+        left: 0;
+
+        width: 100%;
+        
+        text-align: center;
+        font-size: 18px;
     }
 }
 
