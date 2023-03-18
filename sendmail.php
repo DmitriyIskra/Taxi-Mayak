@@ -14,7 +14,7 @@
     $mail->IsHTML(true);
 
     // Откого письмо
-    $mail->setFrom('dmitriyiskra@mail.ru', 'Такси по Крыму');
+    $mail->setFrom('info@taxi-mayak.ru', 'Такси по Крыму'); // не использовать mail
     // Кому отправить
     $mail->addAddress('mayak.evgeny@yandex.ru');
     // Тема письма
@@ -24,7 +24,7 @@
     // Тело письма
     $body = '<h1>Заявка с сайта</h1>';
 
-    if(trim(!empty($_POST['name']))) {
+    if(trim(!empty($_POST['name']))) {  // Проверка на наличие соответствующего поля в форме, если есть то добавляем в тело письма, если нет не добавляем
         $body.='<p><strong>Имя</strong>'.$_POST['name'].'</p>';
     }
     if(trim(!empty($_POST['tel']))) {
