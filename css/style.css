@@ -29,6 +29,10 @@ input[type=time]::-webkit-calendar-picker-indicator {
     background: none;
 }
 
+select, option {
+    color: #000000;
+}
+
 /*------ СТАРТ ФОРМА КОЛЛБЭК ОБЩИЕ СВОЙСТВА -----*/
 
     .form-callback {
@@ -260,7 +264,7 @@ main {
 .popular {
     position: relative;
 
-    padding: 87px 0 195px 152px;
+    padding: 15px 0 195px 152px;
 
     background-color: #FAE4B1;
     background-image: url(../img/lastochka.png);
@@ -366,6 +370,8 @@ main {
 
 
 .popular__form {
+    position: relative;
+
     width: 343px;
 }
 
@@ -530,12 +536,49 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
+.popular__wr-tel {
+    display: flex;
+
+    margin-top: 12px;
+
+    font-family: Roboto, Sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
+    flex-direction: column;
+}
+
+.popular__tel {
+    width: 100%;
+    height: 53px;
+    margin-top: 5px;
+    padding-left: 5px;
+
+    font-family: Roboto, Sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #9BD0C0;
+    border-radius: 10px;
+}
+
 .popular__show-price {
     display: flex;
-    justify-content: center;
-
     width: 100%;
     padding-bottom: 5px;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+.popular__text-price {
+    width: 100%;
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
 }
 
 .popular__price {
@@ -578,6 +621,24 @@ main {
 
 .popular__button-submit:active {
     box-shadow: none;
+}
+
+.popular__result-send {
+    position: absolute;
+    left: 50%;
+
+    display: none;
+    width: 90%;
+    margin-top: 5px;
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    transform: translateX(-50%);
 }
 
 .active {
@@ -1649,16 +1710,10 @@ margin-top: 106px;
 @media(min-width: 430px) {
     .wr-price-order__date-arrive {
         appearance: none;
-        background-image: url(../svg/select-arrow.svg);
-        background-repeat: no-repeat;
-        background-position: top 49% right 13px;
     }
     
     .wr-price-order__time-arrive {
         appearance: none;
-        background-image: url(../svg/select-arrow.svg);
-        background-repeat: no-repeat;
-        background-position: top 49% right 13px;
     }
 }
 
@@ -2197,7 +2252,7 @@ margin-top: 106px;
     .popular {
         display: flex;
 
-        padding: 40px 0 140px;
+        padding: 40px 0 52px;
 
         justify-content: center;
     }
@@ -2317,9 +2372,7 @@ margin-top: 106px;
 @media(max-width: 430px) {
     .wr-price-order__wr-date-arrive,
      .wr-price-order__wr-time-arrive {
-        position: relative;
-
-        display: flex;
+         display: flex;
         flex-direction: column;
      }
 }

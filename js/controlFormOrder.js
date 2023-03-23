@@ -21,7 +21,7 @@ export default class ControlFormOrder {
     };
 
     addTypeChair(elem) { // Заполняем поле выбранным типом кресла 
-        this.lastActiveInputChairOrder.value = elem.textContent;
+        this.lastActiveInputChairOrder.value = elem.textContent; 
         this.closeModalFormOrder();
     }
     

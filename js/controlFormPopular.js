@@ -4,7 +4,7 @@ export default class FormPopular {
         this.formTypeChair = formTypeChair;
         this.windowWidth = windowWidth;
         this.lastActiveInputChair = null;
-    }
+    } 
 
 
     openFormTypeChairs(top, left) {    // Активация формы выбора при нажатии на выбор кресла

@@ -24,7 +24,7 @@ changeDirection.registerEvent();
 
 
 // --- вызов и работа модального окна в POPULAR
-const popularForm = document.querySelector('.popular__form');
+const popularForm = document.querySelector('.popular__form'); 
 const formChairsType = document.querySelector('.popular__wr-modal-type-chair');
 const windowWidth = window.innerWidth;
 

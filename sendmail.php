@@ -18,7 +18,7 @@
     // Кому отправить
     $mail->addAddress('mayak.evgeny@yandex.ru');
     // Тема письма
-    $mail->Subject = 'Заявка с сайта';
+    $mail->Subject = 'Заявка с сайта'; 
 
 
     // Тело письма

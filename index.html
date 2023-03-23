@@ -199,7 +199,7 @@
                         <div class="popular__wr-direction_toback">
                             <div class="popular__wr-from">
                                 <label class="popular__label-from popular__label" for="popular__select-from">Откуда</label>
-                                <select class="popular__select-from_back popular__select" id="popular__select-from" type="text" name="from">
+                                <select class="popular__select-from_back popular__select" id="popular__select-from" type="text" name="back-from">
                                     <option></option>
                                     <option value="aidanil">Ай-Даниль</option>
                                     <option value="alushta">Алушта</option>
@@ -281,7 +281,7 @@
     
                             <div class="popular__wr-where  popular__wr-selects">
                                 <label class="popular__label-where popular__label" for="popular__select-where">Куда</label>
-                                <select class="popular__select-where_back popular__select" id="popular__select-where" type="text" name="where">
+                                <select class="popular__select-where_back popular__select" id="popular__select-where" type="text" name="back-where">
                                     <option value=""></option>
                                     <!-- <option value="aero">Симферополь аэропорт</option> -->
                                     <option value="trainstation">Симферополь жд вокзал</option>
@@ -315,17 +315,25 @@
                             <input class="popular__meet-with-sign" id="popular__meet-with-sign" type="checkbox" name="meet-with-sign">
                             <label class="popular__label-meet-with-sign" for="popular__meet-with-sign">Нужна ли встреча с табличкой?</label>
                         </div>
+
+                        <div class="popular__wr-tel">
+                            <label class="popular__label-tel"  for="popular-tel">Номер телефона</label>
+                            <input class="popular__tel" id="popular-tel" type="text" required>
+                        </div>
     
     
-                        <div class="popular__show-price">  
+                        <div class="popular__show-price">
+                            <span class="popular__text-price">Ориентировочная стоимость:</span>  
                             <span class="popular__price"></span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="popular__wr-button-submit">
-                    <a class="popular__button-submit" href="#wr-price-order">заказать</a>
+                    <input class="popular__button-submit" type="submit" value="заказать">
                 </div>
+
+                <div class="popular__result-send">Ваше сообщение отправлено</div>
             </form>
 
             <form class="popular__wr-modal-type-chair">
