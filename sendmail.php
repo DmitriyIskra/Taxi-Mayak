@@ -60,6 +60,33 @@
     if(trim(!empty($_POST['order__meet']))) {
         $body.='<p><strong>Встреча с табличкой</strong>'.$_POST['order__meet'].'</p>';
     }
+    if(trim(!empty($_POST['from']))) {
+        $body.='<p><strong>Откуда</strong>'.$_POST['from'].'</p>';
+    }
+    if(trim(!empty($_POST['where']))) {
+        $body.='<p><strong>Куда</strong>'.$_POST['where'].'</p>';
+    }
+    if(trim(!empty($_POST['back-from']))) {
+        $body.='<p><strong>Откуда</strong>'.$_POST['back-from'].'</p>';
+    }
+    if(trim(!empty($_POST['back-where']))) {
+        $body.='<p><strong>Куда</strong>'.$_POST['back-where'].'</p>';
+    }
+    if(trim(!empty($_POST['car-class']))) {
+        $body.='<p><strong>Класс авто</strong>'.$_POST['car-class'].'</p>';
+    }
+    if(trim(!empty($_POST['choose-chair1']))) {
+        $body.='<p><strong>Кресло первое</strong>'.$_POST['choose-chair1'].'</p>';
+    }
+    if(trim(!empty($_POST['choose-chair2']))) {
+        $body.='<p><strong>Кресло второе</strong>'.$_POST['choose-chair2'].'</p>';
+    }
+    if(trim(!empty($_POST['meet-with-sign']))) {
+        $body.='<p><strong>Встреча с табличкой</strong>'.$_POST['meet-with-sign'].'</p>';
+    }
+    if(trim(!empty($_POST['popular__tel']))) {
+        $body.='<p><strong>Телефон</strong>'.$_POST['popular__tel'].'</p>';
+    }
 
 
     $mail->Body = $body;

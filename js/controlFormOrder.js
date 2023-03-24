@@ -3,6 +3,8 @@ export default class ControlFormOrder {
         this.element = element;
         this.typeChairOrder = document.querySelector('.wr-price-order__wr-modal-type-chair');
         this.orderResultSend = document.querySelector('.wr-price-order__result-send');
+        this.dateArrive = this.element.querySelector('.wr-price-order__date-arrive');
+        this.timeArrive = this.element.querySelector('.wr-price-order__time-arrive');
         this.lastActiveInputChairOrder = null;
         this.formData = null;
     }
@@ -60,6 +62,38 @@ export default class ControlFormOrder {
         }
     }
 
+    validateArrive(el, e, key) {
+        let text = el.dateArrive.value;
+
+        if(isNaN(key)) {
+            el.dateArrive.value = '';
+        }
+
+        if(text.length === 3 && e === 'deleteContentBackward') {
+            el.dateArrive.value = `${el.dateArrive.value}`
+        }
+
+        if(text.length === 2 && e === 'insertText') {
+            el.dateArrive.value = `${el.dateArrive.value}.`
+        }
+    }
+
+    validateTime(el, e, key) {
+        let text = el.timeArrive.value;
+
+        if(isNaN(key)) {
+            el.timeArrive.value = '';
+        }
+
+        if(text.length === 3 && e === 'deleteContentBackward') {
+            el.timeArrive.value = `${el.timeArrive.value}`
+        }
+
+        if(text.length === 2 && e === 'insertText') {
+            el.timeArrive.value = `${el.timeArrive.value}:`
+        }
+    }
+
     registerEvents() {
         this.element.addEventListener('click', (e) => {
             if(e.target.matches('.wr-price-order__type-chair')) { // Открытие формы выбора типа кресла
@@ -84,6 +118,14 @@ export default class ControlFormOrder {
             if(e.target.matches('.wr-price-order__label-type-chair')) {
                 this.addTypeChair(e.target)
             }
-        });
+        })
+
+        this.dateArrive.addEventListener('input', (e) => {
+            this.validateArrive(this, e.inputType, e.data);
+        })
+
+        this.timeArrive.addEventListener('input', e => {
+            this.validateTime(this, e.inputType, e.data);
+        })
     }
 }

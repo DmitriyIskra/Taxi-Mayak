@@ -3,7 +3,9 @@ export default class FormPopular {
         this.formPopular = formPopular;
         this.formTypeChair = formTypeChair;
         this.windowWidth = windowWidth;
+        this.orderResultSend = this.formPopular.querySelector('.popular__result-send')
         this.lastActiveInputChair = null;
+        this.formData = null;
     } 
 
 
@@ -32,6 +34,34 @@ export default class FormPopular {
         this.closeFormTypeChair(this.formTypeChair); // Закрываем модальное окно
     };
 
+    ResultSendOrder(status) { // Позиция модального окна результат отправки
+        if(status) {
+            this.orderResultSend.style.display = 'block';
+        }
+        else {
+            this.orderResultSend.textContent = 'Ошибка, попробуйте позже или позвоните нам'
+            this.orderResultSend.style.display = 'block';
+        }
+    }
+
+    async formSend(form) {
+        this.formData = new FormData(form);
+        
+        let response = await fetch('sendmail.php', {
+            method: 'POST',
+            body: this.formData
+        })
+
+        if(response.ok) {
+            this.ResultSendOrder(true);
+            form.reset();
+        }
+        else {
+            this.ResultSendOrder(false);
+        }
+    }
+
+
     registerEvents() {
         this.formPopular.addEventListener('focus', (e) => { // Управление формой POPULAR
             if(e.target.matches('.popular__choose-chair')  && this.windowWidth > 976 ) { // Открытие формы выбора типа кресла
@@ -55,6 +85,12 @@ export default class FormPopular {
             if(e.target.matches('.popular__label-type-chair')) {
                 this.chooseTypeChair(e.target);
             };
-        });
+        })
+
+
+        this.formPopular.addEventListener('submit', (e) => { // Отмена стандартного поведения формы заказа
+            e.preventDefault();
+            this.formSend(this.formPopular);
+        })
     }; // END RegisterEvents
 }; // END Class
