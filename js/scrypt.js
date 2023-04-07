@@ -1,4 +1,6 @@
 
+
+
 // ============ Открытие/закрытие меню мобильной версии по клику на иконку или элементам меню
 
 import {controlIconMobileMenu} from './nav-mobile.js'
@@ -186,3 +188,10 @@ const formFooter = new FormFooter(blockFormFooter);
 
 formFooter.registerEvents();
 
+
+
+window.addEventListener('load', (e) => {
+    if(window.scrollY > 0 || window.scrollY === 0) {
+        window.scrollTo(0, 0);
+    }  
+})
