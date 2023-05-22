@@ -1572,12 +1572,15 @@ margin-top: 106px;
 /* ------------------------------------------- СТАРТ FOOTER ------------------------------------------- */
 
 .footer {
-    display: flex;
     padding-top: 27px;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
 
     background-color: #3B7A67;
     border-top: 3px solid #234C60;
+}
+
+.footer__wr-content {
+    display: flex;
 
     justify-content: center;
 }
@@ -1705,7 +1708,106 @@ margin-top: 106px;
     width: 50px;
 }
 
+.footer__privacy-policy {
+    display: flex;
+    padding-top: 35px;
+
+    justify-content: center;
+}
+
+.footer__privacy-policy-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.footer__privacy-policy-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+
 /* ------------------------------------------- КОНЕЦ FOOTER ------------------------------------------- */
+
+
+/* ------------------------------------------- P R I V A C Y  P O L I C Y ------------------------------------------- */
+
+    
+.wr-privacy-policy {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    width: 90%;
+    height: 90%;
+    padding: 20px;
+
+    border: 2px solid #000000;
+    background-color: #E5CFAD;
+    border-radius: 5px;
+
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+}
+
+.privacy-policy__head-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+
+    text-align: center;
+}
+
+.privacy-policy__text {
+    margin-top: 20px;
+}
+
+.footer__privacy-policy-title {
+    margin-top: 7px;
+}
+
+.privacy-policy__wr-accept {
+    display: flex;
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.privacy-policy__accept-text {
+    margin-left: 5px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+
+    text-align: center;
+}
+
+.privacy-policy__close {
+    height: 25px;
+    width: 80px;
+    margin-left: 15px;
+
+    border: 1px solid #BFBFBF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* .wr-privacy-policy_hidden {
+    display: none;
+} */
+
+/* ------------------------------------------- E N D  P R I V A C Y  P O L I C Y ------------------------------------------- */
+
+
+
 
 @media(min-width: 430px) {
     .wr-price-order__date-arrive {
@@ -2908,7 +3010,11 @@ margin-top: 106px;
     .footer {
         padding-top: 27px;
         padding-bottom: 70px;
+    }
+}
 
+@media(max-width: 430px) {
+    .footer__wr-content {
         flex-direction: column;
         align-items: center;
     }
@@ -2916,11 +3022,15 @@ margin-top: 106px;
 
 @media(max-width: 430px) {
     .footer__wr-callback {
+      	position: relative;
+      
         width: 90%;
         padding-top: 0px;
 
         flex-grow: initial;
         order: 1;
+      
+      	z-index: 2;
     }
 }
 
@@ -3061,6 +3171,12 @@ margin-top: 106px;
         width: 112px;
         height: 61px;
         background-size: 126px auto;
+    }
+}
+
+@media(max-width: 430px) {
+    .footer__privacy-policy-text {
+        text-align: center;
     }
 }
 

@@ -49,90 +49,94 @@ calcPrice.registerEvent();
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------
 // ======================== КАРТА
-        ymaps.ready(init); 
-        let myMap;
 
-        function init() {
-            // Стоимость за километр.
-            var DELIVERY_TARIFF_ECONOM = 25;
-            var DELIVERY_TARIFF_KOMFORT = 29;
-            var DELIVERY_TARIFF_BIZNESS = 65;
-            var DELIVERY_TARIFF_MINIVEN = 50,
-            // Минимальная стоимость.
-            MINIMUM_COST = 500,
-            myMap = new ymaps.Map('map', {
-                center: [44.948169, 34.099893],
-                zoom: 9,
-                controls: []
-            }),
-            // Создадим панель маршрутизации.
-            routePanelControl = new ymaps.control.RoutePanel({
-                options: {
-                    // Добавим заголовок панели.
-                    showHeader: false,
-                    title: 'Расчёт маршрута',
-                    maxWidth: '100%'
-                }
-            }),
-            zoomControl = new ymaps.control.ZoomControl({
-                options: {
-                    size: 'small',
-                    float: 'none',
-                    position: {
-                        bottom: 250,
-                        right: 10
-                    }
-                }
-            });
-            routePanelControl.routePanel.options.set({
-                types: {auto: true}
-            });
-
-
-            myMap.controls.add(routePanelControl).add(zoomControl).add(zoomControl);
-
-            // Получим ссылку на маршрут.
-            routePanelControl.routePanel.getRouteAsync().then(function (route) {
-
-                // Зададим максимально допустимое число маршрутов, возвращаемых мультимаршрутизатором.
-                route.model.setParams({results: 1}, true);
-
-                // Повесим обработчик на событие построения маршрута.
-                route.model.events.add('requestsuccess', function () {
-
-                    var activeRoute = route.getActiveRoute();
-                    if (activeRoute) {
-                        // Получим протяженность маршрута.
-                        var length = route.getActiveRoute().properties.get("distance"),
-                        // Вычислим стоимость доставки.
-                            price = calculate(Math.round(length.value / 1000)),
-                        // Создадим макет содержимого балуна маршрута.
-                            balloonContentLayout = ymaps.templateLayoutFactory.createClass(
-                                '<span>Ориентировочная стоимость поездки:' + '</span><br/>' +
-                                '<span>Расстояние: ' + length.text + '.</span><br/>' +
-                                '<span style="font-weight: bold; font-style: italic">Эконом: ' + price[0] + ' р.</span><br/>' + 
-                                '<span style="font-weight: bold; font-style: italic">Комфорт: ' + price[1] + ' р.</span><br/>' +
-                                '<span style="font-weight: bold; font-style: italic">Бизнесс: ' + price[2] + ' р.</span><br/>' +
-                                '<span style="font-weight: bold; font-style: italic">Минивен: ' + price[3] + ' р.</span><br/>');
-                        // Зададим этот макет для содержимого балуна.
-                        route.options.set('routeBalloonContentLayout', balloonContentLayout);
-                        // Откроем балун.
-                        activeRoute.balloon.open();
-                    }
-                });
-
-            });
-            // Функция, вычисляющая стоимость доставки.
-            function calculate(routeLength) {
-                return [Math.max(routeLength * DELIVERY_TARIFF_ECONOM, MINIMUM_COST),
-                        Math.max(routeLength * DELIVERY_TARIFF_KOMFORT, MINIMUM_COST),
-                        Math.max(routeLength * DELIVERY_TARIFF_BIZNESS, MINIMUM_COST),
-                        Math.max(routeLength * DELIVERY_TARIFF_MINIVEN, MINIMUM_COST)]; 
+    ymaps.ready(init);   
+    
+    function init() {
+        // Стоимость за километр.
+        var DELIVERY_TARIFF_ECONOM = 25;
+        var DELIVERY_TARIFF_KOMFORT = 29;
+        var DELIVERY_TARIFF_BIZNESS = 65;
+        var DELIVERY_TARIFF_MINIVEN = 50,
+        // Минимальная стоимость.
+        MINIMUM_COST = 500,
+        myMap = new ymaps.Map('map', {
+            center: [44.948169, 34.099893],
+            zoom: 9,
+            controls: []
+        }),
+        // Создадим панель маршрутизации.
+        routePanelControl = new ymaps.control.RoutePanel({
+            options: {
+                // Добавим заголовок панели.
+                showHeader: false,
+                title: 'Расчёт маршрута',
+                maxWidth: '100%'
             }
+        }),
+        zoomControl = new ymaps.control.ZoomControl({
+            options: {
+                size: 'small',
+                float: 'none',
+                position: {
+                    bottom: 250,
+                    right: 10
+                }
+            }
+        });
+        routePanelControl.routePanel.options.set({
+            types: {auto: true}
+        });
+
+        myMap.controls.add(routePanelControl).add(zoomControl).add(zoomControl);
+
+        // Получим ссылку на маршрут.
+        routePanelControl.routePanel.getRouteAsync().then(function (route) {
+
+            // Зададим максимально допустимое число маршрутов, возвращаемых мультимаршрутизатором.
+            route.model.setParams({results: 1}, true);
+
+            // Повесим обработчик на событие построения маршрута.
+            route.model.events.add('requestsuccess', function () {
+
+                var activeRoute = route.getActiveRoute();
+                if (activeRoute) {
+                    // Получим протяженность маршрута.
+                    var length = route.getActiveRoute().properties.get("distance"),
+                    // Вычислим стоимость доставки.
+                        price = calculate(Math.round(length.value / 1000)),
+                    // Создадим макет содержимого балуна маршрута.
+                        balloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                            '<span>Ориентировочная стоимость поездки:' + '</span><br/>' +
+                            '<span>Расстояние: ' + length.text + '.</span><br/>' +
+                            '<span style="font-weight: bold; font-style: italic">Эконом: ' + price[0] + ' р.</span><br/>' + 
+                            '<span style="font-weight: bold; font-style: italic">Комфорт: ' + price[1] + ' р.</span><br/>' +
+                            '<span style="font-weight: bold; font-style: italic">Бизнесс: ' + price[2] + ' р.</span><br/>' +
+                            '<span style="font-weight: bold; font-style: italic">Минивен: ' + price[3] + ' р.</span><br/>');
+                    // Зададим этот макет для содержимого балуна.
+                    route.options.set('routeBalloonContentLayout', balloonContentLayout);
+                    // Откроем балун.
+                    activeRoute.balloon.open();
+                }
+            });
+
+        });
+        // Функция, вычисляющая стоимость доставки.
+        function calculate(routeLength) {
+            return [Math.max(routeLength * DELIVERY_TARIFF_ECONOM, MINIMUM_COST),
+                    Math.max(routeLength * DELIVERY_TARIFF_KOMFORT, MINIMUM_COST),
+                    Math.max(routeLength * DELIVERY_TARIFF_BIZNESS, MINIMUM_COST),
+                    Math.max(routeLength * DELIVERY_TARIFF_MINIVEN, MINIMUM_COST)]; 
         }
+    }
+    // window.scrollTo(0, 0)
+
+    
+
+        
 
 
-
+        
 
 
 
@@ -189,9 +193,8 @@ const formFooter = new FormFooter(blockFormFooter);
 formFooter.registerEvents();
 
 
+setTimeout(() => {
+	window.scrollTo(0, 0);
+}, 800)
 
-window.addEventListener('load', (e) => {
-    if(window.scrollY > 0 || window.scrollY === 0) {
-        window.scrollTo(0, 0);
-    }  
-})
+
