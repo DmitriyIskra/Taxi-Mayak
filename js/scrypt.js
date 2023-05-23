@@ -198,3 +198,26 @@ setTimeout(() => {
 }, 800)
 
 
+
+
+// P R I V A C Y  P O L I C Y
+
+const privacyPolicy = document.querySelector('.wr-privacy-policy');
+const closePrivacy = document.querySelector('.privacy-policy__close');
+const openPrivacy = document.querySelector('.footer__privacy-policy-link');
+
+
+openPrivacy.addEventListener('click', (e) => {
+    e.preventDefault;
+
+    privacyPolicy.classList.remove('wr-privacy-policy_hidden');
+
+    window.scrollTo(0, 0);
+});
+
+closePrivacy.addEventListener('click', (e) => {
+    e.preventDefault;
+
+    privacyPolicy.classList.add('wr-privacy-policy_hidden');
+})
+
